@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevuApp — Randevu ve Müşteri Yönetimi</title>
+    <meta
+      name="description"
+      content="WhatsApp ile otomatik hatırlatma, akıllı takvim, müşteri takibi. Randevu yönetimini otomatikleştirin."
+    />
+    <meta property="og:title" content="DevuApp — Randevu Yönetimi" />
+    <meta
+      property="og:description"
+      content="WhatsApp ile otomatik hatırlatma gönderin, tek mesajla onay alın. Randevu kaçırma dönemi bitti."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://devuapp.com" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/assets/main-BEUkVbdS.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-jokEUbfO.css">
+  </head>
+  <body>
+    <div id="landing">
+      <!-- ======== Nav ======== -->
+      <nav class="lp-nav" role="navigation">
+        <div class="lp-nav__inner">
+          <a href="/" aria-label="DevuApp Home">
+            <img
+              src="data:image/png;base64,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"
+              alt="DevuApp"
+              class="lp-nav__logo"
+            />
+          </a>
+
+          <ul class="lp-nav__links">
+            <li>
+              <a href="#features" class="lp-nav__link" data-i18n="nav.features"
+                >Özellikler</a
+              >
+            </li>
+            <li>
+              <a href="#whatsapp" class="lp-nav__link" data-i18n="nav.whatsapp"
+                >WhatsApp</a
+              >
+            </li>
+          </ul>
+
+          <div class="lp-nav__actions">
+            <button class="lp-nav__lang" data-lang-toggle>EN</button>
+            <a
+              href="https://app.devuapp.com/#/login"
+              class="lp-btn lp-btn--ghost"
+              data-i18n="nav.login"
+              >Giriş Yap</a
+            >
+            <a
+              href="https://app.devuapp.com/#/register"
+              class="lp-btn lp-btn--primary"
+              data-i18n="nav.start"
+              >Başlayın</a
+            >
+          </div>
+
+          <button class="lp-nav__hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile menu -->
+      <div class="lp-mobile-menu">
+        <div class="lp-mobile-menu__panel">
+          <button class="lp-mobile-menu__close" aria-label="Close">
+            &times;
+          </button>
+          <ul class="lp-mobile-menu__links">
+            <li><a href="#features" data-i18n="nav.features">Özellikler</a></li>
+            <li><a href="#whatsapp" data-i18n="nav.whatsapp">WhatsApp</a></li>
+          </ul>
+          <div class="lp-mobile-menu__actions">
+            <button
+              class="lp-btn lp-btn--ghost"
+              data-lang-toggle
+              style="width: 100%"
+            >
+              EN
+            </button>
+            <a
+              href="https://app.devuapp.com/#/login"
+              class="lp-btn lp-btn--ghost"
+              style="width: 100%"
+              data-i18n="nav.login"
+              >Giriş Yap</a
+            >
+            <a
+              href="https://app.devuapp.com/#/register"
+              class="lp-btn lp-btn--primary"
+              style="width: 100%"
+              data-i18n="nav.start"
+              >Başlayın</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- ======== Hero ======== -->
+      <section class="lp-hero">
+        <div class="lp-container">
+          <div class="lp-hero__inner">
+            <div class="lp-hero__content">
+              <div class="lp-hero__badge" data-i18n="hero.badge">
+                Randevu yönetimi, yeniden tasarlandı
+              </div>
+              <h1 class="lp-hero__title" data-i18n="hero.title">
+                Randevularınız artık <em>kendini yönetsin.</em>
+              </h1>
+              <p class="lp-hero__subtitle" data-i18n="hero.subtitle">
+                WhatsApp ile otomatik hatırlatma gönderin, tek mesajla onay
+                alın, takvimi herkes görsün. Randevu kaçırma dönemi bitti.
+              </p>
+              <div class="lp-hero__ctas">
+                <a
+                  href="https://app.devuapp.com/#/register"
+                  class="lp-btn lp-btn--primary lp-btn--large"
+                  data-i18n="hero.cta.primary"
+                  >Ücretsiz Deneyin</a
+                >
+                <a
+                  href="#how"
+                  class="lp-btn lp-btn--ghost lp-btn--large"
+                  data-i18n="hero.cta.secondary"
+                  >Nasıl Çalışır?</a
+                >
+              </div>
+              <p class="lp-hero__trust" data-i18n="hero.trust">
+                Kredi kartı gerekmez <span>·</span> 1 dakikada kurulum
+              </p>
+            </div>
+
+            <div class="lp-hero__visual">
+              <!-- REPLACE: Drop your hero screenshot here (recommended: 1200x750 web app screenshot) -->
+              <div class="lp-placeholder lp-placeholder--hero">
+                <span class="lp-placeholder__icon">📅</span>
+                <span class="lp-placeholder__text">Web App Screenshot</span>
+                <span class="lp-placeholder__hint">1200 x 750px recommended</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======== Social Proof ======== -->
+      <section class="lp-proof">
+        <div class="lp-container">
+          <div class="lp-proof__inner">
+            <span class="lp-proof__text" data-i18n="proof.text"
+              >Her türlü randevulu işletme için tasarlandı</span
+            >
+            <div class="lp-proof__categories">
+              <span class="lp-proof__category" data-i18n="proof.dental"
+                >Diş Klinikleri</span
+              >
+              <span class="lp-proof__category" data-i18n="proof.psychology"
+                >Psikologlar</span
+              >
+              <span class="lp-proof__category" data-i18n="proof.physio"
+                >Fizyoterapistler</span
+              >
+              <span class="lp-proof__category" data-i18n="proof.diet"
+                >Diyetisyenler</span
+              >
+              <span class="lp-proof__category" data-i18n="proof.beauty"
+                >Güzellik Merkezleri</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======== Problem ======== -->
+      <section class="lp-problem" id="problem">
+        <div class="lp-container">
+          <span class="lp-section-label lp-reveal" data-i18n="problem.label"
+            >Sorun</span
+          >
+          <h2 class="lp-section-title lp-reveal" data-i18n="problem.title">
+            Tanıdık geldi mi?
+          </h2>
+          <div class="lp-problem__grid">
+            <div class="lp-problem__card lp-reveal lp-reveal-delay-1">
+              <div class="lp-problem__icon lp-problem__icon--red">❌</div>
+              <h3 data-i18n="problem.1.title">Kaçırılan Randevular</h3>
+              <p data-i18n="problem.1.desc">
+                Hastanız gelmedi, saatiniz boşa gitti. Her kaçırılan randevu hem
+                gelir kaybı hem zaman kaybı.
+              </p>
+            </div>
+            <div class="lp-problem__card lp-reveal lp-reveal-delay-2">
+              <div class="lp-problem__icon lp-problem__icon--orange">⏰</div>
+              <h3 data-i18n="problem.2.title">Manuel Hatırlatmalar</h3>
+              <p data-i18n="problem.2.desc">
+                Tek tek WhatsApp mesajı göndermek, aramak, not almak...
+                Asistanınızın zamanının yarısı buna gidiyor.
+              </p>
+            </div>
+            <div class="lp-problem__card lp-reveal lp-reveal-delay-3">
+              <div class="lp-problem__icon lp-problem__icon--blue">📋</div>
+              <h3 data-i18n="problem.3.title">Dağınık Takip</h3>
+              <p data-i18n="problem.3.desc">
+                Excel, kâğıt ajanda, telefon rehberi... Hasta bilgileri her
+                yerde ama hiçbir yerde düzenli değil.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======== Features ======== -->
+      <section class="lp-features" id="features">
+        <div class="lp-container">
+          <span class="lp-section-label lp-reveal" data-i18n="features.label"
+            >Özellikler</span
+          >
+          <h2 class="lp-section-title lp-reveal" data-i18n="features.title">
+            Tek platformda her şey
+          </h2>
+          <p
+            class="lp-section-subtitle lp-reveal"
+            data-i18n="features.subtitle"
+          >
+            Randevu, müşteri, hatırlatma, ödeme — hepsi bir arada.
+          </p>
+          <div class="lp-features__grid">
+            <div class="lp-feature-card lp-reveal lp-reveal-delay-1">
+              <div class="lp-feature-card__icon">📅</div>
+              <h3 data-i18n="features.1.title">Akıllı Takvim</h3>
+              <p data-i18n="features.1.desc">
+                Gün, hafta, ay görünümü. Çakışma kontrolu otomatik. Tüm
+                şubeleriniz tek takvimde.
+              </p>
+            </div>
+            <div class="lp-feature-card lp-reveal lp-reveal-delay-2">
+              <div class="lp-feature-card__icon">💬</div>
+              <h3 data-i18n="features.2.title">WhatsApp Hatırlatma</h3>
+              <p data-i18n="features.2.desc">
+                Otomatik hatırlatma, tek mesajla onay veya iptal. Randevu
+                kaçırma oranınız sıfıra iner.
+              </p>
+            </div>
+            <div class="lp-feature-card lp-reveal lp-reveal-delay-3">
+              <div class="lp-feature-card__icon">👥</div>
+              <h3 data-i18n="features.3.title">Müşteri Yönetimi</h3>
+              <p data-i18n="features.3.desc">
+                İletişim bilgileri, geçmiş randevular, fotoğraflar, notlar — her
+                müşteri için eksiksiz profil.
+              </p>
+            </div>
+            <div class="lp-feature-card lp-reveal lp-reveal-delay-1">
+              <div class="lp-feature-card__icon">💰</div>
+              <h3 data-i18n="features.4.title">Ödeme Takibi</h3>
+              <p data-i18n="features.4.desc">
+                Taksit planları, ödeme hatırlatmaları, kalan bakiye — tedavi
+                sürecini finansal olarak da takip edin.
+              </p>
+            </div>
+            <div class="lp-feature-card lp-reveal lp-reveal-delay-2">
+              <div class="lp-feature-card__icon">🏢</div>
+              <h3 data-i18n="features.5.title">Çoklu Şube</h3>
+              <p data-i18n="features.5.desc">
+                Birden fazla lokasyon? Tek hesapla hepsini yönetin, takvimler
+                arası çakışma kontrolu dahil.
+              </p>
+            </div>
+            <div class="lp-feature-card lp-reveal lp-reveal-delay-3">
+              <div class="lp-feature-card__icon">🔄</div>
+              <h3 data-i18n="features.6.title">Google Takvim</h3>
+              <p data-i18n="features.6.desc">
+                Randevularınız otomatik olarak Google Takviminize yansır.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======== WhatsApp Deep Dive ======== -->
+      <section class="lp-whatsapp" id="whatsapp">
+        <div class="lp-container">
+          <!-- WhatsApp hero: text + phone mockup -->
+          <div class="lp-wa__hero">
+            <div class="lp-wa__hero-content lp-reveal">
+              <div class="lp-wa__badge" data-i18n="wa.badge">
+                En önemli özellik
+              </div>
+              <h2 data-i18n="wa.title">
+                WhatsApp ile randevu yönetiminin geleceği
+              </h2>
+              <p data-i18n="wa.subtitle">
+                Sadece hatırlatma değil — tam otomatik, iki yönlü randevu onay
+                sistemi.
+              </p>
+              <a
+                href="/whatsapp-setup/"
+                class="lp-btn lp-btn--primary"
+                data-i18n="wa.cta"
+                >WhatsApp Kurulum Rehberi →</a
+              >
+            </div>
+
+            <div class="lp-wa__phone lp-reveal lp-reveal-delay-2">
+              <div class="lp-wa-phone-frame">
+                <img
+                  src="/assets/wa_mockup-CdiDvErq.png"
+                  alt="Phone Mockup"
+                  class="lp-wa__phone-img"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- WhatsApp flow: 3 steps -->
+          <div class="lp-wa__flow">
+            <div class="lp-wa__flow-card lp-reveal lp-reveal-delay-1">
+              <div class="lp-wa__flow-num">1</div>
+              <h3 data-i18n="wa.flow.1.title">Otomatik Hatırlatma</h3>
+              <p data-i18n="wa.flow.1.desc">
+                Randevudan 24 saat ve 2 saat önce, müşterinize otomatik WhatsApp
+                mesajı gönderilir.
+              </p>
+            </div>
+            <div class="lp-wa__flow-card lp-reveal lp-reveal-delay-2">
+              <div class="lp-wa__flow-num">2</div>
+              <h3 data-i18n="wa.flow.2.title">Tek Mesajla Onay</h3>
+              <p style="white-space: pre-line" data-i18n="wa.flow.2.desc">
+                "Evet" → otomatik onay ✅ "İptal" → otomatik iptal ❌
+                Asistanınız hiçbir şey yapmaz.
+              </p>
+            </div>
+            <div class="lp-wa__flow-card lp-reveal lp-reveal-delay-3">
+              <div class="lp-wa__flow-num">3</div>
+              <h3 data-i18n="wa.flow.3.title">Kolay Kurulum</h3>
+              <p data-i18n="wa.flow.3.desc">
+                Meta Business API ile resmi WhatsApp Business hattınızdan mesaj
+                gönderin. 15 dakikada hazır.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======== How It Works ======== -->
+      <section class="lp-how" id="how">
+        <div class="lp-container">
+          <span class="lp-section-label lp-reveal" data-i18n="how.label"
+            >Nasıl Çalışır</span
+          >
+          <h2 class="lp-section-title lp-reveal" data-i18n="how.title">
+            3 adımda başlayın
+          </h2>
+          <p class="lp-section-subtitle lp-reveal">&nbsp;</p>
+
+          <div class="lp-how__steps">
+            <div class="lp-how__step lp-reveal lp-reveal-delay-1">
+              <div class="lp-how__num">1</div>
+              <h3 data-i18n="how.1.title">Hesap Oluşturun</h3>
+              <p data-i18n="how.1.desc">
+                1 dakikada ücretsiz hesabınızı oluşturun. İşletme kategorinizi
+                seçin, subenizi ekleyin.
+              </p>
+            </div>
+            <div class="lp-how__step lp-reveal lp-reveal-delay-2">
+              <div class="lp-how__num">2</div>
+              <h3 data-i18n="how.2.title">Randevuları Girin</h3>
+              <p data-i18n="how.2.desc">
+                Müşterilerinizi ve randevularınızı ekleyin. Akıllı takvim
+                çakışmaları otomatik kontrol eder.
+              </p>
+            </div>
+            <div class="lp-how__step lp-reveal lp-reveal-delay-3">
+              <div class="lp-how__num">3</div>
+              <h3 data-i18n="how.3.title">Otomatik Pilot</h3>
+              <p data-i18n="how.3.desc">
+                WhatsApp hatırlatmaları otomatik gönderilir. Onaylar otomatik
+                işlenir. Siz işinize odaklanın.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======== Screenshots ======== -->
+      <section class="lp-screenshots" id="screenshots">
+        <div class="lp-container">
+          <h2 class="lp-section-title lp-reveal" data-i18n="screenshots.title">
+            Masaüstünde veya mobilde
+          </h2>
+          <p
+            class="lp-section-subtitle lp-reveal"
+            data-i18n="screenshots.subtitle"
+          >
+            Web uygulaması ve mobil uygulama ile randevularınıza her yerden
+            erişin.
+          </p>
+
+          <div class="lp-screenshots__grid">
+            <!-- REPLACE: Drop your screenshots here as <img> tags -->
+            <div class="lp-placeholder lp-placeholder--wide lp-reveal">
+              <span class="lp-placeholder__icon">📅</span>
+              <span class="lp-placeholder__text">Calendar Week View</span>
+              <span class="lp-placeholder__hint">Full-width screenshot</span>
+            </div>
+            <div class="lp-placeholder lp-reveal lp-reveal-delay-1">
+              <span class="lp-placeholder__icon">🏠</span>
+              <span class="lp-placeholder__text">Today View</span>
+            </div>
+            <div class="lp-placeholder lp-reveal lp-reveal-delay-2">
+              <span class="lp-placeholder__icon">👤</span>
+              <span class="lp-placeholder__text">Client Detail</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======== Use Cases ======== -->
+      <section class="lp-usecases" id="usecases">
+        <div class="lp-container">
+          <span class="lp-section-label lp-reveal" data-i18n="usecases.label"
+            >Kimler İçin</span
+          >
+          <h2 class="lp-section-title lp-reveal" data-i18n="usecases.title">
+            Her randevulu işletme için
+          </h2>
+          <p
+            class="lp-section-subtitle lp-reveal"
+            data-i18n="usecases.subtitle"
+          >
+            İşletme kategorinizi seçin, terminoloji otomatik uyarlanır.
+          </p>
+
+          <div class="lp-usecases__grid">
+            <div class="lp-usecase-card lp-reveal lp-reveal-delay-1">
+              <div class="lp-usecase-card__icon">🦷</div>
+              <div>
+                <h3 data-i18n="usecases.dental">Diş Klinikleri</h3>
+                <p data-i18n="usecases.dental.desc">Hasta, Diş Hekimi</p>
+              </div>
+            </div>
+            <div class="lp-usecase-card lp-reveal lp-reveal-delay-1">
+              <div class="lp-usecase-card__icon">🧠</div>
+              <div>
+                <h3 data-i18n="usecases.psychology">Psikologlar</h3>
+                <p data-i18n="usecases.psychology.desc">Danışan, Terapist</p>
+              </div>
+            </div>
+            <div class="lp-usecase-card lp-reveal lp-reveal-delay-2">
+              <div class="lp-usecase-card__icon">🏃</div>
+              <div>
+                <h3 data-i18n="usecases.physio">Fizyoterapistler</h3>
+                <p data-i18n="usecases.physio.desc">Hasta, Fizyoterapist</p>
+              </div>
+            </div>
+            <div class="lp-usecase-card lp-reveal lp-reveal-delay-2">
+              <div class="lp-usecase-card__icon">🍎</div>
+              <div>
+                <h3 data-i18n="usecases.diet">Diyetisyenler</h3>
+                <p data-i18n="usecases.diet.desc">Danışan, Diyetisyen</p>
+              </div>
+            </div>
+            <div class="lp-usecase-card lp-reveal lp-reveal-delay-3">
+              <div class="lp-usecase-card__icon">✨</div>
+              <div>
+                <h3 data-i18n="usecases.beauty">Güzellik Merkezleri</h3>
+                <p data-i18n="usecases.beauty.desc">Müşteri, Uzman</p>
+              </div>
+            </div>
+            <div class="lp-usecase-card lp-reveal lp-reveal-delay-3">
+              <div class="lp-usecase-card__icon">📋</div>
+              <div>
+                <h3 data-i18n="usecases.general">Diğer İşletmeler</h3>
+                <p data-i18n="usecases.general.desc">
+                  Müşteri, Hizmet Sağlayıcı
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======== Final CTA ======== -->
+      <section class="lp-cta">
+        <div class="lp-container">
+          <h2 class="lp-cta__title lp-reveal" data-i18n="cta.title">
+            Randevularınızı kontrol altına alın.
+          </h2>
+          <p class="lp-cta__subtitle lp-reveal" data-i18n="cta.subtitle">
+            Ücretsiz hesabınızı oluşturun, 2 dakikada kullanmaya başlayın.
+          </p>
+          <a
+            href="https://app.devuapp.com/#/register"
+            class="lp-btn lp-btn--white lp-btn--large lp-reveal"
+            data-i18n="cta.button"
+            >Ücretsiz Başlayın</a
+          >
+          <p class="lp-cta__trust lp-reveal" data-i18n="cta.trust">
+            Kredi kartı gerekmez
+          </p>
+        </div>
+      </section>
+
+      <!-- ======== Footer ======== -->
+      <footer class="lp-footer">
+        <div class="lp-container">
+          <div class="lp-footer__grid">
+            <div class="lp-footer__brand">
+              <img
+                src="data:image/png;base64,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"
+                alt="DevuApp"
+                class="lp-footer__logo"
+              />
+              <p data-i18n="footer.desc">
+                Randevu ve müşteri yönetim platformu. Hizmet sektöründeki
+                işletmeler için tasarlandı.
+              </p>
+            </div>
+            <div class="lp-footer__col">
+              <h4 data-i18n="footer.product">Ürün</h4>
+              <ul>
+                <li>
+                  <a href="#features" data-i18n="footer.features">Özellikler</a>
+                </li>
+                <li>
+                  <a href="https://app.devuapp.com/#/login" data-i18n="footer.login">Giriş Yap</a>
+                </li>
+                <li>
+                  <a href="https://app.devuapp.com/#/register" data-i18n="footer.register">Başlayın</a>
+                </li>
+              </ul>
+            </div>
+            <div class="lp-footer__col">
+              <h4 data-i18n="footer.resources">Kaynaklar</h4>
+              <ul>
+                <li>
+                  <a href="/whatsapp-setup/" data-i18n="footer.wa-guide"
+                    >WhatsApp Kurulum Rehberi</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="lp-footer__col">
+              <h4 data-i18n="footer.legal">Yasal</h4>
+              <ul>
+                <li>
+                  <a href="/privacy/" data-i18n="footer.privacy"
+                    >Gizlilik Politikası</a
+                  >
+                </li>
+                <li>
+                  <a href="/terms/" data-i18n="footer.terms"
+                    >Kullanım Koşulları</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="lp-footer__bottom">
+            <span class="lp-footer__copy" data-i18n="footer.copy"
+              >&copy; 2026 DevuApp. Tüm hakları saklıdır.</span
+            >
+            <button class="lp-footer__lang-toggle" data-lang-toggle>EN</button>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- END #landing -->
+
+  </body>
+</html>
