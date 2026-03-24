@@ -42,7 +42,6 @@ body {
   --lp-orange: #eb8909;
   --lp-wa-green: #25d366;
 
-
   --lp-border: #e5e5e5;
   --lp-border-light: #f0f0f0;
 
@@ -184,10 +183,9 @@ body {
 .lp-nav__inner {
   max-width: 860px;
   margin: 0 auto;
-  height: 52px;
   display: flex;
   align-items: center;
-  padding: 0 6px 0 20px;
+  padding: 10px 15px;
   border-radius: 100px;
   pointer-events: auto;
   background: rgba(255, 255, 255, 0.75);
