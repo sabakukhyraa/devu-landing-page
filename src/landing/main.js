@@ -334,10 +334,6 @@ const TRANSLATIONS = {
     tr: "Kodu girin ve numaranızı doğrulayın",
     en: "Enter the code and verify your number",
   },
-  "wasguide.step3.warning": {
-    tr: "⚠️ <strong>Önemli:</strong> Bu numara halihazırda kişisel WhatsApp'ta kayıtlı olmamalıdır. Yeni bir hat almanızı öneririz.",
-    en: "⚠️ <strong>Important:</strong> This number must not be registered on personal WhatsApp. We recommend getting a new line.",
-  },
   "wasguide.step3.screenshot": {
     tr: "Ekran görüntüsü: Telefon numarası ekleme ekranı",
     en: "Screenshot: Phone number setup screen",
@@ -397,6 +393,10 @@ const TRANSLATIONS = {
     tr: "<strong>Phone Number ID</strong>'yi yapıştırın",
     en: "Paste your <strong>Phone Number ID</strong>",
   },
+  "wasguide.step5.3b": {
+    tr: "<strong>WABA ID</strong>'yi (WhatsApp Business Account ID) yapıştırın",
+    en: "Paste your <strong>WABA ID</strong> (WhatsApp Business Account ID)",
+  },
   "wasguide.step5.4": {
     tr: "<strong>Access Token</strong>'ı yapıştırın",
     en: "Paste your <strong>Access Token</strong>",
@@ -415,38 +415,111 @@ const TRANSLATIONS = {
   },
 
   "wasguide.step6.title": {
+    tr: "Randevu Hatırlatmalarını Ayarlayın",
+    en: "Set Up Appointment Reminders",
+  },
+  "wasguide.step6.intro": {
+    tr: "Hatırlatma oluşturmak artık çok kolay — serbest metin yazmak yerine adım adım bir oluşturucu kullanırsınız. Sistem mesajı sizin için oluşturur ve Meta'ya gönderir.",
+    en: "Creating reminders is now much simpler — instead of writing free-form text, you use a step-by-step builder. The system generates the message for you and submits it to Meta.",
+  },
+  "wasguide.step6.1": {
+    tr: "Ayarlar → WhatsApp → Hatırlatmalar bölümüne gidin",
+    en: "Go to Settings → WhatsApp → Reminders",
+  },
+  "wasguide.step6.2": {
+    tr: '"Yeni Hatırlatma" butonuna tıklayın',
+    en: 'Click "New Reminder"',
+  },
+  "wasguide.step6.3": {
+    tr: "<strong>Zamanlama:</strong> Randevudan ne kadar önce gönderileceğini seçin (dakika, saat veya gün)",
+    en: "<strong>Timing:</strong> Choose how long before the appointment to send the reminder (minutes, hours, or days)",
+  },
+  "wasguide.step6.4": {
+    tr: "<strong>Dahil edilecek bilgiler:</strong> Uzman adı, mekan adı, mekan adresi seçeneklerini işaretleyin",
+    en: "<strong>Included fields:</strong> Check the options for practitioner name, venue name, venue address",
+  },
+  "wasguide.step6.5": {
+    tr: '<strong>Üslup:</strong> Samimi ("Merhaba") veya Resmi ("Sayın") seçin',
+    en: '<strong>Tone:</strong> Choose Friendly ("Merhaba") or Formal ("Sayın")',
+  },
+  "wasguide.step6.6": {
+    tr: "<strong>Dil:</strong> Türkçe veya İngilizce seçin",
+    en: "<strong>Language:</strong> Choose Turkish or English",
+  },
+  "wasguide.step6.7": {
+    tr: "Canlı önizlemede mesajın tam halini kontrol edin",
+    en: "Review the full message in the live preview",
+  },
+  "wasguide.step6.8": {
+    tr: '"Oluştur" butonuna tıklayın — şablon onay için Meta\'ya gönderilir',
+    en: 'Click "Create" — the template is submitted to Meta for approval',
+  },
+  "wasguide.step6.statuses.title": {
+    tr: "Şablon Durumları",
+    en: "Template Statuses",
+  },
+  "wasguide.step6.statuses.col1": { tr: "Durum", en: "Status" },
+  "wasguide.step6.statuses.col2": { tr: "Anlamı", en: "Meaning" },
+  "wasguide.step6.statuses.active": { tr: "Aktif", en: "Active" },
+  "wasguide.step6.statuses.active.desc": {
+    tr: "Şablon onaylandı ve yaklaşan randevu hatırlatmaları için kullanılacak.",
+    en: "Template is approved and will be used for upcoming appointment reminders.",
+  },
+  "wasguide.step6.statuses.pending": { tr: "Hazırlanıyor", en: "Setting Up" },
+  "wasguide.step6.statuses.pending.desc": {
+    tr: "Meta incelemesi devam ediyor. Genellikle birkaç dakika sürer.",
+    en: "Meta review is in progress. Usually takes a few minutes.",
+  },
+  "wasguide.step6.statuses.rejected": {
+    tr: "Dikkat Gerekli",
+    en: "Needs Attention",
+  },
+  "wasguide.step6.statuses.rejected.desc": {
+    tr: 'Meta tarafından reddedildi. "Düzelt" butonuna tıklayın — şablon otomatik düzeltilip yeniden gönderilir.',
+    en: 'Rejected by Meta. Click "Fix" — the template will be auto-adjusted and resubmitted.',
+  },
+  "wasguide.step6.note": {
+    tr: "💡 <strong>Not:</strong> Otomatik yanıt mesajları (onay, iptal, güncelleme yanıtları) hâlâ serbest metindir ve Meta onayı gerektirmez. Bu mesajlar WhatsApp'ın 24 saatlik oturum penceresi içinde gönderilir.",
+    en: "💡 <strong>Note:</strong> Auto-reply messages (confirmation, cancellation, update responses) are still free-form text and don't require Meta approval. These are sent within WhatsApp's 24-hour session window.",
+  },
+  "wasguide.step6.screenshot": {
+    tr: "Ekran görüntüsü: Hatırlatma oluşturucu ve şablon durumları",
+    en: "Screenshot: Reminder builder and template statuses",
+  },
+
+  "wasguide.step7.title": {
     tr: "Webhook Kurulumu (İki Yönlü Mesajlaşma)",
     en: "Webhook Setup (Two-Way Messaging)",
   },
-  "wasguide.step6.intro": {
+  "wasguide.step7.intro": {
     tr: "Webhook, müşterilerinizin WhatsApp yanıtlarının (onay/iptal) otomatik işlenmesini sağlar.",
     en: "Webhooks enable automatic processing of your clients' WhatsApp replies (confirmations/cancellations).",
   },
-  "wasguide.step6.1": {
+  "wasguide.step7.1": {
     tr: "Meta Developer Portal → WhatsApp → Yapılandırma (Configuration) sayfasına gidin",
     en: "Go to Meta Developer Portal → WhatsApp → Configuration",
   },
-  "wasguide.step6.2": {
-    tr: "Webhook URL olarak girin: <code>https://YOUR_BACKEND_URL/api/whatsapp/webhook</code>",
-    en: "Enter the Webhook URL: <code>https://YOUR_BACKEND_URL/api/whatsapp/webhook</code>",
+  "wasguide.step7.2": {
+    tr: "Webhook URL olarak girin: <code>https://devu-backend-57810004994.europe-west1.run.app/api/whatsapp/webhook</code>",
+    en: "Enter the Webhook URL: <code>https://devu-backend-57810004994.europe-west1.run.app/api/whatsapp/webhook</code>",
   },
-  "wasguide.step6.3": {
+  "wasguide.step7.3": {
     tr: "Doğrulama Token'ı olarak DevuApp'taki \"Webhook Verify Token\" değerini girin",
     en: 'Enter the "Webhook Verify Token" from DevuApp as the Verify Token',
   },
-  "wasguide.step6.4": {
+  "wasguide.step7.4": {
     tr: "Abone olunacak alanlar: <code>messages</code> seçin",
     en: "Subscribe to fields: select <code>messages</code>",
   },
-  "wasguide.step6.5": {
+  "wasguide.step7.5": {
     tr: '"Dogrula ve Kaydet" butonuna tıklayın',
     en: 'Click "Verify and Save"',
   },
-  "wasguide.step6.done": {
+  "wasguide.step7.done": {
     tr: '✅ Artık müşterileriniz "Evet" veya "İptal" yazdığında randevu durumu otomatik güncellenir.',
     en: '✅ Now when your clients reply "Yes" or "Cancel", the appointment status updates automatically.',
   },
-  "wasguide.step6.screenshot": {
+  "wasguide.step7.screenshot": {
     tr: "Ekran görüntüsü: Meta webhook yapılandırma ekranı",
     en: "Screenshot: Meta webhook configuration screen",
   },
@@ -477,6 +550,30 @@ const TRANSLATIONS = {
   "wasguide.trouble.3.solution": {
     tr: "Webhook'un dogru URL'ye bağlandığını ve <code>messages</code> alanına abone olduğunuzu kontrol edin.",
     en: "Check that the webhook is connected to the correct URL and you've subscribed to the <code>messages</code> field.",
+  },
+  "wasguide.trouble.4.problem": {
+    tr: 'Şablon "Hazırlanıyor" durumunda takılı kaldı',
+    en: 'Template stuck on "Setting Up"',
+  },
+  "wasguide.trouble.4.solution": {
+    tr: "Meta onayı genellikle birkaç dakika sürer. Bir saatten uzun sürerse yeni bir hatırlatma oluşturmayı deneyin.",
+    en: "Meta approval usually takes a few minutes. If it's been over an hour, try creating a new reminder.",
+  },
+  "wasguide.trouble.5.problem": {
+    tr: 'Şablon "Dikkat Gerekli" gösteriyor',
+    en: 'Template shows "Needs Attention"',
+  },
+  "wasguide.trouble.5.solution": {
+    tr: '"Düzelt" butonuna tıklayın. Şablon otomatik olarak düzeltilip Meta\'ya yeniden gönderilir.',
+    en: 'Click "Fix". The template will be automatically adjusted and resubmitted to Meta.',
+  },
+  "wasguide.trouble.6.problem": {
+    tr: "Hatırlatmalar gönderilmiyor",
+    en: "Reminders not being sent",
+  },
+  "wasguide.trouble.6.solution": {
+    tr: 'Hatırlatma şablonunun "Aktif" durumda olduğundan emin olun. "Hazırlanıyor" durumundaki şablonlar henüz mesaj gönderemez.',
+    en: 'Make sure the reminder template status shows "Active". Templates in "Setting Up" status cannot send messages yet.',
   },
 
   // ========== Privacy Policy ==========
@@ -664,7 +761,7 @@ const TRANSLATIONS = {
   "privacy.contact.title": { tr: "10. İletişim", en: "10. Contact" },
   "privacy.contact.desc": {
     tr: "Gizlilikle ilgili sorularınız için: <strong>destek@devuapp.com</strong>",
-    en: "For privacy questions: <strong>[ENTER YOUR EMAIL ADDRESS]</strong>",
+    en: "For privacy questions: <strong>support@devuapp.com</strong>",
   },
 
   // ========== Terms & Conditions ==========
@@ -847,7 +944,7 @@ const TRANSLATIONS = {
   "terms.contact.title": { tr: "13. İletişim", en: "13. Contact" },
   "terms.contact.desc": {
     tr: "Kullanım koşullarıyla ilgili sorularınız için: <strong>destek@devuapp.com</strong>",
-    en: "For questions about these terms: <strong>[ENTER YOUR EMAIL ADDRESS]</strong>",
+    en: "For questions about these terms: <strong>support@devuapp.com</strong>",
   },
 };
 

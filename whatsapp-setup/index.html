@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WhatsApp Kurulum Rehberi — DevuApp</title>
-    <meta name="description" content="Meta Business API ile WhatsApp hatırlatma sistemini adım adım nasıl kuracağınızı öğrenin." />
+    <meta
+      name="description"
+      content="Meta Business API ile WhatsApp hatırlatma sistemini adım adım nasıl kuracağınızı öğrenin."
+    />
     <link rel="icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,18 +20,31 @@
   </head>
   <body>
     <div class="lp-page">
-
       <!-- Nav -->
       <nav class="lp-nav is-scrolled" role="navigation">
         <div class="lp-nav__inner">
           <a href="/" aria-label="DevuApp Home">
-            <img src="/assets/devu_128.png" alt="DevuApp" class="lp-nav__logo" />
+            <img
+              src="/assets/devu_128.png"
+              alt="DevuApp"
+              class="lp-nav__logo"
+            />
           </a>
           <ul class="lp-nav__links"></ul>
           <div class="lp-nav__actions">
             <button class="lp-nav__lang" data-lang-toggle>EN</button>
-            <a href="https://app.devuapp.com/#/login" class="lp-btn lp-btn--ghost" data-i18n="nav.login">Giriş Yap</a>
-            <a href="https://app.devuapp.com/#/register" class="lp-btn lp-btn--primary" data-i18n="nav.start">Başlayın</a>
+            <a
+              href="https://app.devuapp.com/#/login"
+              class="lp-btn lp-btn--ghost"
+              data-i18n="nav.login"
+              >Giriş Yap</a
+            >
+            <a
+              href="https://app.devuapp.com/#/register"
+              class="lp-btn lp-btn--primary"
+              data-i18n="nav.start"
+              >Başlayın</a
+            >
           </div>
           <button class="lp-nav__hamburger" aria-label="Menu">
             <span></span><span></span><span></span>
@@ -39,14 +55,34 @@
       <!-- Mobile menu -->
       <div class="lp-mobile-menu">
         <div class="lp-mobile-menu__panel">
-          <button class="lp-mobile-menu__close" aria-label="Close">&times;</button>
+          <button class="lp-mobile-menu__close" aria-label="Close">
+            &times;
+          </button>
           <ul class="lp-mobile-menu__links">
             <li><a href="/">Ana Sayfa</a></li>
           </ul>
           <div class="lp-mobile-menu__actions">
-            <button class="lp-btn lp-btn--ghost" data-lang-toggle style="width:100%">EN</button>
-            <a href="https://app.devuapp.com/#/login" class="lp-btn lp-btn--ghost" style="width:100%;" data-i18n="nav.login">Giriş Yap</a>
-            <a href="https://app.devuapp.com/#/register" class="lp-btn lp-btn--primary" style="width:100%;" data-i18n="nav.start">Başlayın</a>
+            <button
+              class="lp-btn lp-btn--ghost"
+              data-lang-toggle
+              style="width: 100%"
+            >
+              EN
+            </button>
+            <a
+              href="https://app.devuapp.com/#/login"
+              class="lp-btn lp-btn--ghost"
+              style="width: 100%"
+              data-i18n="nav.login"
+              >Giriş Yap</a
+            >
+            <a
+              href="https://app.devuapp.com/#/register"
+              class="lp-btn lp-btn--primary"
+              style="width: 100%"
+              data-i18n="nav.start"
+              >Başlayın</a
+            >
           </div>
         </div>
       </div>
@@ -54,48 +90,106 @@
       <!-- Content -->
       <main class="lp-page-content">
         <div class="lp-container lp-container--narrow">
-
           <h1 data-i18n="wasguide.title">WhatsApp Kurulum Rehberi</h1>
-          <p class="lp-page-subtitle" data-i18n="wasguide.subtitle">Meta Business API ile WhatsApp hatırlatma sistemini adım adım kürün. Tahmini sure: 15 dakika.</p>
+          <p class="lp-page-subtitle" data-i18n="wasguide.subtitle">
+            Meta Business API ile WhatsApp hatırlatma sistemini adım adım kürün.
+            Tahmini sure: 15 dakika.
+          </p>
 
           <!-- Prerequisites -->
           <h2 data-i18n="wasguide.prereq.title">Gereksinimler</h2>
           <ul>
             <li data-i18n="wasguide.prereq.1">Bir Facebook hesabı</li>
-            <li data-i18n="wasguide.prereq.2">Bir işletme telefon numarası (kişisel WhatsApp'ınızdan farklı olmalı)</li>
-            <li>DevuApp hesabı (<a href="https://app.devuapp.com/#/register" data-i18n="wasguide.prereq.3link">buradan oluşturun</a>)</li>
+            <li data-i18n="wasguide.prereq.2">
+              Bir işletme telefon numarası (kişisel WhatsApp'ınızdan farklı
+              olmalı)
+            </li>
+            <li>
+              DevuApp hesabı (<a
+                href="https://app.devuapp.com/#/register"
+                data-i18n="wasguide.prereq.3link"
+                >buradan oluşturun</a
+              >)
+            </li>
           </ul>
 
           <!-- Step 1 -->
           <div class="lp-step">
             <div class="lp-step__header">
               <div class="lp-step__num">1</div>
-              <h3 data-i18n="wasguide.step1.title">Meta Business Hesabı Oluşturun</h3>
+              <h3 data-i18n="wasguide.step1.title">
+                Meta Business Hesabı Oluşturun
+              </h3>
             </div>
             <ol>
-              <li data-i18n="wasguide.step1.1"><a href="https://business.facebook.com" target="_blank" rel="noopener">business.facebook.com</a> adresine gidin</li>
-              <li data-i18n="wasguide.step1.2">"Hesap Oluştur" butonuna tıklayın</li>
-              <li data-i18n="wasguide.step1.3">İşletme adınızı, adınızı ve is e-posta adresinizi girin</li>
-              <li data-i18n="wasguide.step1.4">İşletme bilgilerinizi doğrulayın</li>
+              <li data-i18n="wasguide.step1.1">
+                <a
+                  href="https://business.facebook.com"
+                  target="_blank"
+                  rel="noopener"
+                  >business.facebook.com</a
+                >
+                adresine gidin
+              </li>
+              <li data-i18n="wasguide.step1.2">
+                "Hesap Oluştur" butonuna tıklayın
+              </li>
+              <li data-i18n="wasguide.step1.3">
+                İşletme adınızı, adınızı ve is e-posta adresinizi girin
+              </li>
+              <li data-i18n="wasguide.step1.4">
+                İşletme bilgilerinizi doğrulayın
+              </li>
             </ol>
-            <div class="lp-screenshot-placeholder" data-i18n="wasguide.step1.screenshot">Ekran görüntüsü: Meta Business Suite ana ekranı</div>
+            <div
+              class="lp-screenshot-placeholder"
+              data-i18n="wasguide.step1.screenshot"
+            >
+              Ekran görüntüsü: Meta Business Suite ana ekranı
+            </div>
           </div>
 
           <!-- Step 2 -->
           <div class="lp-step">
             <div class="lp-step__header">
               <div class="lp-step__num">2</div>
-              <h3 data-i18n="wasguide.step2.title">WhatsApp Business Uygulaması Oluşturun</h3>
+              <h3 data-i18n="wasguide.step2.title">
+                WhatsApp Business Uygulaması Oluşturun
+              </h3>
             </div>
             <ol>
-              <li data-i18n="wasguide.step2.1"><a href="https://developers.facebook.com" target="_blank" rel="noopener">developers.facebook.com</a> adresine gidin</li>
-              <li data-i18n="wasguide.step2.2">"Uygulamalarım" → "Uygulama Oluştur" seçin</li>
-              <li data-i18n="wasguide.step2.3">Uygulama turu olarak <strong>"Business"</strong> seçin</li>
-              <li data-i18n="wasguide.step2.4">Uygulama adını girin (örn: "Kliniğim WhatsApp")</li>
-              <li data-i18n="wasguide.step2.5">Meta Business hesabınızı bağlayın</li>
-              <li data-i18n="wasguide.step2.6">Oluşturulan uygulamada <strong>WhatsApp</strong> ürününü ekleyin ("Ürün Ekle" → WhatsApp → "Kur")</li>
+              <li data-i18n="wasguide.step2.1">
+                <a
+                  href="https://developers.facebook.com"
+                  target="_blank"
+                  rel="noopener"
+                  >developers.facebook.com</a
+                >
+                adresine gidin
+              </li>
+              <li data-i18n="wasguide.step2.2">
+                "Uygulamalarım" → "Uygulama Oluştur" seçin
+              </li>
+              <li data-i18n="wasguide.step2.3">
+                Uygulama turu olarak <strong>"Business"</strong> seçin
+              </li>
+              <li data-i18n="wasguide.step2.4">
+                Uygulama adını girin (örn: "Kliniğim WhatsApp")
+              </li>
+              <li data-i18n="wasguide.step2.5">
+                Meta Business hesabınızı bağlayın
+              </li>
+              <li data-i18n="wasguide.step2.6">
+                Oluşturulan uygulamada <strong>WhatsApp</strong> ürününü ekleyin
+                ("Ürün Ekle" → WhatsApp → "Kur")
+              </li>
             </ol>
-            <div class="lp-screenshot-placeholder" data-i18n="wasguide.step2.screenshot">Ekran görüntüsü: Meta Developer Portal — uygulama oluşturma</div>
+            <div
+              class="lp-screenshot-placeholder"
+              data-i18n="wasguide.step2.screenshot"
+            >
+              Ekran görüntüsü: Meta Developer Portal — uygulama oluşturma
+            </div>
           </div>
 
           <!-- Step 3 -->
@@ -105,14 +199,28 @@
               <h3 data-i18n="wasguide.step3.title">Telefon Numarası Ekleyin</h3>
             </div>
             <ol>
-              <li data-i18n="wasguide.step3.1">WhatsApp → Başlangıç (Getting Started) sayfasına gidin</li>
-              <li data-i18n="wasguide.step3.2">"Telefon Numarası Ekle" butonuna tıklayın</li>
-              <li data-i18n="wasguide.step3.3">İşletme telefon numaranızı girin</li>
-              <li data-i18n="wasguide.step3.4">SMS veya arama ile doğrulama kodunu alın</li>
-              <li data-i18n="wasguide.step3.5">Kodu girin ve numaranızı doğrulayın</li>
+              <li data-i18n="wasguide.step3.1">
+                WhatsApp → Başlangıç (Getting Started) sayfasına gidin
+              </li>
+              <li data-i18n="wasguide.step3.2">
+                "Telefon Numarası Ekle" butonuna tıklayın
+              </li>
+              <li data-i18n="wasguide.step3.3">
+                İşletme telefon numaranızı girin
+              </li>
+              <li data-i18n="wasguide.step3.4">
+                SMS veya arama ile doğrulama kodunu alın
+              </li>
+              <li data-i18n="wasguide.step3.5">
+                Kodu girin ve numaranızı doğrulayın
+              </li>
             </ol>
-            <div class="lp-warning" data-i18n="wasguide.step3.warning">⚠️ <strong>Önemli:</strong> Bu numara halihazırda kişisel WhatsApp'ta kayıtlı olmamalıdır. Yeni bir hat almanızı öneririz.</div>
-            <div class="lp-screenshot-placeholder" data-i18n="wasguide.step3.screenshot">Ekran görüntüsü: Telefon numarası ekleme ekranı</div>
+            <div
+              class="lp-screenshot-placeholder"
+              data-i18n="wasguide.step3.screenshot"
+            >
+              Ekran görüntüsü: Telefon numarası ekleme ekranı
+            </div>
           </div>
 
           <!-- Step 4 -->
@@ -122,18 +230,40 @@
               <h3 data-i18n="wasguide.step4.title">API Bilgilerini Alın</h3>
             </div>
             <ol>
-              <li data-i18n="wasguide.step4.1">WhatsApp → API Kurulumu (API Setup) sayfasına gidin</li>
-              <li data-i18n="wasguide.step4.2"><strong>Phone Number ID</strong> (Telefon Numarası Kimliği) değerini not edin</li>
-              <li data-i18n="wasguide.step4.3"><strong>WhatsApp Business Account ID</strong> değerini not edin</li>
+              <li data-i18n="wasguide.step4.1">
+                WhatsApp → API Kurulumu (API Setup) sayfasına gidin
+              </li>
+              <li data-i18n="wasguide.step4.2">
+                <strong>Phone Number ID</strong> (Telefon Numarası Kimliği)
+                değerini not edin
+              </li>
+              <li data-i18n="wasguide.step4.3">
+                <strong>WhatsApp Business Account ID</strong> değerini not edin
+              </li>
             </ol>
-            <p data-i18n="wasguide.step4.token"><strong>Kalıcı Erişim Anahtarı (Permanent Access Token) oluşturun:</strong></p>
+            <p data-i18n="wasguide.step4.token">
+              <strong
+                >Kalıcı Erişim Anahtarı (Permanent Access Token)
+                oluşturun:</strong
+              >
+            </p>
             <ol>
-              <li data-i18n="wasguide.step4.4">Business Settings → Users → System Users sayfasına gidin</li>
+              <li data-i18n="wasguide.step4.4">
+                Business Settings → Users → System Users sayfasına gidin
+              </li>
               <li data-i18n="wasguide.step4.5">Sistem kullanıcısı oluşturun</li>
-              <li data-i18n="wasguide.step4.6">Sistem kullanıcısına <code>whatsapp_business_messaging</code> iznini verin</li>
+              <li data-i18n="wasguide.step4.6">
+                Sistem kullanıcısına
+                <code>whatsapp_business_messaging</code> iznini verin
+              </li>
               <li data-i18n="wasguide.step4.7">Kalıcı token oluşturun</li>
             </ol>
-            <div class="lp-screenshot-placeholder" data-i18n="wasguide.step4.screenshot">Ekran görüntüsü: API bilgileri ve token oluşturma</div>
+            <div
+              class="lp-screenshot-placeholder"
+              data-i18n="wasguide.step4.screenshot"
+            >
+              Ekran görüntüsü: API bilgileri ve token oluşturma
+            </div>
           </div>
 
           <!-- Step 5 -->
@@ -144,31 +274,179 @@
             </div>
             <ol>
               <li data-i18n="wasguide.step5.1">DevuApp'a giriş yapın</li>
-              <li data-i18n="wasguide.step5.2">Ayarlar → WhatsApp sayfasına gidin</li>
-              <li data-i18n="wasguide.step5.3"><strong>Phone Number ID</strong>'yi yapıştırın</li>
-              <li data-i18n="wasguide.step5.4"><strong>Access Token</strong>'ı yapıştırın</li>
+              <li data-i18n="wasguide.step5.2">
+                Ayarlar → WhatsApp sayfasına gidin
+              </li>
+              <li data-i18n="wasguide.step5.3">
+                <strong>Phone Number ID</strong>'yi yapıştırın
+              </li>
+              <li data-i18n="wasguide.step5.3b">
+                <strong>WABA ID</strong>'yi (WhatsApp Business Account ID)
+                yapıştırın
+              </li>
+              <li data-i18n="wasguide.step5.4">
+                <strong>Access Token</strong>'ı yapıştırın
+              </li>
               <li data-i18n="wasguide.step5.5">"Etkinleştir" butonunu açın</li>
-              <li data-i18n="wasguide.step5.6">"Test Mesajı Gönder" ile çalıştığını doğrulayın</li>
+              <li data-i18n="wasguide.step5.6">
+                "Test Mesajı Gönder" ile çalıştığını doğrulayın
+              </li>
             </ol>
-            <div class="lp-screenshot-placeholder" data-i18n="wasguide.step5.screenshot">Ekran görüntüsü: DevuApp WhatsApp ayarları ekranı</div>
+            <div
+              class="lp-screenshot-placeholder"
+              data-i18n="wasguide.step5.screenshot"
+            >
+              Ekran görüntüsü: DevuApp WhatsApp ayarları ekranı
+            </div>
           </div>
 
           <!-- Step 6 -->
           <div class="lp-step">
             <div class="lp-step__header">
               <div class="lp-step__num">6</div>
-              <h3 data-i18n="wasguide.step6.title">Webhook Kurulumu (İki Yönlü Mesajlaşma)</h3>
+              <h3 data-i18n="wasguide.step6.title">
+                Randevu Hatırlatmalarını Ayarlayın
+              </h3>
             </div>
-            <p data-i18n="wasguide.step6.intro">Webhook, müşterilerinizin WhatsApp yanıtlarının (onay/iptal) otomatik işlenmesini sağlar.</p>
+            <p data-i18n="wasguide.step6.intro">
+              Hatırlatma oluşturmak artık çok kolay — serbest metin yazmak
+              yerine adım adım bir oluşturucu kullanırsınız. Sistem mesajı sizin
+              için oluşturur ve Meta'ya gönderir.
+            </p>
             <ol>
-              <li data-i18n="wasguide.step6.1">Meta Developer Portal → WhatsApp → Yapılandırma (Configuration) sayfasına gidin</li>
-              <li data-i18n="wasguide.step6.2">Webhook URL olarak girin: <code>https://YOUR_BACKEND_URL/api/whatsapp/webhook</code></li>
-              <li data-i18n="wasguide.step6.3">Doğrulama Token'ı olarak DevuApp'taki "Webhook Verify Token" değerini girin</li>
-              <li data-i18n="wasguide.step6.4">Abone olunacak alanlar: <code>messages</code> seçin</li>
-              <li data-i18n="wasguide.step6.5">"Dogrula ve Kaydet" butonuna tıklayın</li>
+              <li data-i18n="wasguide.step6.1">
+                Ayarlar → WhatsApp → Hatırlatmalar bölümüne gidin
+              </li>
+              <li data-i18n="wasguide.step6.2">
+                "Yeni Hatırlatma" butonuna tıklayın
+              </li>
+              <li data-i18n="wasguide.step6.3">
+                <strong>Zamanlama:</strong> Randevudan ne kadar önce
+                gönderileceğini seçin (dakika, saat veya gün)
+              </li>
+              <li data-i18n="wasguide.step6.4">
+                <strong>Dahil edilecek bilgiler:</strong> Uzman adı, mekan adı,
+                mekan adresi seçeneklerini işaretleyin
+              </li>
+              <li data-i18n="wasguide.step6.5">
+                <strong>Üslup:</strong> Samimi ("Merhaba") veya Resmi ("Sayın")
+                seçin
+              </li>
+              <li data-i18n="wasguide.step6.6">
+                <strong>Dil:</strong> Türkçe veya İngilizce seçin
+              </li>
+              <li data-i18n="wasguide.step6.7">
+                Canlı önizlemede mesajın tam halini kontrol edin
+              </li>
+              <li data-i18n="wasguide.step6.8">
+                "Oluştur" butonuna tıklayın — şablon onay için Meta'ya
+                gönderilir
+              </li>
             </ol>
-            <p data-i18n="wasguide.step6.done">✅ Artık müşterileriniz "Evet" veya "İptal" yazdığında randevu durumu otomatik güncellenir.</p>
-            <div class="lp-screenshot-placeholder" data-i18n="wasguide.step6.screenshot">Ekran görüntüsü: Meta webhook yapılandırma ekranı</div>
+
+            <h4 data-i18n="wasguide.step6.statuses.title">Şablon Durumları</h4>
+            <table>
+              <thead>
+                <tr>
+                  <th data-i18n="wasguide.step6.statuses.col1">Durum</th>
+                  <th data-i18n="wasguide.step6.statuses.col2">Anlamı</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong data-i18n="wasguide.step6.statuses.active"
+                      >Aktif</strong
+                    >
+                  </td>
+                  <td data-i18n="wasguide.step6.statuses.active.desc">
+                    Şablon onaylandı ve yaklaşan randevu hatırlatmaları için
+                    kullanılacak.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong data-i18n="wasguide.step6.statuses.pending"
+                      >Hazırlanıyor</strong
+                    >
+                  </td>
+                  <td data-i18n="wasguide.step6.statuses.pending.desc">
+                    Meta incelemesi devam ediyor. Genellikle birkaç dakika
+                    sürer.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong data-i18n="wasguide.step6.statuses.rejected"
+                      >Dikkat Gerekli</strong
+                    >
+                  </td>
+                  <td data-i18n="wasguide.step6.statuses.rejected.desc">
+                    Meta tarafından reddedildi. "Düzelt" butonuna tıklayın —
+                    şablon otomatik düzeltilip yeniden gönderilir.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="lp-warning" data-i18n="wasguide.step6.note">
+              💡 <strong>Not:</strong> Otomatik yanıt mesajları (onay, iptal,
+              güncelleme yanıtları) hâlâ serbest metindir ve Meta onayı
+              gerektirmez. Bu mesajlar WhatsApp'ın 24 saatlik oturum penceresi
+              içinde gönderilir.
+            </div>
+            <div
+              class="lp-screenshot-placeholder"
+              data-i18n="wasguide.step6.screenshot"
+            >
+              Ekran görüntüsü: Hatırlatma oluşturucu ve şablon durumları
+            </div>
+          </div>
+
+          <!-- Step 7 -->
+          <div class="lp-step">
+            <div class="lp-step__header">
+              <div class="lp-step__num">7</div>
+              <h3 data-i18n="wasguide.step7.title">
+                Webhook Kurulumu (İki Yönlü Mesajlaşma)
+              </h3>
+            </div>
+            <p data-i18n="wasguide.step7.intro">
+              Webhook, müşterilerinizin WhatsApp yanıtlarının (onay/iptal)
+              otomatik işlenmesini sağlar.
+            </p>
+            <ol>
+              <li data-i18n="wasguide.step7.1">
+                Meta Developer Portal → WhatsApp → Yapılandırma (Configuration)
+                sayfasına gidin
+              </li>
+              <li data-i18n="wasguide.step7.2">
+                Webhook URL olarak girin:
+                <code
+                  >https://devu-backend-57810004994.europe-west1.run.app/api/whatsapp/webhook</code
+                >
+              </li>
+              <li data-i18n="wasguide.step7.3">
+                Doğrulama Token'ı olarak DevuApp'taki "Webhook Verify Token"
+                değerini girin
+              </li>
+              <li data-i18n="wasguide.step7.4">
+                Abone olunacak alanlar: <code>messages</code> seçin
+              </li>
+              <li data-i18n="wasguide.step7.5">
+                "Dogrula ve Kaydet" butonuna tıklayın
+              </li>
+            </ol>
+            <p data-i18n="wasguide.step7.done">
+              ✅ Artık müşterileriniz "Evet" veya "İptal" yazdığında randevu
+              durumu otomatik güncellenir.
+            </p>
+            <div
+              class="lp-screenshot-placeholder"
+              data-i18n="wasguide.step7.screenshot"
+            >
+              Ekran görüntüsü: Meta webhook yapılandırma ekranı
+            </div>
           </div>
 
           <!-- Troubleshooting -->
@@ -182,20 +460,60 @@
             </thead>
             <tbody>
               <tr>
-                <td data-i18n="wasguide.trouble.1.problem">Mesaj gönderilmiyor</td>
-                <td data-i18n="wasguide.trouble.1.solution">Token süresinin dolmadığını kontrol edin. Kalıcı token kullandığınızdan emin olun.</td>
+                <td data-i18n="wasguide.trouble.1.problem">
+                  Mesaj gönderilmiyor
+                </td>
+                <td data-i18n="wasguide.trouble.1.solution">
+                  Token süresinin dolmadığını kontrol edin. Kalıcı token
+                  kullandığınızdan emin olun.
+                </td>
               </tr>
               <tr>
-                <td data-i18n="wasguide.trouble.2.problem">Webhook dogrulanamıyor</td>
-                <td data-i18n="wasguide.trouble.2.solution">Verify Token'ın DevuApp ayarlarıyla eşleştiğinden emin olun.</td>
+                <td data-i18n="wasguide.trouble.2.problem">
+                  Webhook dogrulanamıyor
+                </td>
+                <td data-i18n="wasguide.trouble.2.solution">
+                  Verify Token'ın DevuApp ayarlarıyla eşleştiğinden emin olun.
+                </td>
               </tr>
               <tr>
-                <td data-i18n="wasguide.trouble.3.problem">"Evet" yazıldıgında onaylanmıyor</td>
-                <td data-i18n="wasguide.trouble.3.solution">Webhook'un dogru URL'ye bağlandığını ve <code>messages</code> alanına abone olduğunuzu kontrol edin.</td>
+                <td data-i18n="wasguide.trouble.3.problem">
+                  "Evet" yazıldıgında onaylanmıyor
+                </td>
+                <td data-i18n="wasguide.trouble.3.solution">
+                  Webhook'un dogru URL'ye bağlandığını ve
+                  <code>messages</code> alanına abone olduğunuzu kontrol edin.
+                </td>
+              </tr>
+              <tr>
+                <td data-i18n="wasguide.trouble.4.problem">
+                  Şablon "Hazırlanıyor" durumunda takılı kaldı
+                </td>
+                <td data-i18n="wasguide.trouble.4.solution">
+                  Meta onayı genellikle birkaç dakika sürer. Bir saatten uzun
+                  sürerse yeni bir hatırlatma oluşturmayı deneyin.
+                </td>
+              </tr>
+              <tr>
+                <td data-i18n="wasguide.trouble.5.problem">
+                  Şablon "Dikkat Gerekli" gösteriyor
+                </td>
+                <td data-i18n="wasguide.trouble.5.solution">
+                  "Düzelt" butonuna tıklayın. Şablon otomatik olarak düzeltilip
+                  Meta'ya yeniden gönderilir.
+                </td>
+              </tr>
+              <tr>
+                <td data-i18n="wasguide.trouble.6.problem">
+                  Hatırlatmalar gönderilmiyor
+                </td>
+                <td data-i18n="wasguide.trouble.6.solution">
+                  Hatırlatma şablonunun "Aktif" durumda olduğundan emin olun.
+                  "Hazırlanıyor" durumundaki şablonlar henüz mesaj gönderemez.
+                </td>
               </tr>
             </tbody>
           </table>
-
         </div>
       </main>
 
@@ -203,16 +521,29 @@
       <footer class="lp-footer">
         <div class="lp-container">
           <div class="lp-footer__bottom">
-            <span class="lp-footer__copy" data-i18n="footer.copy">&copy; 2026 DevuApp. Tüm hakları saklıdır.</span>
-            <div style="display:flex;gap:16px;align-items:center;">
-              <a href="/privacy/" style="font-size:13px;color:var(--lp-text-on-dark-secondary);" data-i18n="footer.privacy">Gizlilik Politikası</a>
-              <a href="/terms/" style="font-size:13px;color:var(--lp-text-on-dark-secondary);" data-i18n="footer.terms">Kullanım Koşulları</a>
-              <button class="lp-footer__lang-toggle" data-lang-toggle>EN</button>
+            <span class="lp-footer__copy" data-i18n="footer.copy"
+              >&copy; 2026 DevuApp. Tüm hakları saklıdır.</span
+            >
+            <div style="display: flex; gap: 16px; align-items: center">
+              <a
+                href="/privacy/"
+                style="font-size: 13px; color: var(--lp-text-on-dark-secondary)"
+                data-i18n="footer.privacy"
+                >Gizlilik Politikası</a
+              >
+              <a
+                href="/terms/"
+                style="font-size: 13px; color: var(--lp-text-on-dark-secondary)"
+                data-i18n="footer.terms"
+                >Kullanım Koşulları</a
+              >
+              <button class="lp-footer__lang-toggle" data-lang-toggle>
+                EN
+              </button>
             </div>
           </div>
         </div>
       </footer>
-
     </div>
 
     <script type="module" src="/src/landing/main.js"></script>
