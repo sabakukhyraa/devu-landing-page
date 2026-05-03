@@ -446,7 +446,6 @@ svg {
   display: inline-flex;
   white-space: nowrap;
   color: var(--accent);
-  background: var(--accent-soft);
 }
 
 .pain-card,

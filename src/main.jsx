@@ -618,7 +618,7 @@ function ProblemSection() {
     <section className="section problem-section">
       <div className="problem-heading">
         <p className="eyebrow">Günlük karmaşa</p>
-        <h2>Randevu yönetiminde kritik: ortak&nbsp;iletişim</h2>
+        <h2><span style={{whiteSpace: "nowrap"}}>Ran<span className="highlight-devu">devu</span></span> yönetiminde kritik: ortak&nbsp;iletişim</h2>
         <p>
           Devu sayesinde hem uzman, hem danışan hem de asistan aynı randevu bilgilerine sahip olur. Yanlış anlaşılmalar, unutulan aramalar ve dağınık defterler ortadan&nbsp;kalkar.
         </p>
