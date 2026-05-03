@@ -162,8 +162,8 @@ const videoFeatures = [
     id: "client",
     file: "/media/client-profile.mp4",
     eyebrow: "Danışan profili",
-    title: "Her randevuda doğru danışan bağlamı.",
-    body: "Fotoğraflar, notlar, özel uyarılar ve geçmiş randevular tek profilde toplanır.",
+    title: "Danışanlarını yakından tanı",
+    body: "Fotoğraflar, notlar, özel uyarılar, geçmiş randevular ve ödemeler tek profilde toplanır.",
     caption: "Diş kliniği kategorisinden",
     variant: "client",
     icon: UsersRound
