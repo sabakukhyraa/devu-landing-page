@@ -3,218 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WhatsApp Kurulum Rehberi — DevuApp</title>
-    <meta name="description" content="Meta Business API ile WhatsApp hatırlatma sistemini adım adım nasıl kuracağınızı öğrenin." />
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
+    <title>WhatsApp Kurulum Rehberi | devu</title>
+    <meta
+      name="description"
+      content="devu WhatsApp kurulum rehberi: Meta Business API ile randevu hatırlatmalarını etkinleştirme adımları."
     />
-    <script type="module" crossorigin src="/assets/main-BEUkVbdS.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/main-jokEUbfO.css">
+    <link rel="canonical" href="https://devuapp.com/whatsapp-setup" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://devuapp.com/whatsapp-setup" />
+    <meta property="og:title" content="WhatsApp Kurulum Rehberi | devu" />
+    <meta
+      property="og:description"
+      content="devu WhatsApp kurulum rehberi: Meta Business API ile randevu hatırlatmalarını etkinleştirme adımları."
+    />
+    <meta property="og:image" content="https://devuapp.com/og-image.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#f7f3ee" />
+    <link rel="icon" href="/favicon.ico" />
+    <script type="module" crossorigin src="/assets/main-BGz6h-M7.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-DU1jQmJJ.css">
   </head>
   <body>
-    <div class="lp-page">
-
-      <!-- Nav -->
-      <nav class="lp-nav is-scrolled" role="navigation">
-        <div class="lp-nav__inner">
-          <a href="/" aria-label="DevuApp Home">
-            <img src="data:image/png;base64,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" alt="DevuApp" class="lp-nav__logo" />
-          </a>
-          <ul class="lp-nav__links"></ul>
-          <div class="lp-nav__actions">
-            <button class="lp-nav__lang" data-lang-toggle>EN</button>
-            <a href="https://app.devuapp.com/#/login" class="lp-btn lp-btn--ghost" data-i18n="nav.login">Giriş Yap</a>
-            <a href="https://app.devuapp.com/#/register" class="lp-btn lp-btn--primary" data-i18n="nav.start">Başlayın</a>
-          </div>
-          <button class="lp-nav__hamburger" aria-label="Menu">
-            <span></span><span></span><span></span>
-          </button>
-        </div>
-      </nav>
-
-      <!-- Mobile menu -->
-      <div class="lp-mobile-menu">
-        <div class="lp-mobile-menu__panel">
-          <button class="lp-mobile-menu__close" aria-label="Close">&times;</button>
-          <ul class="lp-mobile-menu__links">
-            <li><a href="/">Ana Sayfa</a></li>
-          </ul>
-          <div class="lp-mobile-menu__actions">
-            <button class="lp-btn lp-btn--ghost" data-lang-toggle style="width:100%">EN</button>
-            <a href="https://app.devuapp.com/#/login" class="lp-btn lp-btn--ghost" style="width:100%;" data-i18n="nav.login">Giriş Yap</a>
-            <a href="https://app.devuapp.com/#/register" class="lp-btn lp-btn--primary" style="width:100%;" data-i18n="nav.start">Başlayın</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Content -->
-      <main class="lp-page-content">
-        <div class="lp-container lp-container--narrow">
-
-          <h1 data-i18n="wasguide.title">WhatsApp Kurulum Rehberi</h1>
-          <p class="lp-page-subtitle" data-i18n="wasguide.subtitle">Meta Business API ile WhatsApp hatırlatma sistemini adım adım kürün. Tahmini sure: 15 dakika.</p>
-
-          <!-- Prerequisites -->
-          <h2 data-i18n="wasguide.prereq.title">Gereksinimler</h2>
-          <ul>
-            <li data-i18n="wasguide.prereq.1">Bir Facebook hesabı</li>
-            <li data-i18n="wasguide.prereq.2">Bir işletme telefon numarası (kişisel WhatsApp'ınızdan farklı olmalı)</li>
-            <li>DevuApp hesabı (<a href="https://app.devuapp.com/#/register" data-i18n="wasguide.prereq.3link">buradan oluşturun</a>)</li>
-          </ul>
-
-          <!-- Step 1 -->
-          <div class="lp-step">
-            <div class="lp-step__header">
-              <div class="lp-step__num">1</div>
-              <h3 data-i18n="wasguide.step1.title">Meta Business Hesabı Oluşturun</h3>
-            </div>
-            <ol>
-              <li data-i18n="wasguide.step1.1"><a href="https://business.facebook.com" target="_blank" rel="noopener">business.facebook.com</a> adresine gidin</li>
-              <li data-i18n="wasguide.step1.2">"Hesap Oluştur" butonuna tıklayın</li>
-              <li data-i18n="wasguide.step1.3">İşletme adınızı, adınızı ve is e-posta adresinizi girin</li>
-              <li data-i18n="wasguide.step1.4">İşletme bilgilerinizi doğrulayın</li>
-            </ol>
-            <div class="lp-screenshot-placeholder" data-i18n="wasguide.step1.screenshot">Ekran görüntüsü: Meta Business Suite ana ekranı</div>
-          </div>
-
-          <!-- Step 2 -->
-          <div class="lp-step">
-            <div class="lp-step__header">
-              <div class="lp-step__num">2</div>
-              <h3 data-i18n="wasguide.step2.title">WhatsApp Business Uygulaması Oluşturun</h3>
-            </div>
-            <ol>
-              <li data-i18n="wasguide.step2.1"><a href="https://developers.facebook.com" target="_blank" rel="noopener">developers.facebook.com</a> adresine gidin</li>
-              <li data-i18n="wasguide.step2.2">"Uygulamalarım" → "Uygulama Oluştur" seçin</li>
-              <li data-i18n="wasguide.step2.3">Uygulama turu olarak <strong>"Business"</strong> seçin</li>
-              <li data-i18n="wasguide.step2.4">Uygulama adını girin (örn: "Kliniğim WhatsApp")</li>
-              <li data-i18n="wasguide.step2.5">Meta Business hesabınızı bağlayın</li>
-              <li data-i18n="wasguide.step2.6">Oluşturulan uygulamada <strong>WhatsApp</strong> ürününü ekleyin ("Ürün Ekle" → WhatsApp → "Kur")</li>
-            </ol>
-            <div class="lp-screenshot-placeholder" data-i18n="wasguide.step2.screenshot">Ekran görüntüsü: Meta Developer Portal — uygulama oluşturma</div>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="lp-step">
-            <div class="lp-step__header">
-              <div class="lp-step__num">3</div>
-              <h3 data-i18n="wasguide.step3.title">Telefon Numarası Ekleyin</h3>
-            </div>
-            <ol>
-              <li data-i18n="wasguide.step3.1">WhatsApp → Başlangıç (Getting Started) sayfasına gidin</li>
-              <li data-i18n="wasguide.step3.2">"Telefon Numarası Ekle" butonuna tıklayın</li>
-              <li data-i18n="wasguide.step3.3">İşletme telefon numaranızı girin</li>
-              <li data-i18n="wasguide.step3.4">SMS veya arama ile doğrulama kodunu alın</li>
-              <li data-i18n="wasguide.step3.5">Kodu girin ve numaranızı doğrulayın</li>
-            </ol>
-            <div class="lp-warning" data-i18n="wasguide.step3.warning">⚠️ <strong>Önemli:</strong> Bu numara halihazırda kişisel WhatsApp'ta kayıtlı olmamalıdır. Yeni bir hat almanızı öneririz.</div>
-            <div class="lp-screenshot-placeholder" data-i18n="wasguide.step3.screenshot">Ekran görüntüsü: Telefon numarası ekleme ekranı</div>
-          </div>
-
-          <!-- Step 4 -->
-          <div class="lp-step">
-            <div class="lp-step__header">
-              <div class="lp-step__num">4</div>
-              <h3 data-i18n="wasguide.step4.title">API Bilgilerini Alın</h3>
-            </div>
-            <ol>
-              <li data-i18n="wasguide.step4.1">WhatsApp → API Kurulumu (API Setup) sayfasına gidin</li>
-              <li data-i18n="wasguide.step4.2"><strong>Phone Number ID</strong> (Telefon Numarası Kimliği) değerini not edin</li>
-              <li data-i18n="wasguide.step4.3"><strong>WhatsApp Business Account ID</strong> değerini not edin</li>
-            </ol>
-            <p data-i18n="wasguide.step4.token"><strong>Kalıcı Erişim Anahtarı (Permanent Access Token) oluşturun:</strong></p>
-            <ol>
-              <li data-i18n="wasguide.step4.4">Business Settings → Users → System Users sayfasına gidin</li>
-              <li data-i18n="wasguide.step4.5">Sistem kullanıcısı oluşturun</li>
-              <li data-i18n="wasguide.step4.6">Sistem kullanıcısına <code>whatsapp_business_messaging</code> iznini verin</li>
-              <li data-i18n="wasguide.step4.7">Kalıcı token oluşturun</li>
-            </ol>
-            <div class="lp-screenshot-placeholder" data-i18n="wasguide.step4.screenshot">Ekran görüntüsü: API bilgileri ve token oluşturma</div>
-          </div>
-
-          <!-- Step 5 -->
-          <div class="lp-step">
-            <div class="lp-step__header">
-              <div class="lp-step__num">5</div>
-              <h3 data-i18n="wasguide.step5.title">DevuApp'ta Yapılandırın</h3>
-            </div>
-            <ol>
-              <li data-i18n="wasguide.step5.1">DevuApp'a giriş yapın</li>
-              <li data-i18n="wasguide.step5.2">Ayarlar → WhatsApp sayfasına gidin</li>
-              <li data-i18n="wasguide.step5.3"><strong>Phone Number ID</strong>'yi yapıştırın</li>
-              <li data-i18n="wasguide.step5.4"><strong>Access Token</strong>'ı yapıştırın</li>
-              <li data-i18n="wasguide.step5.5">"Etkinleştir" butonunu açın</li>
-              <li data-i18n="wasguide.step5.6">"Test Mesajı Gönder" ile çalıştığını doğrulayın</li>
-            </ol>
-            <div class="lp-screenshot-placeholder" data-i18n="wasguide.step5.screenshot">Ekran görüntüsü: DevuApp WhatsApp ayarları ekranı</div>
-          </div>
-
-          <!-- Step 6 -->
-          <div class="lp-step">
-            <div class="lp-step__header">
-              <div class="lp-step__num">6</div>
-              <h3 data-i18n="wasguide.step6.title">Webhook Kurulumu (İki Yönlü Mesajlaşma)</h3>
-            </div>
-            <p data-i18n="wasguide.step6.intro">Webhook, müşterilerinizin WhatsApp yanıtlarının (onay/iptal) otomatik işlenmesini sağlar.</p>
-            <ol>
-              <li data-i18n="wasguide.step6.1">Meta Developer Portal → WhatsApp → Yapılandırma (Configuration) sayfasına gidin</li>
-              <li data-i18n="wasguide.step6.2">Webhook URL olarak girin: <code>https://YOUR_BACKEND_URL/api/whatsapp/webhook</code></li>
-              <li data-i18n="wasguide.step6.3">Doğrulama Token'ı olarak DevuApp'taki "Webhook Verify Token" değerini girin</li>
-              <li data-i18n="wasguide.step6.4">Abone olunacak alanlar: <code>messages</code> seçin</li>
-              <li data-i18n="wasguide.step6.5">"Dogrula ve Kaydet" butonuna tıklayın</li>
-            </ol>
-            <p data-i18n="wasguide.step6.done">✅ Artık müşterileriniz "Evet" veya "İptal" yazdığında randevu durumu otomatik güncellenir.</p>
-            <div class="lp-screenshot-placeholder" data-i18n="wasguide.step6.screenshot">Ekran görüntüsü: Meta webhook yapılandırma ekranı</div>
-          </div>
-
-          <!-- Troubleshooting -->
-          <h2 data-i18n="wasguide.trouble.title">Sorun Giderme</h2>
-          <table>
-            <thead>
-              <tr>
-                <th data-i18n="wasguide.trouble.problem">Sorun</th>
-                <th data-i18n="wasguide.trouble.solution">Çözüm</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td data-i18n="wasguide.trouble.1.problem">Mesaj gönderilmiyor</td>
-                <td data-i18n="wasguide.trouble.1.solution">Token süresinin dolmadığını kontrol edin. Kalıcı token kullandığınızdan emin olun.</td>
-              </tr>
-              <tr>
-                <td data-i18n="wasguide.trouble.2.problem">Webhook dogrulanamıyor</td>
-                <td data-i18n="wasguide.trouble.2.solution">Verify Token'ın DevuApp ayarlarıyla eşleştiğinden emin olun.</td>
-              </tr>
-              <tr>
-                <td data-i18n="wasguide.trouble.3.problem">"Evet" yazıldıgında onaylanmıyor</td>
-                <td data-i18n="wasguide.trouble.3.solution">Webhook'un dogru URL'ye bağlandığını ve <code>messages</code> alanına abone olduğunuzu kontrol edin.</td>
-              </tr>
-            </tbody>
-          </table>
-
-        </div>
-      </main>
-
-      <!-- Footer -->
-      <footer class="lp-footer">
-        <div class="lp-container">
-          <div class="lp-footer__bottom">
-            <span class="lp-footer__copy" data-i18n="footer.copy">&copy; 2026 DevuApp. Tüm hakları saklıdır.</span>
-            <div style="display:flex;gap:16px;align-items:center;">
-              <a href="/privacy/" style="font-size:13px;color:var(--lp-text-on-dark-secondary);" data-i18n="footer.privacy">Gizlilik Politikası</a>
-              <a href="/terms/" style="font-size:13px;color:var(--lp-text-on-dark-secondary);" data-i18n="footer.terms">Kullanım Koşulları</a>
-              <button class="lp-footer__lang-toggle" data-lang-toggle>EN</button>
-            </div>
-          </div>
-        </div>
-      </footer>
-
-    </div>
-
+    <div id="root"></div>
   </body>
 </html>
