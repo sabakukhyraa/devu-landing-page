@@ -652,7 +652,7 @@ function ProductStory() {
     <section className="section product-story" id="product">
       <div className="section-heading narrow">
         <p className="eyebrow">Ürün</p>
-        <h2>Neden devu?</h2>
+        <h2>Neden <span className="highlight-devu">devu</span>?</h2>
         <p>Randevu ile çalışan küçük ve orta ölçekli hizmet ekipleri için çok ideal. <br />WhatsApp hatırlatmalarıyla modern ve profesyonel gözükürsün!</p>
       </div>
       <div className="feature-grid">
@@ -748,9 +748,9 @@ function VideoFeatures() {
     <section className="section video-section" id="demo">
       <div className="video-heading">
         <p className="eyebrow">Ürün videoları</p>
-        <h2>Demo videoları ile devu'ya daha yakından bak.</h2>
+        <h2>Demo videoları ile <span style={{whiteSpace: "nowrap"}}><span className="highlight-devu">devu</span>'ya</span> daha yakından bak.</h2>
         <p>
-          Aşağıda devu'nun farklı özelliklerini gösteren ve farklı senaryolar içeren kısa videolar bulabilirsin.
+          Aşağıda devu'nun farklı özelliklerini gösteren ve farklı senaryolar içeren kısa videolar bulabilirsin.
         </p>
       </div>
       <div className="video-feature-list">
