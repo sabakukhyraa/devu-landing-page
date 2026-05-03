@@ -1,0 +1,18 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#F7F3EE"/>
+  <rect x="92" y="80" width="1016" height="470" rx="36" fill="#FFFFFF" stroke="#E7DDD1"/>
+  <rect x="136" y="126" width="440" height="378" rx="24" fill="#FAFAFA" stroke="#EEE8E0"/>
+  <text x="176" y="190" fill="#1A1A1A" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="800">devu</text>
+  <text x="176" y="246" fill="#655F58" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="600">WhatsApp hatırlatmalı günlük operasyon sistemi</text>
+  <rect x="176" y="310" width="314" height="56" rx="16" fill="#DC4C3E"/>
+  <text x="207" y="347" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="700">14 Gün Ücretsiz Dene</text>
+  <rect x="630" y="126" width="382" height="84" rx="18" fill="#FEF6E9" stroke="#F0C991"/>
+  <text x="658" y="162" fill="#9A5700" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800">Dikkat gerekli</text>
+  <text x="658" y="190" fill="#1A1A1A" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">09:30 · Cilt bakımı</text>
+  <rect x="630" y="236" width="382" height="58" rx="16" fill="#FFFFFF" stroke="#ECE6DE"/>
+  <text x="656" y="272" fill="#1A1A1A" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">10:15 Ayşe Koç</text>
+  <rect x="630" y="316" width="382" height="58" rx="16" fill="#FFFFFF" stroke="#ECE6DE"/>
+  <text x="656" y="352" fill="#1A1A1A" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">11:00 Emre Arslan</text>
+  <rect x="630" y="396" width="382" height="58" rx="16" fill="#FFFFFF" stroke="#ECE6DE"/>
+  <text x="656" y="432" fill="#1A1A1A" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">13:30 Selin Aydın</text>
+</svg>
