@@ -1020,6 +1020,17 @@ svg {
   padding-bottom: 24px;
 }
 
+.faq-answer a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 500;
+}
+
+.faq-answer a:hover {
+  color: var(--accent-dark);
+}
+
 .final-cta {
   width: min(1180px, calc(100% - 40px));
   margin: 10px auto 0;

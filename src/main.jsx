@@ -181,7 +181,7 @@ const plans = [
   {
     name: "Başlangıç",
     monthlyPrice: 799,
-    description: "Tek uzmanlı küçük işletmeler için sade başlangıç.",
+    description: "Tek uzmanlı küçük işletmeler için sade başlangıç.",
     items: [
       "1 lokasyon",
       "1 uzman",
@@ -195,7 +195,7 @@ const plans = [
   {
     name: "Ekip",
     monthlyPrice: 1499,
-    description: "Asistanlı, çok uzmanlı işletmeler için günlük operasyon planı.",
+    description: "Asistanlı, çok uzmanlı işletmeler için günlük operasyon planı.",
     featured: true,
     items: [
       "Birden fazla uzman",
@@ -222,18 +222,22 @@ const faqs = [
   },
   {
     question: "WhatsApp kurulumu nasıl çalışıyor?",
-    answer:
-      "devu, Meta WhatsApp Business API yapısına göre çalışır. Telefon numarası, Phone Number ID ve erişim anahtarı gibi bilgiler gerekir. Ayrıntılı adımlar için WhatsApp Kurulum Rehberi sayfasını hazırladık."
+    answer: (
+      <>
+        devu, Meta WhatsApp Business API yapısına göre çalışır. Telefon numarası, Phone Number ID ve erişim anahtarı gibi bilgiler gerekir. Ayrıntılı adımlar için{" "}
+        <a href="/whatsapp-setup">WhatsApp Kurulum Rehberi</a> sayfasını hazırladık.
+      </>
+    )
   },
   {
     question: "Mobil uygulama kimler için?",
     answer:
-      "Özellikle asistanlar için. Bugünkü randevuları görmek, danışanı aramak, WhatsApp durumunu kontrol etmek ve randevu durumunu değiştirmek için tasarlandı."
+      "Mobil uygulama, gün içinde hareket halinde olan asistanlar ve uzmanlar için tasarlanır. Masaüstünde kurulum ve yönetim kolaylığı sağlanırken, mobil uygulama günlük operasyonun hızlı ve esnek şekilde yürütülmesine odaklanır. Danışanlar ürünün hiçbir platformunu kullanmaz, yalnızca WhatsApp üzerinden hatırlatmaları alır ve yanıt verirler."
   },
   {
     question: "İstediğim zaman iptal edebilir miyim?",
     answer:
-      "Evet. V1 abonelik modeli aylık ve sade tutulacak. Yıllık taahhüt v1 kapsamına dahil değil."
+      "Evet, aboneliğinizi istediğiniz zaman iptal edebilirsiniz. İptal durumunda mevcut abonelik dönemi sonuna kadar hizmetten yararlanmaya devam edersiniz, ardından yenileme olmaz."
   }
 ];
 
