@@ -748,11 +748,9 @@ function VideoFeatures() {
     <section className="section video-section" id="demo">
       <div className="video-heading">
         <p className="eyebrow">Ürün videoları</p>
-        <h2>Hatırlatma, takip ve minimal arayüz kısa akışlarla anlatılır.</h2>
+        <h2>Demo videoları ile devu'ya daha yakından bak.</h2>
         <p>
-          Kayıtlar eklenene kadar bu alanlar ürün hissini veren canlı
-          mockup'larla çalışır. Dosyaları aynı isimlerle eklediğinizde videolar
-          otomatik görünür.
+          Aşağıda devu'nun farklı özelliklerini gösteren ve farklı senaryolar içeren kısa videolar bulabilirsin.
         </p>
       </div>
       <div className="video-feature-list">
