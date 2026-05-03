@@ -620,7 +620,7 @@ function ProblemSection() {
         <p className="eyebrow">Günlük karmaşa</p>
         <h2>Randevu yönetiminde kritik: ortak&nbsp;iletişim</h2>
         <p>
-          Devu sayesinde hem uzman, hem danışan hem de asistan aynı randevu bilgilerine sahip olur. Yanlış anlaşılmalar, unutulan aramalar ve dağınık notlar ortadan&nbsp;kalkar.
+          Devu sayesinde hem uzman, hem danışan hem de asistan aynı randevu bilgilerine sahip olur. Yanlış anlaşılmalar, unutulan aramalar ve dağınık defterler ortadan&nbsp;kalkar.
         </p>
       </div>
       <p className="without-devu">devu OLMADAN:</p>
@@ -748,7 +748,7 @@ function VideoFeatures() {
     <section className="section video-section" id="demo">
       <div className="video-heading">
         <p className="eyebrow">Ürün videoları</p>
-        <h2>Demo videoları ile devu'ya daha yakından bak.</h2>
+        <h2>Demo videoları ile devu'ya daha yakından bak.</h2>
         <p>
           Aşağıda devu'nun farklı özelliklerini gösteren ve farklı senaryolar içeren kısa videolar bulabilirsin.
         </p>
