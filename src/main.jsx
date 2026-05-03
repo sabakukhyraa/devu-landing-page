@@ -143,7 +143,7 @@ const videoFeatures = [
     file: "/media/hero-today.mp4",
     eyebrow: "WhatsApp + bugün",
     title: "Bugünkü randevuların durumunu incele",
-    body: "Asistan sabah ilk iş olarak 'Bugün' sayfasına göz atar, randevularını durumunu kontrol eder, gerekiyorsa danışanı arar ve randevuyu günceller.",
+    body: "Asistan sabah ilk iş olarak 'Bugün' sayfasına göz atar, randevularını durumunu kontrol eder, gerekiyorsa danışanı arar ve randevuyu günceller.",
     caption: "Diş kliniği kategorisinden",
     variant: "today",
     icon: BellRing
@@ -152,8 +152,8 @@ const videoFeatures = [
     id: "calendar",
     file: "/media/calendar-flow.mp4",
     eyebrow: "Takvim akışı",
-    title: "Yoğun günleri sade filtrelerle okuyun.",
-    body: "Uzman, lokasyon ve durum filtreleriyle takvim gereksiz karmaşadan arınır.",
+    title: "Geleceği gözden geçir",
+    body: "Önündeki birkaç haftayı kolayca gözden geçir, hangi randevuların hangi uzmanlara ait olduğunu ve hangi lokasyonda olduğunu tek bakışta gör.",
     variant: "calendar",
     icon: CalendarDays
   },
