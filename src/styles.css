@@ -1791,13 +1791,6 @@ svg {
     min-height: 360px;
   }
 
-  .video-caption {
-    border-radius: var(--radius);
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 2px;
-  }
-
   .summary-row {
     grid-template-columns: repeat(2, 1fr);
   }

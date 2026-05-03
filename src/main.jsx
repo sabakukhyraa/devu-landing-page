@@ -154,6 +154,7 @@ const videoFeatures = [
     eyebrow: "Takvim akışı",
     title: "Geleceği gözden geçir",
     body: "Önündeki birkaç haftayı kolayca gözden geçir, hangi randevuların hangi uzmanlara ait olduğunu ve hangi lokasyonda olduğunu tek bakışta gör.",
+    caption: "Diş kliniği kategorisinden",
     variant: "calendar",
     icon: CalendarDays
   },
@@ -163,6 +164,7 @@ const videoFeatures = [
     eyebrow: "Danışan profili",
     title: "Her randevuda doğru danışan bağlamı.",
     body: "Fotoğraflar, notlar, özel uyarılar ve geçmiş randevular tek profilde toplanır.",
+    caption: "Diş kliniği kategorisinden",
     variant: "client",
     icon: UsersRound
   },
@@ -172,6 +174,7 @@ const videoFeatures = [
     eyebrow: "Hatırlatmalar",
     title: "WhatsApp süreci takip edilebilir hale gelir.",
     body: "Hangi randevuya mesaj gitti, hangisi bekliyor, hangisi aksiyon istiyor net görünür.",
+    caption: "Diş kliniği kategorisinden",
     variant: "whatsapp",
     icon: MessageCircle
   }
