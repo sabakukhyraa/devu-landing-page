@@ -143,7 +143,7 @@ const videoFeatures = [
     file: "/media/hero-today.mp4",
     eyebrow: "WhatsApp + bugün",
     title: "Bugünkü randevuların durumunu incele",
-    body: "Asistan sabah ilk iş olarak 'Bugün' sayfasına göz atar, randevularını durumunu kontrol eder, gerekiyorsa danışanı arar ve randevuyu günceller.",
+    body: "Asistan sabah ilk iş olarak 'Bugün' sayfasına göz atar, randevuların durumunu kontrol eder, gerekiyorsa danışanları arar ve randevuyu günceller.",
     caption: "Diş kliniği kategorisinden",
     variant: "today",
     icon: BellRing
