@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { createRoot } from "react-dom/client";
 import {
+  ArrowLeft,
   ArrowRight,
   BellRing,
   BriefcaseBusiness,
   CalendarDays,
+  Camera,
   Check,
+  CheckCheck,
   ChevronDown,
   CircleCheck,
   CircleUser,
@@ -14,15 +17,20 @@ import {
   FileText,
   Frown,
   MessageCircle,
+  Mic,
+  MoreVertical,
   MousePointer2,
+  Paperclip,
   Phone,
   PlayCircle,
   ShieldCheck,
+  Smile,
   Sparkles,
   Smartphone,
   ThumbsDown,
   UsersRound,
-  Users
+  Users,
+  Video
 } from "lucide-react";
 import "./styles.css";
 
@@ -36,41 +44,65 @@ const navLinks = [
   { href: "/whatsapp-setup", label: "WhatsApp Rehberi" }
 ];
 
-const stats = [
-  { label: "Hatırlatma", value: "31" },
-  { label: "Planlanan", value: "18" },
-  { label: "Gelecek", value: "7" },
-  { label: "Tamamlanan", value: "12" }
-];
-
-const timeline = [
+const chatThread = [
+  { type: "date", text: "Bugün" },
   {
-    time: "09:30",
-    name: "Ayşe Koç",
-    reason: "Cilt bakımı",
-    status: "Hatırlatma gitti",
-    tone: "green"
+    type: "sent",
+    automated: true,
+    body: (
+      <>
+        <p>Merhaba Merve Hanım 👋</p>
+        <p>
+          Yarın <strong>16 Mayıs Perşembe · 09:30</strong> randevunuzu
+          hatırlatmak istedik.
+        </p>
+        <p>
+          Hizmet: <strong>Cilt Bakımı</strong> · Deniz Arslan
+        </p>
+        <p>Onaylamak için bu mesaja yanıt vermeniz yeterli ✨</p>
+      </>
+    ),
+    time: "20:00",
+    status: "read"
   },
   {
-    time: "10:15",
-    name: "Emre Arslan",
-    reason: "Fizyoterapi",
-    status: "Gelecek",
-    tone: "blue"
+    type: "received",
+    body: <p>Evet, geliyorum 😊</p>,
+    time: "20:14"
   },
   {
-    time: "11:00",
-    name: "Selin Aydın",
-    reason: "Danışmanlık",
-    status: "Mesaj bekliyor",
-    tone: "orange"
+    type: "sent",
+    automated: true,
+    body: (
+      <>
+        <p>Teşekkür ederiz! 🌿</p>
+        <p>
+          Sizi <strong>09:30</strong>'da Nişantaşı şubemizde bekliyoruz.
+        </p>
+      </>
+    ),
+    time: "20:14",
+    status: "read"
   },
   {
-    time: "13:30",
-    name: "Burak Şahin",
-    reason: "Saç bakımı",
-    status: "Tamamlandı",
-    tone: "green"
+    type: "received",
+    body: <p>Konum atabilir misiniz?</p>,
+    time: "20:16"
+  },
+  {
+    type: "sent",
+    body: (
+      <>
+        <p>Tabii 📍</p>
+        <p>
+          <strong>Beauty Studio · Nişantaşı</strong>
+          <br />
+          Teşvikiye Cd. 12, Şişli
+        </p>
+      </>
+    ),
+    time: "20:17",
+    status: "delivered"
   }
 ];
 
@@ -408,65 +440,88 @@ const whatsappSections = [
 
 function ProductScene({ compact = false }) {
   return (
-    <div className={`product-scene ${compact ? "product-scene-compact" : ""}`}>
-      <div className="scene-topbar">
-        <div>
-          <span className="scene-kicker">WhatsApp hatırlatmaları</span>
-          <strong>Perşembe, 16 Mayıs</strong>
+    <div
+      className={`product-scene chat-scene ${compact ? "product-scene-compact" : ""}`}
+      role="img"
+      aria-label="DevuApp WhatsApp hatırlatma örneği"
+    >
+      <div className="chat-header">
+        <button type="button" className="chat-icon-btn chat-back" aria-label="Geri">
+          <ArrowLeft size={18} />
+        </button>
+        <div className="chat-avatar" aria-hidden="true">AK</div>
+        <div className="chat-contact">
+          <strong>Merve Koç</strong>
+          <span>
+            <i className="chat-presence" aria-hidden="true" />
+            çevrimiçi
+          </span>
         </div>
-        <span className="scene-filter">
-          <BellRing size={14} />
-          31 mesaj
-        </span>
-      </div>
-
-      <div className="attention-panel">
-        <span>Hatırlatma gönderildi</span>
-        <strong>09:30 · Ayşe Koç</strong>
-        <p>Cilt bakımı · Deniz Arslan · Nişantaşı</p>
-        <div className="attention-actions">
-          <button>
-            <Phone size={14} />
-            Ara
+        <div className="chat-header-actions">
+          <button type="button" className="chat-icon-btn" aria-label="Görüntülü ara">
+            <Video size={18} />
           </button>
-          <button>
-            <MessageCircle size={14} />
-            WhatsApp
+          <button type="button" className="chat-icon-btn" aria-label="Sesli ara">
+            <Phone size={18} />
           </button>
-          <button>
-            <CircleCheck size={14} />
-            Gelecek işaretle
+          <button type="button" className="chat-icon-btn" aria-label="Daha fazla">
+            <MoreVertical size={18} />
           </button>
         </div>
       </div>
 
-      <div className="scene-stats">
-        {stats.map((stat) => (
-          <div key={stat.label}>
-            <strong>{stat.value}</strong>
-            <span>{stat.label}</span>
-          </div>
-        ))}
-      </div>
-
-      <div className="scene-tabs">
-        <span>Aktif</span>
-        <span>Planlandı</span>
-        <span>Gelecek</span>
-        <span>Tamamlandı</span>
-      </div>
-
-      <div className="scene-timeline">
-        {timeline.map((item) => (
-          <div className="scene-row" key={`${item.time}-${item.name}`}>
-            <time>{item.time}</time>
-            <div>
-              <strong>{item.name}</strong>
-              <span>{item.reason}</span>
+      <div className="chat-body">
+        {chatThread.map((entry, index) => {
+          if (entry.type === "date") {
+            return (
+              <div key={`date-${index}`} className="chat-date">
+                <span>{entry.text}</span>
+              </div>
+            );
+          }
+          return (
+            <div key={index} className={`chat-bubble chat-bubble-${entry.type}`}>
+              {entry.automated && (
+                <span className="chat-bubble-badge">
+                  <Sparkles size={11} />
+                  Otomatik · Güzellik Merkezi
+                </span>
+              )}
+              <div className="chat-bubble-body">{entry.body}</div>
+              <span className="chat-bubble-meta">
+                <time>{entry.time}</time>
+                {entry.type === "sent" && (
+                  <CheckCheck
+                    size={14}
+                    className={`chat-receipt${entry.status === "read" ? " is-read" : ""}`}
+                  />
+                )}
+              </span>
             </div>
-            <em className={`status-${item.tone}`}>{item.status}</em>
-          </div>
-        ))}
+          );
+        })}
+
+        <div className="chat-typing" aria-hidden="true">
+          <span />
+          <span />
+          <span />
+        </div>
+      </div>
+
+      <div className="chat-input">
+        <button type="button" className="chat-icon-btn" aria-label="Emoji">
+          <Smile size={18} />
+        </button>
+        <div className="chat-input-field">Mesaj yaz</div>
+        <button type="button" className="chat-icon-btn" aria-label="Dosya ekle">
+          <Paperclip size={18} />
+        </button>
+        <button type="button" className="chat-icon-btn" aria-label="Kamera">
+          <Camera size={18} />
+        </button>
+        <button type="button" className="chat-mic-btn" aria-label="Sesli mesaj">
+          <Mic size={16} />
+        </button>
       </div>
     </div>
   );
@@ -499,7 +554,7 @@ function ClientMockup() {
       <div className="client-head">
         <div className="avatar">AK</div>
         <div>
-          <strong>Ayşe Koç</strong>
+          <strong>Merve Koç</strong>
           <span>Cilt bakımı · Deniz Arslan</span>
         </div>
       </div>
@@ -523,7 +578,7 @@ function WhatsappMockup() {
     <div className="whatsapp-mockup">
       <div className="message-card sent">
         <span>Gönderildi</span>
-        <p>Merhaba Ayşe Hanım, randevunuz bugün 09:30.</p>
+        <p>Merhaba Merve Hanım, randevunuz bugün 09:30.</p>
       </div>
       <div className="message-card pending">
         <span>Bekliyor</span>
