@@ -646,7 +646,6 @@ function Hero() {
         <h1>Basit, sade <br />ve&nbsp;etkili!</h1>
         <p className="hero-copy">
           devu, randevu ile çalışan işletmelerin günlük akışına WhatsApp hatırlatmalarını entegre eder.
-          <br />Farklı hizmet kategorileri için uygundur.
         </p>
         <div className="hero-actions">
           <a className="primary-cta" href={SIGNUP_URL}>
@@ -658,7 +657,8 @@ function Hero() {
             Demo İzle
           </a>
         </div>
-        <p className="hero-note">Kredi kartı gerekmeden başlayın. Web ve mobil birlikte.</p>
+        <p className="hero-note">Kredi kartı gerekmeden başlayın. Web ve mobil birlikte.<br />Farklı hizmet kategorileri için uygundur.</p>
+        <p className="hero-note"></p>
         <div className="hero-showcase">
           <span className="hero-showcase-tag">
             <Sparkles size={12} />
