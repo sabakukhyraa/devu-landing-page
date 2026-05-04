@@ -303,6 +303,31 @@ svg {
   font-weight: 700;
 }
 
+.hero-showcase {
+  display: none;
+}
+
+.hero-showcase-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(37, 211, 102, 0.14);
+  border: 1px solid rgba(37, 211, 102, 0.42);
+  color: #d1fadf;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.hero-showcase-tag svg {
+  width: 12px;
+  height: 12px;
+  color: #25d366;
+}
+
 .section {
   width: min(1180px, calc(100% - 40px));
   margin: 0 auto;
@@ -1273,7 +1298,7 @@ svg {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
   padding: 14px 12px 16px;
   background-color: var(--wa-bg);
   background-image:
@@ -1281,20 +1306,6 @@ svg {
     radial-gradient(rgba(11, 20, 26, 0.04) 1px, transparent 1px);
   background-position: 0 0, 12px 12px;
   background-size: 24px 24px, 24px 24px;
-  max-height: 460px;
-  overflow: hidden;
-}
-
-.chat-body::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(
-    180deg,
-    rgba(239, 234, 226, 0) 70%,
-    rgba(239, 234, 226, 0.92) 100%
-  );
 }
 
 .chat-date {
@@ -1316,8 +1327,10 @@ svg {
 
 .chat-bubble {
   position: relative;
-  max-width: 78%;
-  padding: 8px 10px 6px;
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+  padding: 7px 10px 5px;
   border-radius: 10px;
   font-size: 14px;
   line-height: 1.4;
@@ -1339,10 +1352,8 @@ svg {
 
 .chat-bubble-body p {
   margin: 0;
-}
-
-.chat-bubble-body p + p {
-  margin-top: 6px;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 
 .chat-bubble-body strong {
@@ -1351,17 +1362,19 @@ svg {
 }
 
 .chat-bubble-badge {
+  align-self: flex-start;
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  margin: -2px 0 4px;
-  padding: 3px 7px;
+  margin: 0 0 4px;
+  padding: 2px 7px;
   border-radius: 999px;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.02em;
   color: #fff;
   background: var(--wa-badge);
+  white-space: nowrap;
 }
 
 .chat-bubble-badge svg {
@@ -1371,15 +1384,16 @@ svg {
 }
 
 .chat-bubble-meta {
+  align-self: flex-end;
   display: inline-flex;
   align-items: center;
   gap: 3px;
-  float: right;
-  margin: 4px -2px -2px 8px;
-  font-size: 11px;
+  margin: 2px -2px 0 8px;
+  font-size: 10.5px;
   font-weight: 500;
   color: var(--wa-meta);
   font-variant-numeric: tabular-nums;
+  line-height: 1;
 }
 
 .chat-bubble-meta time {
@@ -1714,26 +1728,62 @@ svg {
     display: none;
   }
 
+  .hero {
+    min-height: auto;
+  }
+
   .hero-backdrop {
-    align-items: end;
-    padding: 190px 20px 20px;
+    padding: 0;
   }
 
   .hero-backdrop::before {
     background:
-      linear-gradient(180deg, rgba(12, 11, 10, 0.86), rgba(12, 11, 10, 0.45) 58%, rgba(12, 11, 10, 0.18)),
-      linear-gradient(90deg, rgba(12, 11, 10, 0.18), rgba(12, 11, 10, 0.18));
+      radial-gradient(circle at 50% 12%, rgba(37, 211, 102, 0.18), transparent 38%),
+      linear-gradient(180deg, rgba(12, 11, 10, 0.65), rgba(12, 11, 10, 0.4) 60%, rgba(12, 11, 10, 0.7));
   }
 
   .hero-backdrop .product-scene {
-    width: min(420px, 86vw);
-    transform: translateY(18%) rotateX(0) rotateZ(0);
-    opacity: 0.92;
+    display: none;
   }
 
   .hero-content {
-    margin-top: 8vh;
-    margin-bottom: 34vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 4vh auto 56px;
+    padding-bottom: 8px;
+  }
+
+  .hero-showcase {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    margin-top: 44px;
+    perspective: 1200px;
+    isolation: isolate;
+  }
+
+  .hero-showcase .product-scene {
+    width: min(420px, 100%);
+    transform: rotate(-1.5deg);
+    box-shadow:
+      0 24px 70px rgba(0, 0, 0, 0.55),
+      0 6px 16px rgba(0, 0, 0, 0.35);
+  }
+
+  .hero-showcase::before {
+    content: "";
+    position: absolute;
+    width: min(520px, 90%);
+    height: 80%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(37, 211, 102, 0.22), transparent 65%);
+    filter: blur(40px);
+    pointer-events: none;
+    z-index: -1;
   }
 
   .section-heading,
@@ -1800,20 +1850,21 @@ svg {
   }
 
   .hero-content {
-    margin-bottom: 30vh;
+    margin-bottom: 40px;
   }
 
   .hero h1 {
-    font-size: clamp(44px, 15vw, 70px);
+    font-size: clamp(40px, 13vw, 64px);
   }
 
   .hero-copy {
-    font-size: 17px;
+    font-size: 16.5px;
   }
 
   .hero-actions {
     align-items: stretch;
     flex-direction: column;
+    width: 100%;
   }
 
   .primary-cta,
@@ -1826,9 +1877,13 @@ svg {
     align-self: flex-start;
   }
 
-  .hero-backdrop .product-scene {
-    width: min(360px, 88vw);
-    transform: translateY(22%) scale(0.96);
+  .hero-showcase {
+    margin-top: 36px;
+  }
+
+  .hero-showcase .product-scene {
+    width: min(360px, 100%);
+    transform: rotate(-1deg);
   }
 
   .section {
@@ -1930,6 +1985,10 @@ svg {
     gap: 8px;
   }
 
+  .chat-header-actions .chat-icon-btn:first-child {
+    display: none;
+  }
+
   .chat-avatar {
     width: 34px;
     height: 34px;
@@ -1941,18 +2000,32 @@ svg {
   }
 
   .chat-body {
+    gap: 5px;
     padding: 12px 10px 14px;
-    max-height: 420px;
   }
 
   .chat-bubble {
-    max-width: 84%;
+    max-width: 86%;
     font-size: 13.5px;
+    padding: 6px 9px 4px;
+  }
+
+  .chat-bubble-badge {
+    font-size: 9.5px;
+    padding: 2px 6px;
+  }
+
+  .chat-input {
+    padding: 6px 8px 8px;
+  }
+
+  .chat-input .chat-icon-btn:nth-of-type(2) {
+    display: none;
   }
 
   .chat-input-field {
     font-size: 12.5px;
-    padding: 8px 12px;
+    padding: 7px 12px;
   }
 
   .site-footer {

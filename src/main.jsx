@@ -50,17 +50,11 @@ const chatThread = [
     type: "sent",
     automated: true,
     body: (
-      <>
-        <p>Merhaba Merve Hanım 👋</p>
-        <p>
-          Yarın <strong>16 Mayıs Perşembe · 09:30</strong> randevunuzu
-          hatırlatmak istedik.
-        </p>
-        <p>
-          Hizmet: <strong>Cilt Bakımı</strong> · Deniz Arslan
-        </p>
-        <p>Onaylamak için bu mesaja yanıt vermeniz yeterli ✨</p>
-      </>
+      <p>
+        Merhaba Merve Hanım 👋 Yarın{" "}
+        <strong>16 Mayıs · 09:30</strong> Cilt Bakımı randevunuzu
+        hatırlatırız. Onaylamak için yanıt verin ✨
+      </p>
     ),
     time: "20:00",
     status: "read"
@@ -74,12 +68,10 @@ const chatThread = [
     type: "sent",
     automated: true,
     body: (
-      <>
-        <p>Teşekkür ederiz! 🌿</p>
-        <p>
-          Sizi <strong>09:30</strong>'da Nişantaşı şubemizde bekliyoruz.
-        </p>
-      </>
+      <p>
+        Teşekkürler! 🌿 Sizi <strong>09:30</strong>'da Nişantaşı
+        şubemizde bekliyoruz.
+      </p>
     ),
     time: "20:14",
     status: "read"
@@ -92,14 +84,11 @@ const chatThread = [
   {
     type: "sent",
     body: (
-      <>
-        <p>Tabii 📍</p>
-        <p>
-          <strong>Beauty Studio · Nişantaşı</strong>
-          <br />
-          Teşvikiye Cd. 12, Şişli
-        </p>
-      </>
+      <p>
+        📍 <strong>Beauty Studio · Nişantaşı</strong>
+        <br />
+        Teşvikiye Cd. 12, Şişli
+      </p>
     ),
     time: "20:17",
     status: "delivered"
@@ -194,7 +183,7 @@ const videoFeatures = [
     id: "client",
     file: "/media/client-profile.mp4",
     eyebrow: "Danışan profili",
-    title: "Danışanlarını yakından tanı",
+    title: "Danışanlarını yakından tanı",
     body: "Fotoğraflar, notlar, özel uyarılar, geçmiş randevular ve ödemeler tek profilde toplanır.",
     caption: "Diş kliniği kategorisinden",
     variant: "client",
@@ -484,7 +473,7 @@ function ProductScene({ compact = false }) {
               {entry.automated && (
                 <span className="chat-bubble-badge">
                   <Sparkles size={11} />
-                  Otomatik · Güzellik Merkezi
+                  Otomatik · Beauty Studio
                 </span>
               )}
               <div className="chat-bubble-body">{entry.body}</div>
@@ -654,9 +643,9 @@ function Hero() {
       <Header />
       <div className="hero-content">
         <p className="eyebrow">WhatsApp hatırlatmaları + kolay randevu yönetimi</p>
-        <h1>Basit, sade ve&nbsp;etkili!</h1>
+        <h1>Basit, sade <br />ve&nbsp;etkili!</h1>
         <p className="hero-copy">
-          devu, randevu ile çalışan işletmelerin WhatsApp randevu hatırlatmalarını, danışan kayıtlarını ve günlük asistan akışını minimal bir çalışma ekranında toplar.
+          devu, randevu ile çalışan işletmelerin günlük akışına WhatsApp hatırlatmalarını entegre eder.
           <br />Farklı hizmet kategorileri için uygundur.
         </p>
         <div className="hero-actions">
@@ -670,6 +659,13 @@ function Hero() {
           </a>
         </div>
         <p className="hero-note">Kredi kartı gerekmeden başlayın. Web ve mobil birlikte.</p>
+        <div className="hero-showcase">
+          <span className="hero-showcase-tag">
+            <Sparkles size={12} />
+            Otomatik WhatsApp hatırlatması
+          </span>
+          <ProductScene />
+        </div>
       </div>
     </section>
   );
@@ -715,7 +711,7 @@ function ProductStory() {
       <div className="section-heading narrow">
         <p className="eyebrow">Ürün</p>
         <h2>Neden <span className="highlight-devu">devu</span>?</h2>
-        <p>Randevu ile çalışan küçük ve orta ölçekli hizmet ekipleri için çok ideal. <br />WhatsApp hatırlatmalarıyla modern ve profesyonel gözükürsün!</p>
+        <p>Randevu ile çalışan küçük ve orta ölçekli hizmet ekipleri için çok ideal. <br />WhatsApp hatırlatmalarıyla modern ve profesyonel gözükürsün!</p>
       </div>
       <div className="feature-grid">
         {features.map((feature) => {
