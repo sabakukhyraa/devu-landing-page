@@ -51,11 +51,11 @@ const chatThread = [
     automated: true,
     body: (
       <p>
-        Merhaba Merve Hanım 👋 Yarın{" "}
-        <strong>16 Mayıs · 09:30</strong> Cilt Bakımı randevunuzu
-        hatırlatırız. Onaylamak için yanıt verin ✨
+        Merhaba Merve 👋 Yarın{" "}
+        <strong>16 Mayıs · 09:30</strong> Cilt Bakımı randevunu hatırlatırız. Onaylamak için yanıt ver ✨
       </p>
     ),
+    appointmentStatus: "Planlandı",
     time: "20:00",
     status: "read"
   },
@@ -69,10 +69,11 @@ const chatThread = [
     automated: true,
     body: (
       <p>
-        Teşekkürler! 🌿 Sizi <strong>09:30</strong>'da Nişantaşı
+        Teşekkürler! 🌿 Seni <strong>09:30</strong>'da Nişantaşı
         şubemizde bekliyoruz.
       </p>
     ),
+    appointmentStatus: "Onaylandı",
     time: "20:14",
     status: "read"
   },
@@ -438,9 +439,9 @@ function ProductScene({ compact = false }) {
         <button type="button" className="chat-icon-btn chat-back" aria-label="Geri">
           <ArrowLeft size={18} />
         </button>
-        <div className="chat-avatar" aria-hidden="true">AK</div>
+        <div className="chat-avatar" aria-hidden="true">MG</div>
         <div className="chat-contact">
-          <strong>Merve Koç</strong>
+          <strong>Merve Göktürk</strong>
           <span>
             <i className="chat-presence" aria-hidden="true" />
             çevrimiçi
@@ -473,7 +474,7 @@ function ProductScene({ compact = false }) {
               {entry.automated && (
                 <span className="chat-bubble-badge">
                   <Sparkles size={11} />
-                  Otomatik · Beauty Studio
+                  Beauty Studio · {entry.appointmentStatus}
                 </span>
               )}
               <div className="chat-bubble-body">{entry.body}</div>
