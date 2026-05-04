@@ -870,6 +870,12 @@ svg {
   margin: 30px auto 0;
 }
 
+@media (max-width: 799px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .pricing-card {
   position: relative;
   padding: 28px;
@@ -1789,8 +1795,7 @@ svg {
   .section-heading,
   .workflow-inner,
   .video-feature,
-  .video-feature:nth-child(even),
-  .pricing-grid {
+  .video-feature:nth-child(even) {
     grid-template-columns: 1fr;
   }
 
