@@ -51,18 +51,25 @@ const chatThread = [
     type: "sent",
     automated: true,
     body: (
-      <p>
-        Merhaba Merve 👋 Yarın{" "}
-        <strong>16 Mayıs · 09:30</strong> Cilt Bakımı randevunu hatırlatırız. Onaylamak için yanıt ver ✨
-      </p>
+      <>
+        <p>
+          Merhaba Merve 👋 Yarın{" "}
+          <strong>16 Mayıs · 09:30</strong> Cilt Bakımı randevunu hatırlatırız.
+        </p>
+        <div className="chat-quick-replies" aria-label="WhatsApp hızlı yanıt seçenekleri">
+          <span>Geleceğim</span>
+          <span>İptal et</span>
+        </div>
+      </>
     ),
-    appointmentStatus: "Planlandı",
+    appointmentStatus: "Otomatik mesaj",
     time: "20:00",
     status: "read"
   },
   {
     type: "received",
-    body: <p>Evet, geliyorum 😊</p>,
+    quickReply: true,
+    body: <p>Geleceğim</p>,
     time: "20:14"
   },
   {
@@ -70,31 +77,14 @@ const chatThread = [
     automated: true,
     body: (
       <p>
-        Teşekkürler! 🌿 Seni <strong>09:30</strong>'da Nişantaşı
-        şubemizde bekliyoruz.
+        Harika, randevun onaylandı. Seni <strong>09:30</strong>'da Nişantaşı
+        şubemizde bekliyoruz 🌿
       </p>
     ),
-    appointmentStatus: "Onaylandı",
+    appointmentStatus: "Otomatik mesaj",
     time: "20:14",
     status: "read"
   },
-  {
-    type: "received",
-    body: <p>Konum atabilir misiniz?</p>,
-    time: "20:16"
-  },
-  {
-    type: "sent",
-    body: (
-      <p>
-        📍 <strong>Beauty Studio · Nişantaşı</strong>
-        <br />
-        Teşvikiye Cd. 12, Şişli
-      </p>
-    ),
-    time: "20:17",
-    status: "delivered"
-  }
 ];
 
 const painPoints = [
@@ -251,7 +241,7 @@ const faqs = [
     answer: (
       <>
         devu, Meta WhatsApp Business API yapısına göre çalışır. Telefon numarası, Phone Number ID ve erişim anahtarı gibi bilgiler gerekir. Ayrıntılı adımlar için{" "}
-        <a href="/whatsapp-setup">WhatsApp Kurulum Rehberi</a> sayfasını hazırladık.
+        <a href="/whatsapp-setup">WhatsApp Kurulum Rehberi</a> sayfasını hazırladık.<FootnoteRef n={5} />
       </>
     )
   },
@@ -733,7 +723,10 @@ function ProductScene({ compact = false }) {
             );
           }
           return (
-            <div key={index} className={`chat-bubble chat-bubble-${entry.type}`}>
+            <div
+              key={index}
+              className={`chat-bubble chat-bubble-${entry.type}${entry.quickReply ? " chat-bubble-quick-reply" : ""}`}
+            >
               {entry.automated && (
                 <span className="chat-bubble-badge">
                   <Sparkles size={11} />
@@ -898,6 +891,61 @@ function Header({ dark = false }) {
   );
 }
 
+// ── Footnote sistem ────────────────────────────────────────────────────────
+//
+// Sayfa içinde dağıtılmış 5 superscript marker, ana sayfanın altındaki
+// "Yasal Notlar" bölümündeki numaralı maddelere bağlanır.
+
+function FootnoteRef({ n }) {
+  return (
+    <sup className="footnote-ref" id={`fnref-${n}`}>
+      <a href={`#footnote-${n}`} aria-label={`Yasal not ${n}`}>
+        {n}
+      </a>
+    </sup>
+  );
+}
+
+const legalNotes = [
+  "devu abonelik bedeli YALNIZCA yazılım hizmetinin karşılığıdır.",
+  "WhatsApp mesajları için Meta tarafından AYRICA ücret tahsil edilir (Conversation-Based Pricing).",
+  "Ücretler konuşma kategorisine, alıcı ülkesine ve Meta tarifesine göre değişir.",
+  "Meta ücretleri doğrudan ALICI'nın WhatsApp Business hesabına bağlı kart üzerinden Meta tarafından tahsil edilir.",
+  null, // index 4 — link maddesi aşağıda elle render edilir
+];
+
+function LegalNotes() {
+  return (
+    <section className="legal-notes" aria-label="WhatsApp ücretlendirme notları">
+      <div className="legal-notes-inner">
+        <ol>
+          {legalNotes.map((text, index) => {
+            const n = index + 1;
+            return (
+              <li id={`footnote-${n}`} key={n} value={n}>
+                {n === 5 ? (
+                  <>
+                    Güncel tarife:{" "}
+                    <a
+                      href="https://developers.facebook.com/docs/whatsapp/pricing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      developers.facebook.com/docs/whatsapp/pricing
+                    </a>
+                  </>
+                ) : (
+                  text
+                )}
+              </li>
+            );
+          })}
+        </ol>
+      </div>
+    </section>
+  );
+}
+
 function Hero() {
   return (
     <section className="hero" id="hero">
@@ -906,7 +954,7 @@ function Hero() {
       </div>
       <Header />
       <div className="hero-content">
-        <p className="eyebrow">WhatsApp hatırlatmaları + kolay randevu yönetimi</p>
+        <p className="eyebrow">WhatsApp hatırlatmaları<FootnoteRef n={1} /> + kolay randevu yönetimi</p>
         <h1>Basit, sade <br />ve&nbsp;etkili!</h1>
         <p className="hero-copy">
           devu, randevu ile çalışan işletmelerin günlük akışına WhatsApp hatırlatmalarını entegre eder.
@@ -1012,7 +1060,7 @@ function Workflow() {
     {
       icon: Phone,
       title: "WhatsApp konfigürasyonu",
-      body: "WhatsApp Business hesabınla Meta'dan bilgileri al ve devu'ya gir."
+      body: (<>WhatsApp Business hesabınla Meta'dan bilgileri al ve devu'ya gir.<FootnoteRef n={4} /></>)
     },
     {
       icon: BellRing,
@@ -1118,7 +1166,7 @@ function Pricing() {
   return (
     <section className="section pricing-section" id="pricing">
       <div className="section-heading narrow">
-        <p className="eyebrow">Fiyatlar</p>
+        <p className="eyebrow">Fiyatlar<FootnoteRef n={2} /></p>
         <h2>İki sade plan. <br />Aylık ya da yıllık.</h2>
         <p>WhatsApp hatırlatma ve minimal günlük operasyon akışını hızlıca test edin.</p>
       </div>
@@ -1161,7 +1209,7 @@ function Pricing() {
                 <span className={`plan-badge ${plan.featured ? "" : "plan-badge-placeholder"}`}>
                   {plan.featured ? "En uygun seçim" : "Başlamak için"}
                 </span>
-                <h3>{plan.name}</h3>
+                <h3>{plan.name}<FootnoteRef n={1} /><sup style={{ color: "#dc4c3e", marginLeft: 1 }}>,</sup> <FootnoteRef n={2} /></h3>
                 <p>{plan.description}</p>
               </div>
               <div className="price">
@@ -1241,9 +1289,10 @@ function FinalCTA() {
   );
 }
 
-function SiteFooter() {
+function SiteFooter({ showLegalNotes = false }) {
   return (
     <footer className="site-footer">
+      {showLegalNotes && <LegalNotes />}
       <div className="footer-main">
         <div className="footer-brand">
           <img src="/devu-logo.png" alt="devu" />
@@ -1281,7 +1330,7 @@ function SiteFooter() {
         </div>
       </div>
       <div className="footer-bottom">
-        <span>© 2026 Ali Kerem Ata. Tüm hakları saklıdır.</span>
+        <span>© 2026 DevuApp. Tüm hakları saklıdır.</span>
         <button type="button">EN</button>
       </div>
     </footer>
@@ -1299,7 +1348,7 @@ function MarketingPage() {
       <Pricing />
       <FAQ />
       <FinalCTA />
-      <SiteFooter />
+      <SiteFooter showLegalNotes />
     </>
   );
 }
@@ -1367,8 +1416,8 @@ function App() {
   if (path === "/kvkk") {
     return (
       <LegalPage
-        title="KVKK Aydınlatma Metni (Özet)"
-        subtitle="Veri sorumlusu, işleme amaçları, aktarımlar ve KVKK m.11 haklarınız. Tam metin için /KVKK-AYDINLATMA-METNI.md belgesine bakınız."
+        title="KVKK Aydınlatma Metni"
+        subtitle="Veri sorumlusu kimliği, işleme amaçları, yurt içi/yurt dışı aktarımlar ve KVKK m.11 kapsamındaki haklarınızın özeti. Haklarınızı kullanmak için Madde 9'daki başvuru kanallarından bize ulaşabilirsiniz."
         sections={privacySections}
         icon={ShieldCheck}
       />
@@ -1390,7 +1439,7 @@ function App() {
     return (
       <LegalPage
         title="Mesafeli Satış Sözleşmesi (Özet)"
-        subtitle="Bu sayfa bilgilendirme amaçlıdır. Hukuki olarak bağlayıcı tam metin /MESAFELI-SATIS-SOZLESMESI.md belgesinde yer alır ve checkout sırasında onayınıza sunulur."
+        subtitle="Bu sayfa bilgilendirme amaçlıdır. Hukuki olarak bağlayıcı tam sözleşme metni; satın alma akışında kişisel bilgileriniz ve seçtiğiniz plan ile birlikte düzenlenir, ödeme adımından önce elektronik onayınıza sunulur."
         sections={preInfoSections}
         icon={FileText}
       />

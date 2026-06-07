@@ -122,12 +122,18 @@ export default function CookieBanner() {
         >
           <div className="cookie-modal">
             <div className="cookie-modal-head">
-              <h2 id="cookie-modal-title">Çerez Tercihleri</h2>
+              <div>
+                <p className="cookie-modal-kicker">Gizlilik kontrolü</p>
+                <h2 id="cookie-modal-title">Çerez tercihleri</h2>
+              </div>
               <button type="button" className="cookie-modal-close" aria-label="Kapat" onClick={() => setModalOpen(false)}>
                 <X size={18} />
               </button>
             </div>
             <div className="cookie-modal-body">
+              <p className="cookie-modal-intro">
+                Zorunlu çerezler devu'nun güvenli çalışması için her zaman aktiftir. Diğer kategorileri dilediğiniz zaman açıp kapatabilirsiniz.
+              </p>
               <CategoryRow
                 title="Zorunlu çerezler"
                 description="Platform'un çalışması için zorunludur. Oturum güvenliği, kimlik doğrulama, CSRF token. Kapatılamaz."
@@ -152,6 +158,9 @@ export default function CookieBanner() {
                 checked={draft.marketing}
                 onChange={(v) => setDraft((d) => ({ ...d, marketing: v }))}
               />
+              <a className="cookie-policy-link" href="/cerez-politikasi">
+                Çerez Politikası'nı incele
+              </a>
             </div>
             <div className="cookie-modal-foot">
               <button type="button" className="cookie-btn cookie-btn-secondary" onClick={handleRejectAll}>
@@ -172,7 +181,10 @@ function CategoryRow({ title, description, checked, onChange, disabled }) {
   return (
     <div className={`cookie-category${disabled ? " cookie-category-disabled" : ""}`}>
       <div>
-        <strong>{title}</strong>
+        <div className="cookie-category-title">
+          <strong>{title}</strong>
+          {disabled && <span>Zorunlu</span>}
+        </div>
         <p>{description}</p>
       </div>
       <label className="cookie-toggle">
