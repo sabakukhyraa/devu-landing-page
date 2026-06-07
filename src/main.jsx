@@ -240,7 +240,7 @@ const faqs = [
     question: "WhatsApp kurulumu nasıl çalışıyor?",
     answer: (
       <>
-        devu, Meta WhatsApp Business API yapısına göre çalışır. Telefon numarası, Phone Number ID ve erişim anahtarı gibi bilgiler gerekir. Ayrıntılı adımlar için{" "}
+        devu, Meta'nın Embedded Signup akışıyla çalışır. Panelde Facebook ile WhatsApp bağlantısını başlatır, işletme hesabınızı ve numaranızı Meta'nın güvenli penceresinde seçersiniz; teknik erişim bilgileri devu tarafından sunucuda şifreli şekilde yönetilir. Ayrıntılı adımlar için{" "}
         <a href="/whatsapp-setup">WhatsApp Kurulum Rehberi</a> sayfasını hazırladık.<FootnoteRef n={5} />
       </>
     )
@@ -634,50 +634,76 @@ const preInfoSections = [
 
 const whatsappSections = [
   {
-    title: "Gereksinimler",
+    title: "Kısa özet",
+    body: "Devu bir Meta Tech Provider olarak Meta'nın Embedded Signup akışını kullanır. Kurulum, Devu web panelinden açılan güvenli Facebook/WhatsApp penceresinde tamamlanır."
+  },
+  {
+    title: "Başlamadan önce",
     items: [
-      "Bir Facebook hesabı.",
-      "İşletmenize ait, kişisel WhatsApp'tan farklı bir telefon numarası.",
-      "DevuApp hesabı.",
-      "Meta Business hesabı ve WhatsApp Business API erişimi."
+      "Devu web hesabınıza işletme sahibi veya ayarları yönetebilen kullanıcı olarak giriş yapın.",
+      "İşletmenin Meta Business portföyünü yönetebilen bir Facebook hesabınız olsun.",
+      "Tercihen yeni alınmış, daha önce herhangi bir WhatsApp hesabına bağlanmamış bir telefon numarası kullanın.",
+      "Bu numaranın SMS veya arama ile doğrulanabilir olduğundan emin olun.",
+      "Meta'nın işletme adı, görünen ad ve mesajlaşma politikalarına uygun bilgiler kullanın."
     ]
   },
   {
-    title: "1. Meta Business hesabı oluşturun",
+    title: "1. Devu'da WhatsApp bağlantısını başlatın",
     items: [
-      "business.facebook.com adresine gidin.",
-      "İşletme adınızı, adınızı ve iş e-posta adresinizi girin.",
-      "İşletme bilgilerinizi doğrulayın."
+      "Devu web panelinde WhatsApp > Konfigürasyon sayfasına gidin.",
+      "Facebook ile WhatsApp bağla butonuna tıklayın.",
+      "Açılan Meta penceresinde Facebook hesabınızla devam edin."
     ]
   },
   {
-    title: "2. WhatsApp Business uygulaması oluşturun",
+    title: "2. Meta penceresinde işletmeyi ve WhatsApp hesabını seçin",
     items: [
-      "developers.facebook.com üzerinde yeni bir Business uygulaması oluşturun.",
-      "Uygulamanıza WhatsApp ürününü ekleyin.",
-      "Uygulamayı Meta Business hesabınızla bağlayın."
+      "Meta size bağlı işletme portföylerini gösterir; doğru işletmeyi seçin.",
+      "Var olan bir WhatsApp Business Account seçebilir veya Meta akışında yeni bir hesap oluşturabilirsiniz.",
+      "Devu'nun WhatsApp mesajlarını gönderebilmesi ve şablonları yönetebilmesi için istenen izinleri onaylayın.",
+      "Meta yalnızca gerekli WhatsApp varlıklarını paylaşır; katalog, reklam hesabı veya sayfa gibi gereksiz varlıklar Devu kurulumu için istenmez."
     ]
   },
   {
-    title: "3. Telefon numarası ekleyin",
+    title: "3. Telefon numarasını ekleyin veya seçin",
     items: [
-      "WhatsApp API kurulumu ekranından işletme telefon numaranızı ekleyin.",
+      "Hatırlatmaların gönderileceği işletme numarasını seçin veya ekleyin.",
       "SMS veya arama ile doğrulama kodunu alın.",
-      "Numarayı doğrulayarak API kullanımına hazır hale getirin."
+      "Numaranın görünen adını ve profil bilgilerini Meta'nın istediği şekilde tamamlayın.",
+      "Kurulum bittiğinde Meta, Devu'ya sizle ilgili gerekli verileri gönderir; bunları elle girmeniz gerekmez."
     ]
   },
   {
-    title: "4. API bilgilerini DevuApp'e girin",
+    title: "4. Devu'daki kontrol listesini tamamlayın",
     items: [
-      "Phone Number ID değerini kopyalayın.",
-      "WhatsApp Business Account ID değerini kaydedin.",
-      "Kalıcı erişim anahtarı oluşturun.",
-      "DevuApp WhatsApp ayarlarına bu bilgileri girin ve test mesajı gönderin."
+      "Bağlantı tamamlandıktan sonra Devu, Konfigürasyon sayfasında WABA ve Telefon Numarası ID değerlerini gösterir.",
+      "Onboarding kontrol listesinde mesaj gönderim uygunluğu, telefon numarası, ödeme yöntemi ve onaylı şablon durumunu kontrol edin.",
+      "Ödeme yöntemi eksikse WhatsApp Manager üzerinden Meta ödeme yöntemini ekleyin.",
+      "En az bir hatırlatma şablonu onaylandıktan sonra otomatik hatırlatmalar gönderime hazır hale gelir."
+    ]
+  },
+  {
+    title: "5. Test edin ve doğrulayın",
+    items: [
+      "Konfigürasyon sayfasında WhatsApp otomasyonunu aktif bırakın.",
+      "Test telefon numarasını uluslararası formatta girin. Örnek: +905XXXXXXXXX.",
+      "Test mesajı göndererek numara, ödeme yöntemi ve gönderim izinlerinin birlikte çalıştığını doğrulayın.",
+      "Bir yanlışlık olduğunu düşünüyorsanız WhatsApp > Mesaj Geçmişi sayfasında gönderim hatalarını ve Meta tarafından dönen hata kodlarını kontrol edin.",
+      "Herhangi bir problem devam ederse devu destek ekibiyle iletişime geçin: destek@devuapp.com"
+    ]
+  },
+  {
+    title: "Sık karşılaşılan durumlar",
+    items: [
+      "Meta işletme doğrulaması, telefon adı incelemesi veya kalite durumu nedeniyle gönderimi geçici olarak sınırlayabilir.",
+      "WhatsApp konuşma ücretleri Meta tarafından ayrıca tahsil edilir; devu aboneliğine dahil değildir.",
+      "Şablonlar Meta onayından geçmeden randevu dışı otomatik hatırlatma olarak kullanılamaz.",
+      "Bağlantıyı yenilemeniz gerekirse aynı sayfadaki Bağlantıyı yenile butonunu kullanabilirsiniz."
     ]
   },
   {
     title: "Önemli not",
-    body: "Meta politikaları, şablon onayları ve konuşma ücretleri zaman içinde değişebilir. DevuApp, hatırlatma akışını sadeleştirir; Meta hesabınızın uygunluğu ve mesaj izinleri işletmenizin sorumluluğundadır."
+    body: "Meta politikaları, şablon onayları, hesap uygunluğu ve WhatsApp konuşma ücretleri zaman içinde değişebilir. Devu bağlantı ve günlük hatırlatma akışını sadeleştirir; Meta Business hesabınızın uygunluğu, ödeme yöntemi ve mesajlaşma politikalarına uyum işletmenizin sorumluluğundadır."
   }
 ];
 
@@ -1059,8 +1085,8 @@ function Workflow() {
     },
     {
       icon: Phone,
-      title: "WhatsApp konfigürasyonu",
-      body: (<>WhatsApp Business hesabınla Meta'dan bilgileri al ve devu'ya gir.<FootnoteRef n={4} /></>)
+      title: "WhatsApp'ı bağla",
+      body: (<>Meta'nın güvenli penceresinde işletme hesabını ve numaranı seç; devu bağlantıyı tamamlasın.<FootnoteRef n={4} /></>)
     },
     {
       icon: BellRing,
@@ -1472,7 +1498,7 @@ function App() {
     return (
       <LegalPage
         title="WhatsApp Kurulum Rehberi"
-        subtitle="Meta Business API ile WhatsApp hatırlatma sistemini adım adım kurun. Tahmini süre: 15-30 dakika."
+        subtitle="Meta Embedded Signup ile WhatsApp hatırlatma sistemini Devu'ya bağlama adımları. Tahmini süre: 5-15 dakika."
         sections={whatsappSections}
         icon={MessageCircle}
       />
