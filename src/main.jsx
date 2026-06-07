@@ -1281,7 +1281,7 @@ function SiteFooter() {
         </div>
       </div>
       <div className="footer-bottom">
-        <span>© 2026 DevuApp. Tüm hakları saklıdır.</span>
+        <span>© 2026 Ali Kerem Ata. Tüm hakları saklıdır.</span>
         <button type="button">EN</button>
       </div>
     </footer>
