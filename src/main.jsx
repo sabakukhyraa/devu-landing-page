@@ -236,12 +236,22 @@ const faqs = [
   {
     question: "devu'nun ana faydası nedir?",
     answer:
-      "Birincil fayda WhatsApp randevu hatırlatmalarını günlük işletme akışıyla birleştirmektir. İkinci büyük fayda ise ekibin karmaşık bir yazılım değil, sade bir çalışma ekranı kullanmasıdır."
+      "devu, randevu hatırlatmalarını yalnızca mesaj gönderen ayrı bir araç gibi değil, günlük operasyonun parçası olarak ele alır. WhatsApp hatırlatmaları, hızlı yanıtlar, Bugün ekranı, takvim ve danışan kayıtları birlikte çalışır; ekip kimin geleceğini, kimin iptal ettiğini ve hangi randevunun aksiyon istediğini aynı akışta görür."
+  },
+  {
+    question: "devu hangi işletmeler için uygun?",
+    answer:
+      "Randevuyla çalışan küçük ve orta ölçekli hizmet işletmeleri için uygundur: sağlık ve bakım hizmetleri, danışmanlık, güzellik, spor, terapi, eğitim ve benzeri randevu yoğun ekipler. devu özellikle WhatsApp ile iletişim kuran, ama karmaşık CRM veya ağır yönetim yazılımlarına ihtiyaç duymayan işletmeler için tasarlanır."
+  },
+  {
+    question: "devu mevcut takvim veya not sistemimin yerini alır mı?",
+    answer:
+      "devu'nun amacı ekibin günlük randevu akışını tek bir yerde sadeleştirmektir. Randevu takvimi, danışan profili, notlar, fotoğraflar, uyarılar ve WhatsApp mesaj durumu aynı bağlamda tutulur. Google Takvim bağlantısı olan planlarda randevular bağlı takvime yazılabilir; böylece uzmanlar günlük programı telefonlarında da takip edebilir."
   },
   {
     question: "14 günlük deneme için kart gerekiyor mu?",
     answer:
-      "Kayıt olup işletmenizi kurarak ürünün günlük akışınıza uyup uymadığını görebilirsiniz. Deneme süreci küçük ekipler için hızlı karar vermeyi kolaylaştıracak şekilde tasarlanır."
+      "Deneme süreci abonelik akışı üzerinden başlar ve ödeme güvenliği iyzico altyapısıyla yönetilir. Amaç, kurulumu yapıp devu'nun günlük akışınıza uyup uymadığını gerçekçi şekilde test etmenizdir. Deneme veya mevcut abonelik dönemi bitmeden iptal ederseniz, yenileme yapılmaz."
   },
   {
     question: "WhatsApp kurulumu nasıl çalışıyor?",
@@ -253,14 +263,39 @@ const faqs = [
     )
   },
   {
+    question: "Danışanlar devu uygulamasını kullanmak zorunda mı?",
+    answer:
+      "Hayır. Danışanlar devu'ya giriş yapmaz, uygulama indirmez ve yeni bir hesap oluşturmaz. Hatırlatmaları WhatsApp üzerinden alır; randevuyu onaylama veya iptal etme gibi aksiyonları WhatsApp hızlı yanıtlarıyla verir. Ekip ise bu yanıtları devu içinde randevu durumu olarak görür."
+  },
+  {
+    question: "WhatsApp hızlı yanıtlar ne işe yarar?",
+    answer:
+      "Hatırlatma mesajında danışana net aksiyonlar sunar: örneğin 'Geleceğim' veya 'İptal et'. Danışan yanıt verdiğinde devu randevunun durumunu günceller ve bu bilgi randevu detayında görünür. Böylece ekip, tek tek mesaj okumadan günün riskli veya teyit edilmiş randevularını ayırt edebilir."
+  },
+  {
     question: "Mobil uygulama kimler için?",
     answer:
       "Mobil uygulama, gün içinde hareket halinde olan asistanlar ve uzmanlar için tasarlanır. Masaüstünde kurulum ve yönetim kolaylığı sağlanırken, mobil uygulama günlük operasyonun hızlı ve esnek şekilde yürütülmesine odaklanır. Danışanlar ürünün hiçbir platformunu kullanmaz, yalnızca WhatsApp üzerinden hatırlatmaları alır ve yanıt verirler."
   },
   {
+    question: "Basic ve Ekip planları arasındaki fark nedir?",
+    answer:
+      "Basic plan, tek uzman ve tek lokasyonla çalışan işletmelerin randevu takvimi, danışan kayıtları, Bugün ekranı ve WhatsApp hatırlatmalarını sade şekilde kullanması için uygundur. Ekip planı ise birden fazla uzman, asistan kullanımı, gelişmiş operasyon ekranı, Google Takvim bağlantısı, ödeme takibi, daha geniş fotoğraf/not kullanımı ve öncelikli destek gibi ekip büyüdükçe ihtiyaç duyulan alanları açar."
+  },
+  {
+    question: "Ödeme takibi zorunlu mu?",
+    answer:
+      "Hayır. devu'nun ana değeri WhatsApp hatırlatmaları ve sade randevu operasyonudur. Ödeme takibi ek bir modüldür; işletmenizin akışına uygunsa kullanabilirsiniz. Kullanmak istemeyen ekipler devu'yu randevu, danışan ve WhatsApp operasyonu için minimal şekilde kullanmaya devam edebilir."
+  },
+  {
+    question: "Veriler ve WhatsApp erişimleri nasıl korunur?",
+    answer:
+      "WhatsApp bağlantısı Meta'nın resmi Embedded Signup akışıyla yapılır. Teknik erişim bilgileri devu sunucusunda şifreli şekilde yönetilir ve kart bilgileriniz devu sunucularında saklanmaz; ödeme süreci iyzico altyapısıyla yürütülür. Danışan verileri, randevu kayıtları ve ekip erişimleri çalışma alanı bazında yönetilir."
+  },
+  {
     question: "İstediğim zaman iptal edebilir miyim?",
     answer:
-      "Evet, aboneliğinizi istediğiniz zaman iptal edebilirsiniz. İptal durumunda mevcut abonelik dönemi sonuna kadar hizmetten yararlanmaya devam edersiniz, ardından yenileme olmaz."
+      "Evet. Aboneliğinizi istediğiniz zaman iptal edebilirsiniz. İptal durumunda mevcut deneme veya ödeme dönemi sonuna kadar hizmetten yararlanmaya devam edersiniz; dönem sonunda yenileme yapılmaz."
   }
 ];
 
