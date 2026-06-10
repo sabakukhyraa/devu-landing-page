@@ -203,7 +203,7 @@ const videoFeatures = [
 const plans = [
   {
     name: "Başlangıç",
-    monthlyPrice: 799,
+    monthlyPrice: 449,
     description: "Tek uzmanlı küçük işletmeler için sade başlangıç.",
     items: [
       "1 lokasyon",
@@ -217,7 +217,7 @@ const plans = [
   },
   {
     name: "Ekip",
-    monthlyPrice: 1499,
+    monthlyPrice: 1799,
     description: "Asistanlı, çok uzmanlı işletmeler için günlük operasyon planı.",
     featured: true,
     items: [
