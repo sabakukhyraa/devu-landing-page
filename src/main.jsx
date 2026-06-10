@@ -147,6 +147,13 @@ const features = [
     title: "Kayıt, not, fotoğraf ve uyarılar bir arada.",
     body: "Danışan profili, randevu geçmişi ve özel uyarılar ile her randevuda doğru bağlamda çalışmanı sağlar.",
     metric: "Tek kaynak"
+  },
+  {
+    icon: CalendarDays,
+    eyebrow: "Google Takvim",
+    title: "Randevular Google Takvim'e otomatik düşer.",
+    body: "Devu üzerinde oluşturduğun randevular, hesabınla bağladığın Google Takvim'e tek yönlü olarak yazılır. Uzmanlar telefonlarındaki Google Takvim uygulamasında da görür; çift bağlam yönetmek zorunda kalmazsın.",
+    metric: "Tek yönlü senkronizasyon"
   }
 ];
 
@@ -473,7 +480,18 @@ const privacySections = [
     body: "Platform 18 yaşından küçükler için tasarlanmamıştır. Danışan kayıtlarınızda 18 yaş altı veri yer alıyorsa, ilgili velayet sahibinden rıza alma yükümlülüğü size aittir."
   },
   {
-    title: "12. Çerezler ve Tam Metinler",
+    title: "12. Google API Services User Data Policy — Limited Use",
+    items: [
+      "devu, Google API'lerinden alınan kullanıcı verilerini (Google Takvim olayları) yalnızca kullanıcının açıkça talep ettiği Hizmet'in (devu üzerinde oluşturulan/güncellenen randevuların kullanıcının Google Takvim'inde eş zamanlı görünmesi) ifası için kullanır.",
+      "Google Takvim verileri ASLA reklam veya pazarlama amacıyla kullanılmaz.",
+      "Google Takvim verileri ASLA üçüncü taraflara satılmaz veya devredilmez.",
+      "Google Takvim verileri ASLA yapay zekâ veya makine öğrenmesi modellerinin eğitiminde kullanılmaz.",
+      "Google Takvim verilerine ASLA insan tarafından erişilmez; istisnalar: (1) kullanıcının açık rızası, (2) güvenlik amaçlı (örn. ihlal soruşturması), (3) yasal yükümlülük, (4) anonim veya toplulaştırılmış iç işletme operasyonları.",
+      "Tüm bu kapsam, Google API Services User Data Policy'nin 'Limited Use' şartlarına bağlıdır: https://developers.google.com/terms/api-services-user-data-policy"
+    ]
+  },
+  {
+    title: "13. Çerezler ve Tam Metinler",
     body: "Çerez kullanımı için ayrı Çerez Politikası, tüm KVKK detayları için tam KVKK Aydınlatma Metni yayımlanmıştır. Hukuki bağlayıcılığı tam metinler haizdir; bu özet sadece bilgilendirme amaçlıdır."
   }
 ];
@@ -983,7 +1001,7 @@ function Hero() {
         <p className="eyebrow">WhatsApp hatırlatmaları<FootnoteRef n={1} /> + kolay randevu yönetimi</p>
         <h1>Basit, sade <br />ve&nbsp;etkili!</h1>
         <p className="hero-copy">
-          devu, randevu ile çalışan işletmelerin günlük akışına WhatsApp hatırlatmalarını entegre eder.
+          devu; klinikler, terapistler, fizyoterapistler ve hizmet sektöründeki diğer küçük işletmeler için tasarlanmış bulut tabanlı bir randevu yönetim platformudur. Müşterilerinize otomatik WhatsApp hatırlatmaları gönderir, randevuları Google Takvim ile senkronize eder ve danışan kayıtlarınızı tek arayüzden yönetmenizi sağlar.
         </p>
         <div className="hero-actions">
           <a className="primary-cta" href={SIGNUP_URL}>
