@@ -1013,7 +1013,7 @@ function Hero() {
             Demo İzle
           </a>
         </div>
-        <p className="hero-note">Kredi kartı gerekmeden başlayın. Web ve mobil birlikte.<br />Farklı hizmet kategorileri için uygundur.</p>
+        <p className="hero-note">Web ve mobil birlikte.<br />Farklı hizmet kategorileri için uygundur.</p>
         <p className="hero-note"></p>
         <div className="hero-showcase">
           <span className="hero-showcase-tag">
@@ -1344,7 +1344,7 @@ function FinalCTA() {
         <p className="eyebrow">Başlayın</p>
         <h2>İncele, <br />beğenmezsen <br />iptal et.</h2>
         <p>
-          14 günlük denemede kurulumu yap, günlük akışınıza uyup uymadığına bak. Kredi kartı gerekmeden başla,<br /> istediğin zaman iptal et.
+          14 günlük denemede kurulumu yap, günlük akışınıza uyup uymadığına bak. Hemen başla,<br /> istediğin zaman iptal et.
         </p>
       </div>
       <a className="primary-cta final-cta-button" href={SIGNUP_URL}>
