@@ -263,6 +263,11 @@ const faqs = [
     )
   },
   {
+    question: "WhatsApp için yeni bir telefon numarası gerekir mi?",
+    answer:
+      "Genellikle evet, en sorunsuz kurulum için WhatsApp Business Platform'a özel yeni veya boşa çıkarılmış bir numara önerilir. Bu numara mevcut WhatsApp ya da WhatsApp Business uygulamasında aktif kullanılmamalı; SMS veya arama ile doğrulanabilir olmalıdır. Böylece otomatik hatırlatmalar işletme numaranızdan güvenilir şekilde gönderilir ve kişisel WhatsApp kullanımınızla karışmaz."
+  },
+  {
     question: "Danışanlar devu uygulamasını kullanmak zorunda mı?",
     answer:
       "Hayır. Danışanlar devu'ya giriş yapmaz, uygulama indirmez ve yeni bir hesap oluşturmaz. Hatırlatmaları WhatsApp üzerinden alır; randevuyu onaylama veya iptal etme gibi aksiyonları WhatsApp hızlı yanıtlarıyla verir. Ekip ise bu yanıtları devu içinde randevu durumu olarak görür."
@@ -695,7 +700,8 @@ const whatsappSections = [
     items: [
       "Devu web hesabınıza işletme sahibi veya ayarları yönetebilen kullanıcı olarak giriş yapın.",
       "İşletmenin Meta Business portföyünü yönetebilen bir Facebook hesabınız olsun.",
-      "Tercihen yeni alınmış, daha önce herhangi bir WhatsApp hesabına bağlanmamış bir telefon numarası kullanın.",
+      "WhatsApp Business Platform için tercihen yeni alınmış veya boşa çıkarılmış ayrı bir telefon numarası kullanın.",
+      "Bu numara mevcut WhatsApp veya WhatsApp Business uygulamasında aktif olmamalıdır. Aktif bir numarayı taşımak istiyorsanız önce Meta'nın numara taşıma/kaldırma koşullarını kontrol edin.",
       "Bu numaranın SMS veya arama ile doğrulanabilir olduğundan emin olun.",
       "Meta'nın işletme adı, görünen ad ve mesajlaşma politikalarına uygun bilgiler kullanın."
     ]
@@ -720,7 +726,7 @@ const whatsappSections = [
   {
     title: "3. Telefon numarasını ekleyin veya seçin",
     items: [
-      "Hatırlatmaların gönderileceği işletme numarasını seçin veya ekleyin.",
+      "Hatırlatmaların gönderileceği işletme numarasını seçin veya ekleyin. En iyi deneyim için bu numarayı yalnızca otomatik hatırlatmalar ve işletme iletişimi için ayırın.",
       "SMS veya arama ile doğrulama kodunu alın.",
       "Numaranın görünen adını ve profil bilgilerini Meta'nın istediği şekilde tamamlayın.",
       "Kurulum bittiğinde Meta, Devu'ya sizle ilgili gerekli verileri gönderir; bunları elle girmeniz gerekmez."
@@ -1048,7 +1054,7 @@ function Hero() {
             Demo İzle
           </a>
         </div>
-        <p className="hero-note">Web ve mobil birlikte.<br />Farklı hizmet kategorileri için uygundur.</p>
+        <p className="hero-note">Kredi kartı gerekmeden başlayın. Web ve mobil birlikte.<br />Farklı hizmet kategorileri için uygundur.</p>
         <p className="hero-note"></p>
         <div className="hero-showcase">
           <span className="hero-showcase-tag">
@@ -1379,7 +1385,7 @@ function FinalCTA() {
         <p className="eyebrow">Başlayın</p>
         <h2>İncele, <br />beğenmezsen <br />iptal et.</h2>
         <p>
-          14 günlük denemede kurulumu yap, günlük akışınıza uyup uymadığına bak. Hemen başla,<br /> istediğin zaman iptal et.
+          14 günlük denemede kurulumu yap, günlük akışınıza uyup uymadığına bak. Kredi kartı gerekmeden başla,<br /> istediğin zaman iptal et.
         </p>
       </div>
       <a className="primary-cta final-cta-button" href={SIGNUP_URL}>
