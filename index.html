@@ -3,26 +3,118 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>devu | WhatsApp hatırlatmalı randevu ve günlük operasyon sistemi</title>
+    <title>devu — Bulut Tabanlı Randevu Yönetim Platformu | WhatsApp ve Google Takvim Entegrasyonu</title>
     <meta
       name="description"
-      content="devu, randevu ile çalışan hizmet işletmelerinin WhatsApp hatırlatmalarını, danışan kayıtlarını ve günlük operasyonunu sade bir ekrandan yönetmesini sağlar."
+      content="devu; klinikler, terapistler, fizyoterapistler ve hizmet sektöründeki diğer küçük işletmeler için tasarlanmış bulut tabanlı bir randevu yönetim platformudur. Otomatik WhatsApp hatırlatmaları, Google Takvim ile senkronizasyon ve danışan kayıtlarını tek arayüzden yönetmenizi sağlar."
     />
-    <link rel="canonical" href="https://devuapp.com" />
+    <link rel="canonical" href="https://www.devuapp.com/" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://devuapp.com" />
-    <meta property="og:title" content="devu | Bugünkü randevu akışınızı tek ekrandan yönetin" />
+    <meta property="og:url" content="https://www.devuapp.com/" />
+    <meta property="og:title" content="devu — Bulut Tabanlı Randevu Yönetim Platformu" />
     <meta
       property="og:description"
-      content="Hizmet işletmeleri için randevu, danışan, WhatsApp hatırlatma ve günlük operasyon yönetimi."
+      content="Klinikler, terapistler ve hizmet işletmeleri için bulut tabanlı randevu yönetim platformu. WhatsApp hatırlatmaları, Google Takvim senkronizasyonu ve danışan kayıtlarını tek arayüzden yönet."
     />
-    <meta property="og:image" content="https://devuapp.com/og-image.svg" />
+    <meta property="og:image" content="https://www.devuapp.com/og-image.svg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="theme-color" content="#f7f3ee" />
     <link rel="icon" href="/favicon.ico" />
+    <style>
+      /* SEO/verification için statik içerik — React mount olunca React tarafından replace edilir */
+      .seo-prerender {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 48px 24px;
+        color: #1f2123;
+        line-height: 1.6;
+      }
+      .seo-prerender h1 { font-size: 32px; margin: 0 0 8px; }
+      .seo-prerender h2 { font-size: 20px; margin: 32px 0 12px; }
+      .seo-prerender p, .seo-prerender li { font-size: 15px; }
+      .seo-prerender .tagline { color: #6f6860; margin: 0 0 24px; }
+      .seo-prerender .footer-links { margin-top: 32px; padding-top: 24px; border-top: 1px solid #e8e0d6; font-size: 13px; }
+      .seo-prerender .footer-links a { color: #2473e0; margin-right: 16px; }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!--
+        Statik prerender içerik. JavaScript yüklenmeden önce ya da
+        verification crawler'ları için sayfanın amacını ve önemli linkleri
+        anlatır. React mount olduğunda bu içerik tamamen replace edilir.
+      -->
+      <main class="seo-prerender">
+        <h1>devu</h1>
+        <p class="tagline">Bulut Tabanlı Randevu Yönetim Platformu</p>
+
+        <h2>devu nedir?</h2>
+        <p>
+          <strong>devu</strong>, klinikler (diş, fizyoterapi, psikoloji,
+          diyetisyen), terapistler, kuaförler ve hizmet sektöründeki diğer küçük
+          işletmeler için tasarlanmış bulut tabanlı bir randevu yönetim ve
+          müşteri iletişim platformudur. İşletmelerin randevularını, danışan
+          kayıtlarını ve müşteri iletişimini tek bir basit arayüzden
+          yönetmelerini sağlar.
+        </p>
+
+        <h2>Ne yapar?</h2>
+        <ul>
+          <li>
+            <strong>Randevu yönetimi:</strong> Çoklu lokasyon ve uzman için
+            takvim, çakışma kontrolü, durum takibi.
+          </li>
+          <li>
+            <strong>WhatsApp hatırlatmaları:</strong> Meta WhatsApp Cloud API
+            üzerinden randevulardan önce müşterilere otomatik hatırlatma
+            mesajları gönderir. Müşteriler interaktif butonlarla randevuyu
+            onaylayıp iptal edebilir.
+          </li>
+          <li>
+            <strong>Google Takvim senkronizasyonu:</strong> Kullanıcı, kendi
+            Google hesabını OAuth ile bağlar; devu üzerinde oluşturulan
+            randevular Google Takvim'e otomatik yazılır. Bu, uygulamanın Google
+            Calendar API erişimi talep etmesinin tek nedenidir. Veriler reklam,
+            satış veya AI eğitimi için kullanılmaz.
+          </li>
+          <li>
+            <strong>Danışan kayıtları:</strong> Kişisel bilgiler, fotoğraflar,
+            notlar, özel uyarılar ve geçmiş randevular tek profilde toplanır.
+          </li>
+          <li>
+            <strong>Ödeme takibi:</strong> Opsiyonel taksitli ödeme yönetimi.
+          </li>
+        </ul>
+
+        <h2>Kimler kullanır?</h2>
+        <p>
+          Hizmet sektöründeki küçük ve orta ölçekli işletmeler: diş klinikleri,
+          fizyoterapi merkezleri, psikoloji/psikiyatri pratikleri, diyetisyen
+          ofisleri, kuaförler, güzellik salonları ve benzeri randevuya dayalı
+          işletmeler.
+        </p>
+
+        <h2>Veri kullanımı ve gizlilik</h2>
+        <p>
+          devu, kullanıcı verilerini yalnızca Hizmet'in sunulması için işler.
+          Google API'lerinden (Google Calendar) alınan veriler
+          <a href="https://developers.google.com/terms/api-services-user-data-policy"
+            >Google API Services User Data Policy</a
+          >
+          'nin <strong>Limited Use</strong> şartlarına uygun olarak yalnızca
+          randevu senkronizasyonu amacıyla kullanılır; reklam, üçüncü taraf
+          paylaşımı, satış veya yapay zekâ modeli eğitimi için kullanılmaz.
+        </p>
+
+        <div class="footer-links">
+          <a href="https://www.devuapp.com/privacy/">Gizlilik Politikası</a>
+          <a href="https://www.devuapp.com/terms/">Kullanım Koşulları</a>
+          <a href="https://www.devuapp.com/kvkk/">KVKK Aydınlatma Metni</a>
+          <a href="https://www.devuapp.com/cerez-politikasi/">Çerez Politikası</a>
+        </div>
+      </main>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
