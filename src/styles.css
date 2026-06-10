@@ -2597,3 +2597,115 @@ svg {
 html {
   scroll-behavior: smooth;
 }
+
+/* ── Payment trust strip (Pricing section) ───────────────────────────── */
+
+.pricing-trust {
+  margin-top: 48px;
+  padding: 26px 28px;
+  border-radius: 22px;
+  background:
+    linear-gradient(160deg, #ffffff 0%, #f6f9f8 75%, #eef4f1 100%);
+  border: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 28px;
+  align-items: center;
+  box-shadow: 0 12px 36px rgba(46, 38, 31, 0.07);
+}
+
+.pricing-trust-pay {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 16px 22px;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+.pricing-trust-pay span {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.pricing-trust-pay img {
+  display: block;
+  width: 120px;
+  height: auto;
+}
+
+.pricing-trust-cards {
+  display: flex;
+  align-items: center;
+}
+
+.pricing-trust-cards img {
+  display: block;
+  height: 26px;
+  width: auto;
+  max-width: 100%;
+}
+
+.pricing-trust p {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--muted);
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 720px) {
+  .pricing-trust {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 22px 18px;
+    gap: 18px;
+  }
+  .pricing-trust-pay {
+    align-items: center;
+  }
+  .pricing-trust-cards {
+    justify-content: center;
+  }
+}
+
+/* ── Footer payment band ─────────────────────────────────────────────── */
+
+.footer-payment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 22px 24px 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 14px;
+}
+
+.footer-payment-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #9d9d9d;
+}
+
+.footer-payment-band {
+  display: block;
+  height: 28px;
+  width: auto;
+  max-width: 100%;
+  opacity: 0.95;
+}
+
+@media (max-width: 640px) {
+  .footer-payment-band {
+    height: 22px;
+  }
+}

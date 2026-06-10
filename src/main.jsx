@@ -1260,6 +1260,28 @@ function Pricing() {
           );
         })}
       </div>
+      <div className="pricing-trust">
+        <div className="pricing-trust-pay">
+          <span>Güvenli ödeme</span>
+          <img
+            src="/payment/iyzico-ile-ode-colored.svg"
+            alt="iyzico ile öde"
+            width="120"
+            height="auto"
+          />
+        </div>
+        <div className="pricing-trust-cards" aria-label="Kabul edilen kartlar">
+          <img
+            src="/payment/iyzico-logo-band-colored.svg"
+            alt="Kabul edilen kartlar: Visa, Mastercard, Maestro, American Express, Troy"
+            height="22"
+          />
+        </div>
+        <p>
+          Ödemeleriniz Türkiye'de lisanslı ödeme kuruluşu iyzico altyapısıyla 3D Secure ve PCI-DSS standartlarında işlenir.
+          Kart bilgileriniz devu sunucularında saklanmaz.
+        </p>
+      </div>
     </section>
   );
 }
@@ -1354,6 +1376,14 @@ function SiteFooter({ showLegalNotes = false }) {
           <a href="/on-bilgilendirme-formu">Ön Bilgilendirme Formu</a>
           <a href="/iade-politikasi">İade ve Cayma Politikası</a>
         </div>
+      </div>
+      <div className="footer-payment">
+        <span className="footer-payment-label">Ödemeler güvenli altyapı ile</span>
+        <img
+          src="/payment/iyzico-logo-band-white.svg"
+          alt="iyzico ile güvenli ödeme — Visa, Mastercard, Maestro, American Express, Troy"
+          className="footer-payment-band"
+        />
       </div>
       <div className="footer-bottom">
         <span>© 2026 DevuApp. Tüm hakları saklıdır.</span>
