@@ -1375,6 +1375,7 @@ svg {
 
 .chat-bubble-body p {
   margin: 0;
+  text-align: left;
   word-wrap: break-word;
   overflow-wrap: anywhere;
 }
@@ -1403,6 +1404,11 @@ svg {
   font-size: 13px;
   font-weight: 760;
   box-shadow: 0 1px 1px rgba(11, 20, 26, 0.05);
+}
+
+.chat-quick-replies span.chat-quick-reply-selected {
+  background: #075e54;
+  color: #fff;
 }
 
 .chat-bubble-quick-reply {
@@ -1534,6 +1540,7 @@ svg {
   overflow: hidden;
   text-overflow: ellipsis;
   box-shadow: 0 1px 1px rgba(11, 20, 26, 0.04);
+  text-align: left;
 }
 
 .chat-mic-btn {

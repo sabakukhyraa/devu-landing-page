@@ -1,5 +1,5 @@
 {
-  "name": "devu-landing",
+  "name": "devu-landing-new",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -10,9 +10,12 @@
   },
   "dependencies": {
     "@vitejs/plugin-react": "^5.1.1",
+    "framer-motion": "^11.15.0",
+    "i18next": "^25.8.13",
     "lucide-react": "^1.14.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-i18next": "^16.5.4",
     "typescript": "^5.9.3",
     "vite": "^7.3.1"
   }

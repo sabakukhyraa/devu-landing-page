@@ -1,0 +1,435 @@
+{
+  "landing.nav.items": [
+    "Lorem",
+    "Ipsum",
+    "Dolor"
+  ],
+  "landing.nav.login": "Lorem",
+  "landing.nav.langLabel": "Dil",
+  "landing.hero.badgeStrong": "Lorem",
+  "landing.hero.badgeText": "Ipsum dolor sit amet consectetur",
+  "landing.hero.title": "Lorem ipsum dolor sit amet.",
+  "landing.hero.subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim.",
+  "landing.hero.ctaPrimary": "Lorem ipsum",
+  "landing.hero.ctaSecondary": "Dolor sit",
+  "landing.hero.note": "Lorem ipsum dolor sit amet · consectetur adipiscing elit.",
+  "landing.hero.shotTag": "App screenshot",
+  "landing.hero.shotLabel": "Product UI — Today / daily overview",
+  "landing.hero.shotSub": "Replace with a real capture",
+  "landing.hero.pill": "Lorem ipsum · delivered",
+  "landing.hero.trust": [
+    "Lorem ipsum",
+    "Dolor sit",
+    "Amet elit",
+    "Consectetur",
+    "Adipiscing",
+    "+20 lorem"
+  ],
+  "landing.minimal.eyebrow": "Lorem ipsum",
+  "landing.minimal.title": "One job. Done perfectly. Lorem ipsum dolor.",
+  "landing.minimal.body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam.",
+  "landing.minimal.points": [
+    "Lorem ipsum dolor sit amet consectetur adipiscing.",
+    "Sed do eiusmod tempor incididunt ut labore dolore.",
+    "Ut enim ad minim veniam quis nostrud exercitation.",
+    "Duis aute irure dolor in reprehenderit voluptate."
+  ],
+  "landing.minimal.cta": "Lorem ipsum",
+  "landing.minimal.badge": "Lorem",
+  "landing.minimal.shotTag": "App screenshot",
+  "landing.minimal.shotLabel": "Minimal UI — a single focused list",
+  "landing.minimal.shotSub": "No clutter, no noise",
+  "landing.minimal.micros": [
+    {
+      "title": "Lorem ipsum",
+      "body": "Dolor sit amet consectetur adipiscing elit sed do eiusmod."
+    },
+    {
+      "title": "Sit amet dolor",
+      "body": "Tempor incididunt ut labore et dolore magna aliqua enim."
+    },
+    {
+      "title": "Consectetur elit",
+      "body": "Ut enim ad minim veniam quis nostrud exercitation ullamco."
+    }
+  ],
+  "landing.whatsapp.eyebrow": "Lorem ipsum",
+  "landing.whatsapp.title": "The core power. Lorem ipsum dolor sit amet.",
+  "landing.whatsapp.body": "Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  "landing.whatsapp.mockup.shared": {
+    "backLabel": "Back",
+    "businessInitials": "DV",
+    "businessName": "Devu Studio",
+    "online": "online",
+    "videoLabel": "Video call",
+    "callLabel": "Call",
+    "moreLabel": "More options",
+    "today": "Today",
+    "automaticBadge": "Devu Studio · Automated Message",
+    "quickRepliesLabel": "Quick replies",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "emojiLabel": "Emoji",
+    "messagePlaceholder": "Message",
+    "attachLabel": "Attach file",
+    "cameraLabel": "Camera",
+    "voiceLabel": "Voice message"
+  },
+  "landing.whatsapp.mockup.reminder": {
+    "previewLabel": "Automatic WhatsApp appointment reminder",
+    "greeting": "Hi Ayşe 👋",
+    "message": "You have a Pilates appointment tomorrow at 09:30 with Ece.",
+    "detail": "Devu Studio · Kadıköy",
+    "sentAt": "20:00"
+  },
+  "landing.whatsapp.mockup.changes": {
+    "previewLabel": "WhatsApp appointment update and cancellation notices",
+    "updatedBadge": "Appointment updated",
+    "updatedTitle": "Your new appointment details",
+    "updatedDetails": "July 20 · 14:00 · with Ece",
+    "updatedVenue": "Devu Studio · Kadıköy",
+    "updatedAt": "10:02",
+    "cancelledBadge": "Appointment cancelled",
+    "cancelledTitle": "Your appointment on July 22 at 11:00 was cancelled.",
+    "cancelledDetails": "Pilates · Ece",
+    "cancelledNote": "Message us whenever you are ready to rebook.",
+    "cancelledAt": "10:08"
+  },
+  "landing.whatsapp.mockup.teamDigest": {
+    "previewLabel": "Daily WhatsApp appointment summary sent to a practitioner",
+    "dateLabel": "July 18",
+    "badge": "Daily team summary",
+    "greeting": "Good morning Ece,",
+    "summary": "You have 4 appointments today.",
+    "appointments": [
+      {
+        "time": "09:30",
+        "client": "Ayşe Kaya",
+        "service": "Pilates",
+        "venue": "Kadıköy"
+      },
+      {
+        "time": "11:00",
+        "client": "Deniz Sarı",
+        "service": "Check-up",
+        "venue": "Central"
+      },
+      {
+        "time": "14:15",
+        "client": "Ali Erdem",
+        "service": "Consultation",
+        "venue": "Kadıköy"
+      },
+      {
+        "time": "16:30",
+        "client": "Selin Yalçın",
+        "service": "Pilates",
+        "venue": "Central"
+      }
+    ],
+    "note": "4 appointments total · Full details in Devu",
+    "sentAt": "08:00"
+  },
+  "landing.whatsapp.mockup.quickReply": {
+    "previewLabel": "WhatsApp quick-reply and automated response flow",
+    "replyTime": "20:14",
+    "confirmationMessage": "Your appointment is confirmed ✅\nJuly 20 · 09:30 · Devu Studio\nSee you soon!",
+    "cancellationMessage": "Your appointment is cancelled ❌\nJuly 20 · 09:30 · Devu Studio\nMessage us whenever you are ready to rebook."
+  },
+  "landing.whatsapp.mockup.setup": {
+    "previewLabel": "Guided WhatsApp Embedded Signup in Devu",
+    "secure": "Secured by Meta",
+    "eyebrow": "Guided setup",
+    "title": "Connect WhatsApp in a few clicks",
+    "body": "Choose your business account and phone number without dealing with technical settings.",
+    "steps": [
+      "Continue with Facebook",
+      "Choose your business account",
+      "Choose your WhatsApp number",
+      "Connection complete"
+    ],
+    "readyTitle": "WhatsApp is ready",
+    "readyBody": "You can start using your automations."
+  },
+  "landing.whatsapp.controls": {
+    "tabsLabel": "WhatsApp features",
+    "previous": "Previous feature",
+    "next": "Next feature"
+  },
+  "landing.whatsapp.tabs": [
+    {
+      "title": "Appointment reminders",
+      "sub": "Sent at the right time with Confirm and Cancel buttons.",
+      "captionTitle": "Keep every client on schedule",
+      "captionText": "Choose how long before the appointment to send it and Devu delivers it automatically."
+    },
+    {
+      "title": "Updates and cancellations",
+      "sub": "Tell clients about every change instantly.",
+      "captionTitle": "Your calendar changes, your client knows",
+      "captionText": "When the date, time, practitioner, or location changes, or an appointment is cancelled, Devu sends the right notice."
+    },
+    {
+      "title": "Daily team summary",
+      "sub": "Send every practitioner their schedule each morning.",
+      "captionTitle": "Start every day prepared",
+      "captionText": "Practitioners receive time, client, service, and location details in one WhatsApp message."
+    },
+    {
+      "title": "Smart quick replies",
+      "sub": "Automatically respond to Confirm and Cancel choices.",
+      "captionTitle": "One tap updates the appointment",
+      "captionText": "When a client taps a button, Devu confirms or cancels the appointment and sends your chosen reply."
+    },
+    {
+      "title": "Connect in a few clicks",
+      "sub": "Through Meta's secure Embedded Signup flow.",
+      "captionTitle": "Skip the technical setup",
+      "captionText": "Continue with Facebook, choose the business account and phone number, and Devu completes the connection securely."
+    }
+  ],
+  "landing.features.eyebrow": "Lorem ipsum",
+  "landing.features.title": "Everything else, lorem ipsum.",
+  "landing.features.body": "Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore.",
+  "landing.features.hint": "Lorem ipsum — click a card for details",
+  "landing.features.learnMore": "Lorem ipsum",
+  "landing.features.modalDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud.",
+  "landing.features.modalCta": "Lorem ipsum",
+  "landing.features.items": [
+    {
+      "title": "Lorem ipsum dolor",
+      "body": "Sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
+      "thumbLabel": "Lorem — team & roles",
+      "mediaLabel": "Workspace — invite & roles",
+      "bullets": [
+        "Lorem ipsum dolor sit amet consectetur.",
+        "Adipiscing elit sed do eiusmod tempor.",
+        "Incididunt ut labore et dolore magna.",
+        "Aliqua ut enim ad minim veniam quis."
+      ]
+    },
+    {
+      "title": "Sit amet consectetur",
+      "body": "Adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim.",
+      "thumbLabel": "Ipsum — week view",
+      "mediaLabel": "Calendar — week view",
+      "bullets": [
+        "Nostrud exercitation ullamco laboris nisi.",
+        "Ut aliquip ex ea commodo consequat duis.",
+        "Aute irure dolor in reprehenderit voluptate.",
+        "Velit esse cillum dolore eu fugiat nulla."
+      ]
+    },
+    {
+      "title": "Adipiscing elit sed",
+      "body": "Do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam.",
+      "thumbLabel": "Dolor — client card",
+      "mediaLabel": "Client card — history",
+      "bullets": [
+        "Pariatur excepteur sint occaecat cupidatat.",
+        "Non proident sunt in culpa qui officia.",
+        "Deserunt mollit anim id est laborum lorem.",
+        "Sed ut perspiciatis unde omnis iste natus."
+      ]
+    },
+    {
+      "title": "Tempor incididunt ut",
+      "body": "Labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco.",
+      "thumbLabel": "Sit — installments",
+      "mediaLabel": "Payments — manual tracker",
+      "bullets": [
+        "Error sit voluptatem accusantium doloremque.",
+        "Laudantium totam rem aperiam eaque ipsa.",
+        "Quae ab illo inventore veritatis et quasi.",
+        "Architecto beatae vitae dicta sunt explicabo."
+      ]
+    },
+    {
+      "title": "Ut enim ad minim",
+      "body": "Veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "thumbLabel": "Amet — on the go",
+      "mediaLabel": "Mobile companion",
+      "bullets": [
+        "Nemo enim ipsam voluptatem quia voluptas.",
+        "Sit aspernatur aut odit aut fugit sed quia.",
+        "Consequuntur magni dolores eos qui ratione.",
+        "Voluptatem sequi nesciunt neque porro lorem."
+      ]
+    },
+    {
+      "title": "Consectetur adipiscing elit",
+      "body": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis.",
+      "thumbLabel": "Elit — custom fields",
+      "mediaLabel": "Custom fields — settings",
+      "bullets": [
+        "Lorem ipsum dolor sit amet consectetur adipiscing.",
+        "Elit sed do eiusmod tempor incididunt labore.",
+        "Ut enim ad minim veniam quis nostrud exercitation.",
+        "Ullamco laboris nisi ut aliquip ex ea commodo."
+      ]
+    }
+  ],
+  "landing.demos.eyebrow": "Lorem ipsum",
+  "landing.demos.title": "See it in motion. Lorem ipsum dolor.",
+  "landing.demos.body": "Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  "landing.demos.tag": "Screen Studio",
+  "landing.demos.duration": "Lorem · 0:32",
+  "landing.demos.controls": {
+    "tabsLabel": "Demo chapters",
+    "previous": "Previous demo",
+    "next": "Next demo",
+    "play": "Play demo",
+    "close": "Close demo video",
+    "focusedLabel": "Focused demo",
+    "position": "Demo {{current}} of {{total}}",
+    "select": "Show demo {{index}} of {{total}}: {{label}}"
+  },
+  "landing.demos.items": [
+    {
+      "title": "Lorem ipsum dolor sit amet",
+      "caption": "Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
+      "label": "Today — daily flow"
+    },
+    {
+      "title": "Sit amet consectetur elit",
+      "caption": "Ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud.",
+      "label": "Calendar — overview"
+    },
+    {
+      "title": "Adipiscing elit sed do",
+      "caption": "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
+      "label": "Client — profile"
+    },
+    {
+      "title": "Tempor incididunt labore",
+      "caption": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+      "label": "WhatsApp — status"
+    }
+  ],
+  "landing.pricing.eyebrow": "Lorem ipsum",
+  "landing.pricing.title": "Lorem ipsum dolor sit amet consectetur adipiscing.",
+  "landing.pricing.subtitle": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do.",
+  "landing.pricing.monthly": "Lorem ipsum",
+  "landing.pricing.yearly": "Lorem ipsum",
+  "landing.pricing.yearlyChip": "Lorem ipsum dolor",
+  "landing.pricing.perYear": "Lorem ipsum",
+  "landing.pricing.perMonth": "Lorem ipsum",
+  "landing.pricing.cta": "Lorem ipsum dolor sit.",
+  "landing.pricing.badgeFeatured": "Lorem ipsum dolor",
+  "landing.pricing.badgeDefault": "Lorem ipsum",
+  "landing.pricing.trustPay": "Lorem ipsum",
+  "landing.pricing.trustNote": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  "landing.pricing.plans": [
+    {
+      "name": "Lorem ipsum",
+      "description": "Lorem ipsum dolor sit amet consectetur adipiscing.",
+      "items": [
+        "Lorem ipsum",
+        "Lorem ipsum",
+        "Lorem ipsum",
+        "Lorem ipsum",
+        "Lorem ipsum",
+        "Lorem ipsum dolor",
+        "Lorem ipsum dolor sit."
+      ]
+    },
+    {
+      "name": "Lorem ipsum",
+      "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+      "items": [
+        "Lorem ipsum dolor",
+        "Lorem ipsum",
+        "Lorem ipsum dolor sit.",
+        "Lorem ipsum dolor sit amet.",
+        "Lorem ipsum dolor sit.",
+        "Lorem ipsum dolor",
+        "Lorem ipsum"
+      ]
+    }
+  ],
+  "landing.faq.eyebrow": "Lorem ipsum dolor",
+  "landing.faq.title": "Lorem ipsum dolor sit amet consectetur.",
+  "landing.faq.items": [
+    {
+      "question": "Lorem ipsum dolor sit.",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat lorem ipsum dolor sit amet consectetur."
+    },
+    {
+      "question": "Lorem ipsum dolor sit amet.",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat lorem ipsum dolor sit amet consectetur."
+    },
+    {
+      "question": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed.",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat lorem ipsum dolor sit amet."
+    },
+    {
+      "question": "Lorem ipsum dolor sit amet consectetur adipiscing.",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea."
+    },
+    {
+      "question": "Lorem ipsum dolor sit.",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat lorem."
+    },
+    {
+      "question": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat lorem ipsum dolor sit amet consectetur."
+    },
+    {
+      "question": "Lorem ipsum dolor sit amet consectetur.",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat lorem."
+    },
+    {
+      "question": "Lorem ipsum dolor sit amet consectetur.",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat lorem ipsum."
+    },
+    {
+      "question": "Lorem ipsum dolor sit.",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat lorem ipsum dolor sit amet."
+    },
+    {
+      "question": "Lorem ipsum dolor sit amet consectetur adipiscing.",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat lorem ipsum dolor sit amet consectetur."
+    },
+    {
+      "question": "Lorem ipsum dolor sit.",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea."
+    },
+    {
+      "question": "Lorem ipsum dolor sit amet consectetur.",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat lorem ipsum."
+    },
+    {
+      "question": "Lorem ipsum dolor sit amet.",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim."
+    }
+  ],
+  "landing.finalCta.eyebrow": "Lorem ipsum",
+  "landing.finalCta.title": "Lorem ipsum dolor sit.",
+  "landing.finalCta.body": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  "landing.finalCta.cta": "Lorem ipsum dolor sit.",
+  "landing.footer.tagline": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do.",
+  "landing.footer.colProduct": "Lorem ipsum",
+  "landing.footer.linkFeatures": "Lorem ipsum",
+  "landing.footer.linkLogin": "Lorem ipsum",
+  "landing.footer.linkStart": "Lorem ipsum",
+  "landing.footer.colResources": "Lorem ipsum",
+  "landing.footer.linkGuide": "Lorem ipsum dolor",
+  "landing.footer.colLegal": "Lorem ipsum",
+  "landing.footer.linkTerms": "Lorem ipsum",
+  "landing.footer.linkPrivacy": "Lorem ipsum",
+  "landing.footer.linkKvkk": "Lorem ipsum dolor",
+  "landing.footer.linkCookie": "Lorem ipsum",
+  "landing.footer.cookiePrefs": "Lorem ipsum",
+  "landing.footer.linkDistanceSales": "Lorem ipsum dolor",
+  "landing.footer.linkPreInfo": "Lorem ipsum dolor",
+  "landing.footer.linkRefund": "Lorem ipsum dolor sit.",
+  "landing.footer.paymentLabel": "Lorem ipsum dolor sit.",
+  "landing.footer.copyright": "Lorem ipsum dolor sit amet consectetur.",
+  "landing.legalNotes.items": [
+    "Lorem ipsum dolor sit amet consectetur adipiscing.",
+    "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod.",
+    "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod.",
+    "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut."
+  ],
+  "landing.legalNotes.rateLabel": "Lorem ipsum"
+}
