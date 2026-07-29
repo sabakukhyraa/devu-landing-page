@@ -161,6 +161,7 @@ const privacySections = [
     title: "3. Topladığımız Veriler",
     items: [
       "Hesap verileri: ad, e-posta, şifrelenmiş parola, telefon, işletme bilgileri.",
+      "Google ile giriş verileri (opsiyonel): Google hesabının benzersiz kullanıcı kimliği (sub), doğrulanmış e-posta adresi ve görünen ad. Bu veriler yalnızca kimlik doğrulama, mevcut Devu hesabını güvenli biçimde bağlama ve mükerrer hesapları önleme amacıyla kullanılır.",
       "Otomatik veriler: IP, tarayıcı/cihaz, oturum kayıtları, gezinme verileri.",
       "Üçüncü kişi verileri (siz girdiğinizde): danışan kimliği, iletişimi, fotoğrafı, notu.",
       "ÖZEL NİTELİKLİ KİŞİSEL VERİ UYARISI: Danışan fotoğrafları, sağlık notları ve özel durum uyarıları KVKK m.6 anlamında özel nitelikli kişisel veridir. Bu veriler için ek güvenlik tedbirleri uygulanır; ilgili danışanlardan açık rıza alma yükümlülüğü size aittir.",
@@ -172,6 +173,7 @@ const privacySections = [
     title: "4. İşleme Amaçları ve Hukuki Sebepleri",
     items: [
       "Hesap oluşturma, kimlik doğrulama: sözleşmenin ifası (KVKK m.5/2-c).",
+      "Google ile giriş ve mevcut Devu hesabına Google kimliğinin bağlanması (opsiyonel): sözleşmenin ifası ve hesap güvenliği.",
       "Hizmetin sunulması (randevu, WhatsApp): sözleşmenin ifası (KVKK m.5/2-c).",
       "Faturalama, ödeme: hukuki yükümlülük (KVKK m.5/2-ç).",
       "Destek ve şikayet süreçleri: sözleşmenin ifası + meşru menfaat.",
@@ -188,7 +190,7 @@ const privacySections = [
       "Yurt dışı — Cloudinary (ABD/AB): görsel depolama.",
       "Yurt dışı — Resend (ABD): transactional e-posta.",
       "Yurt dışı — Meta Platforms (ABD/AB): WhatsApp Cloud API.",
-      "Yurt dışı — Google LLC (ABD): Calendar API (opsiyonel).",
+      "Yurt dışı — Google LLC (ABD): Google Identity Services ve Calendar API (opsiyonel).",
       "Yurt dışı — Google LLC / Google Analytics 4 (ABD): web sitesi/uygulama kullanım analizi. YALNIZCA Çerez Onay Banner'ından onay verirseniz aktif olur.",
       "Yurt dışı — Meta Platforms / Meta Pixel (ABD): reklam ölçümü, dönüşüm takibi, retargeting. YALNIZCA Çerez Onay Banner'ından onay verirseniz aktif olur.",
       "Tüm yurt dışı aktarımlar için kayıt sırasında AÇIK RIZANIZ alınır (KVKK m.9)."
@@ -201,7 +203,8 @@ const privacySections = [
       "Hesap kapatma sonrası: 30 gün kurtarma penceresi, sonra silinir/anonim hâle getirilir.",
       "Faturalandırma kayıtları: VUK m.253 uyarınca 10 yıl.",
       "5651 sayılı Kanun erişim logları: 1-2 yıl (mevzuat şartı).",
-      "Pazarlama kayıtları: rıza geri alınana kadar."
+      "Pazarlama kayıtları: rıza geri alınana kadar.",
+      "Google OAuth tokenları ve bağlantı kayıtları: bağlantı kaldırılana veya hesap silinene kadar."
     ]
   },
   {
@@ -249,7 +252,10 @@ const privacySections = [
   {
     title: "12. Google API Services User Data Policy — Limited Use",
     items: [
-      "devu, Google API'lerinden alınan kullanıcı verilerini (Google Takvim olayları) yalnızca kullanıcının açıkça talep ettiği Hizmet'in (devu üzerinde oluşturulan/güncellenen randevuların kullanıcının Google Takvim'inde eş zamanlı görünmesi) ifası için kullanır.",
+      "Google ile girişte alınan benzersiz Google kullanıcı kimliği (sub), doğrulanmış e-posta ve ad yalnızca kimlik doğrulama, hesap eşleme ve güvenli hesap bağlama için kullanılır.",
+      "devu, Google Calendar API üzerinden yalnızca kullanıcının açıkça talep ettiği Hizmet'i sunar: Devu'da oluşturulan, güncellenen veya iptal edilen randevular kullanıcının birincil Google Takvim'inde oluşturulur, güncellenir veya silinir.",
+      "Takvim bağlantısı yalnızca kullanıcının sahip olduğu takvimlerde etkinlik yönetme yetkisini ister; takvim listesi veya mevcut etkinliklerin toplu içeriği okunmaz.",
+      "Calendar OAuth tokenları uygulama katmanında AES-256-GCM ile şifrelenir. Kullanıcı bağlantıyı kaldırdığında Google yetkisi iptal edilir ve yerel token kopyası temizlenir.",
       "Google Takvim verileri ASLA reklam veya pazarlama amacıyla kullanılmaz.",
       "Google Takvim verileri ASLA üçüncü taraflara satılmaz veya devredilmez.",
       "Google Takvim verileri ASLA yapay zekâ veya makine öğrenmesi modellerinin eğitiminde kullanılmaz.",
@@ -583,7 +589,7 @@ function App() {
     return (
       <LegalPage
         title="Gizlilik Politikası"
-        subtitle="Son güncelleme: Haziran 2026"
+        subtitle="Son güncelleme: Temmuz 2026"
         sections={privacySections}
         icon={ShieldCheck}
       />

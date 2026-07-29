@@ -323,10 +323,10 @@
   "landing.pricing.plans": [
     {
       "name": "Başlangıç",
-      "description": "Tek uzmanlı küçük işletmeler için sade başlangıç.",
+      "description": "İki uzmana kadar çalışan küçük işletmeler için sade başlangıç.",
       "items": [
         "1 lokasyon",
-        "1 uzman",
+        "2 aktif uzman",
         "Randevu takvimi",
         "Danışan kayıtları",
         "Danışan notları ve fotoğrafları",
@@ -336,9 +336,10 @@
     },
     {
       "name": "Ekip",
-      "description": "Birden çok uzman ve lokasyon ile gelişmiş özellikler.",
+      "description": "Altı uzmana ve üç lokasyona kadar gelişmiş ekip özellikleri.",
       "items": [
-        "Birden fazla uzman",
+        "6 aktif uzman",
+        "3 lokasyon",
         "Asistan kullanımı",
         "Daha fazla depolama",
         "Gelişmiş Bugün ekranı",
@@ -389,7 +390,7 @@
     },
     {
       "question": "Basic ve Ekip planları arasındaki fark nedir?",
-      "answer": "Basic plan, tek uzman ve tek lokasyonla çalışan işletmelerin randevu takvimi, danışan kayıtları, Bugün ekranı ve WhatsApp hatırlatmalarını sade şekilde kullanması için uygundur. Ekip planı ise birden fazla uzman, asistan kullanımı, gelişmiş operasyon ekranı, Google Takvim bağlantısı, ödeme takibi, daha geniş fotoğraf/not kullanımı ve öncelikli destek gibi ekip büyüdükçe ihtiyaç duyulan alanları açar."
+      "answer": "Basic plan, en fazla 2 aktif uzman ve 1 lokasyonla çalışan işletmeler için uygundur. Premium plan 6 aktif uzman, 3 lokasyon, sınırsız ekip kullanıcı hesabı, Google Takvim bağlantısı, ödeme takibi, haftalık görünüm, ekip bildirimleri ve daha geniş depolama alanı sunar."
     },
     {
       "question": "Ödeme takibi zorunlu mu?",

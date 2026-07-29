@@ -37,14 +37,14 @@
       .seo-prerender li { margin-bottom: 6px; }
       .seo-prerender a { color: #2473e0; }
     </style>
-    <script type="module" crossorigin src="/assets/main-C8gty-8E.js"></script>
+    <script type="module" crossorigin src="/assets/main-CAXZmunI.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/main-D53oQ6Z4.css">
   </head>
   <body>
     <div id="root">
       <main class="seo-prerender">
         <h1>Gizlilik Politikası</h1>
-        <p class="updated">Son güncelleme: 10.06.2026</p>
+        <p class="updated">Son güncelleme: 24.07.2026</p>
 
         <h2>1. Veri Sorumlusu</h2>
         <p>
@@ -58,6 +58,13 @@
           <li>
             <strong>Hesap verileri:</strong> ad, e-posta, şifrelenmiş parola,
             telefon, işletme bilgileri.
+          </li>
+          <li>
+            <strong>Google ile giriş verileri (opsiyonel):</strong> Google
+            hesabının benzersiz kullanıcı kimliği (sub), doğrulanmış e-posta
+            adresi ve görünen ad. Bu veriler yalnızca kimlik doğrulama, mevcut
+            Devu hesabını güvenli biçimde bağlama ve mükerrer hesapları önleme
+            amacıyla kullanılır.
           </li>
           <li>
             <strong>Otomatik veriler:</strong> IP, tarayıcı/cihaz, oturum
@@ -81,6 +88,10 @@
         <h2>3. Veri Kullanım Amaçları</h2>
         <ul>
           <li>Hesap oluşturma, kimlik doğrulama (KVKK m.5/2-c)</li>
+          <li>
+            Google ile giriş ve mevcut Devu hesabına Google kimliğinin
+            bağlanması (opsiyonel)
+          </li>
           <li>Hizmetin sunulması (randevu, WhatsApp, Google Takvim)</li>
           <li>Faturalama (KVKK m.5/2-ç)</li>
           <li>Destek süreçleri</li>
@@ -89,8 +100,12 @@
 
         <h2>4. Google API Services — Limited Use Politikası</h2>
         <p>
-          devu, Google Calendar API'sini kullanır. Bu API üzerinden elde edilen
-          veriler,
+          devu, opsiyonel Google ile giriş ve Google Calendar API
+          entegrasyonlarını kullanır. Google ile girişte alınan sub, ad ve
+          e-posta yalnızca giriş ve hesap bağlama için; Calendar OAuth yetkisi
+          ise yalnızca kullanıcının kendi randevularını birincil Google
+          Takvim'inde oluşturmak, güncellemek ve silmek için kullanılır. Bu
+          entegrasyonlar üzerinden elde edilen veriler,
           <a href="https://developers.google.com/terms/api-services-user-data-policy"
             >Google API Services User Data Policy</a
           >'nin <strong>Limited Use</strong> şartlarına uyar:
@@ -101,6 +116,16 @@
             verileri sadece sen aktif olarak takvim entegrasyonunu açtığında ve
             devu üzerinde randevu oluşturduğunda, bu verilerin Google Takvim'ine
             yazılması amacıyla kullanılır.
+          </li>
+          <li>
+            <strong>En az yetki:</strong> Takvim bağlantısı yalnızca kullanıcının
+            sahip olduğu takvimlerde etkinlik yönetme yetkisini ister. Takvim
+            listesi veya mevcut etkinliklerin toplu içeriği okunmaz.
+          </li>
+          <li>
+            <strong>Güvenli saklama ve silme:</strong> Calendar OAuth tokenları
+            uygulama katmanında AES-256-GCM ile şifrelenir; kullanıcı bağlantıyı
+            kaldırdığında token iptal edilir ve yerel kopyası temizlenir.
           </li>
           <li>
             <strong>Reklam için kullanılmaz.</strong> Bu verileri hiçbir koşulda
@@ -131,7 +156,10 @@
           <li>Cloudinary (ABD/AB) — görsel depolama</li>
           <li>Resend (ABD) — transactional e-posta</li>
           <li>Meta Platforms (ABD/AB) — WhatsApp Cloud API</li>
-          <li>Google (ABD) — Google Calendar API (opsiyonel, açık rıza ile)</li>
+          <li>
+            Google (ABD) — Google Identity Services ve Google Calendar API
+            (opsiyonel)
+          </li>
           <li>iyzico (Türkiye) — ödeme altyapısı</li>
         </ul>
 
@@ -147,6 +175,10 @@
         <ul>
           <li>Aktif hesap verileri: aboneliğiniz boyunca</li>
           <li>Hesap kapatma sonrası: 30 gün, sonra silinir</li>
+          <li>
+            Google OAuth tokenları ve bağlantı kayıtları: bağlantı kaldırılana
+            veya hesap silinene kadar
+          </li>
           <li>Faturalandırma kayıtları: VUK m.253 uyarınca 10 yıl</li>
         </ul>
 

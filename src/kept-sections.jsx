@@ -9,8 +9,8 @@ const LOGIN_URL = "https://app.devuapp.com/#/login";
 const formatPrice = (value) => `₺${new Intl.NumberFormat("tr-TR").format(value)}`;
 
 const planMeta = [
-  { monthlyPrice: 449, featured: false },
-  { monthlyPrice: 1799, featured: true }
+  { monthlyPrice: 699, yearlyPrice: 6990, featured: false },
+  { monthlyPrice: 1299, yearlyPrice: 12990, featured: true }
 ];
 
 function LegalNotes() {
@@ -77,7 +77,7 @@ export function Pricing() {
         {planMeta.map((plan, i) => {
           const txt = (Array.isArray(planText) && planText[i]) || {};
           const items = Array.isArray(txt.items) ? txt.items : [];
-          const price = yearly ? formatPrice(plan.monthlyPrice * 10) : formatPrice(plan.monthlyPrice);
+          const price = yearly ? formatPrice(plan.yearlyPrice) : formatPrice(plan.monthlyPrice);
           return (
             <article className={`pricing-card ${plan.featured ? "featured" : ""}`} key={i}>
               <div className="plan-top">
@@ -93,7 +93,7 @@ export function Pricing() {
               </div>
               {yearly && (
                 <p className="annual-equivalent">
-                  {formatPrice(Math.round((plan.monthlyPrice * 10) / 12))} {t("landing.pricing.perMonth")}
+                  {formatPrice(Math.round(plan.yearlyPrice / 12))} {t("landing.pricing.perMonth")}
                 </p>
               )}
               <a href={SIGNUP_URL}>{t("landing.pricing.cta")}</a>
