@@ -326,6 +326,7 @@
       "items": [
         "1 venue",
         "2 active practitioners",
+        "Up to 10 team members",
         "Appointment calendar",
         "Client records",
         "Client notes and photos",
@@ -339,7 +340,7 @@
       "items": [
         "6 active practitioners",
         "3 venues",
-        "Unlimited team user accounts",
+        "Up to 10 team members",
         "500 MB storage",
         "Daily team notifications",
         "Google Calendar connection",
@@ -388,7 +389,7 @@
     },
     {
       "question": "What is the difference between Basic and Premium?",
-      "answer": "Basic supports up to 2 active practitioners and 1 venue. Premium supports 6 active practitioners, 3 venues, unlimited team user accounts, Google Calendar sync, payment tracking, weekly calendar view, team notifications, and larger photo storage."
+      "answer": "Basic supports up to 2 active practitioners and 1 venue. Both plans include access for up to 10 team members, excluding the owner. Premium additionally supports 6 active practitioners, 3 venues, Google Calendar sync, payment tracking, weekly calendar view, team notifications, and larger photo storage."
     },
     {
       "question": "Lorem ipsum dolor sit.",

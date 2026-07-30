@@ -327,6 +327,7 @@
       "items": [
         "1 lokasyon",
         "2 aktif uzman",
+        "10 ekip üyesine kadar",
         "Randevu takvimi",
         "Danışan kayıtları",
         "Danışan notları ve fotoğrafları",
@@ -340,7 +341,7 @@
       "items": [
         "6 aktif uzman",
         "3 lokasyon",
-        "Asistan kullanımı",
+        "10 ekip üyesine kadar",
         "Daha fazla depolama",
         "Gelişmiş Bugün ekranı",
         "Günlük ekip bildirimleri",
@@ -390,7 +391,7 @@
     },
     {
       "question": "Basic ve Ekip planları arasındaki fark nedir?",
-      "answer": "Basic plan, en fazla 2 aktif uzman ve 1 lokasyonla çalışan işletmeler için uygundur. Premium plan 6 aktif uzman, 3 lokasyon, sınırsız ekip kullanıcı hesabı, Google Takvim bağlantısı, ödeme takibi, haftalık görünüm, ekip bildirimleri ve daha geniş depolama alanı sunar."
+      "answer": "Basic plan, en fazla 2 aktif uzman ve 1 lokasyonla çalışan işletmeler için uygundur. Her iki plan da çalışma alanı sahibi hariç 10 ekip üyesine kadar erişim sunar. Premium plan ayrıca 6 aktif uzman, 3 lokasyon, Google Takvim bağlantısı, ödeme takibi, haftalık görünüm, ekip bildirimleri ve daha geniş depolama alanı içerir."
     },
     {
       "question": "Ödeme takibi zorunlu mu?",
