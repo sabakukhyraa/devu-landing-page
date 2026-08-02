@@ -1,61 +1,62 @@
 {
   "landing.nav.items": [
-    "Lorem",
-    "Ipsum",
-    "Dolor"
+    "Features",
+    "Pricing",
+    "WhatsApp"
   ],
-  "landing.nav.login": "Lorem",
-  "landing.nav.langLabel": "Dil",
-  "landing.hero.badgeStrong": "Lorem",
-  "landing.hero.badgeText": "Ipsum dolor sit amet consectetur",
-  "landing.hero.title": "Lorem ipsum dolor sit amet.",
-  "landing.hero.subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim.",
-  "landing.hero.ctaPrimary": "Lorem ipsum",
-  "landing.hero.ctaSecondary": "Dolor sit",
-  "landing.hero.note": "Lorem ipsum dolor sit amet · consectetur adipiscing elit.",
+  "landing.nav.login": "Log in",
+  "landing.nav.langLabel": "Language",
+  "landing.hero.badgeStrong": "Simple",
+  "landing.hero.badgeText": "Start managing appointments like a professional",
+  "landing.hero.title": "Appointments and WhatsApp",
+  "landing.hero.subtitle": "An effortless appointment platform. Keep clients and practitioners informed with automated WhatsApp messages while your business runs professionally.",
+  "landing.hero.ctaPrimary": "Get Started",
+  "landing.hero.ctaSecondary": "Watch demo",
+  "landing.hero.note": "Try free for 14 days · Card details required",
   "landing.hero.shotTag": "App screenshot",
   "landing.hero.shotLabel": "Product UI — Today / daily overview",
   "landing.hero.shotSub": "Replace with a real capture",
   "landing.hero.pill": "Lorem ipsum · delivered",
   "landing.hero.trust": [
-    "Lorem ipsum",
-    "Dolor sit",
-    "Amet elit",
-    "Consectetur",
-    "Adipiscing",
-    "+20 lorem"
+    "Clinics",
+    "Studios",
+    "Consultants",
+    "Instructors",
+    "Therapists",
+    "Healthcare",
+    "+20 categories"
   ],
-  "landing.minimal.eyebrow": "Lorem ipsum",
-  "landing.minimal.title": "One job. Done perfectly. Lorem ipsum dolor.",
-  "landing.minimal.body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam.",
+  "landing.minimal.eyebrow": "Simple by design",
+  "landing.minimal.title": "A smooth experience.",
+  "landing.minimal.body": "A clean design made for every service business and audience. Manage appointments and clients without the usual friction.",
   "landing.minimal.points": [
-    "Lorem ipsum dolor sit amet consectetur adipiscing.",
-    "Sed do eiusmod tempor incididunt ut labore dolore.",
-    "Ut enim ad minim veniam quis nostrud exercitation.",
-    "Duis aute irure dolor in reprehenderit voluptate."
+    "No dozens of unnecessary features",
+    "No confusing copy, buttons, or menus",
+    "Everything you need is visible at a glance",
+    "Just a few clicks, almost like magic"
   ],
-  "landing.minimal.cta": "Lorem ipsum",
+  "landing.minimal.cta": "Get Started",
   "landing.minimal.badge": "Lorem",
   "landing.minimal.shotTag": "App screenshot",
   "landing.minimal.shotLabel": "Minimal UI — a single focused list",
   "landing.minimal.shotSub": "No clutter, no noise",
   "landing.minimal.micros": [
     {
-      "title": "Lorem ipsum",
-      "body": "Dolor sit amet consectetur adipiscing elit sed do eiusmod."
+      "title": "Ready in minutes",
+      "body": "Add your business, venue, and practitioners. Start working confidently with a guided setup."
     },
     {
-      "title": "Sit amet dolor",
-      "body": "Tempor incididunt ut labore et dolore magna aliqua enim."
+      "title": "A few taps per appointment",
+      "body": "Choose the client, practitioner, and time. Devu keeps every detail in one simple flow."
     },
     {
-      "title": "Consectetur elit",
-      "body": "Ut enim ad minim veniam quis nostrud exercitation ullamco."
+      "title": "Leave the follow-up to Devu",
+      "body": "Reminders, confirmations, cancellations, updates, and team notices go automatically through WhatsApp."
     }
   ],
-  "landing.whatsapp.eyebrow": "Lorem ipsum",
-  "landing.whatsapp.title": "The core power. Lorem ipsum dolor sit amet.",
-  "landing.whatsapp.body": "Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  "landing.whatsapp.eyebrow": "Like magic",
+  "landing.whatsapp.title": "Explore the WhatsApp integration.",
+  "landing.whatsapp.body": "Keep your clients and practitioners in sync and informed about every appointment.",
   "landing.whatsapp.mockup.shared": {
     "backLabel": "Back",
     "businessInitials": "DV",
@@ -195,6 +196,7 @@
   "landing.features.learnMore": "Lorem ipsum",
   "landing.features.modalDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud.",
   "landing.features.modalCta": "Lorem ipsum",
+  "landing.features.closeLabel": "Close feature details",
   "landing.features.items": [
     {
       "title": "Lorem ipsum dolor",
@@ -267,6 +269,31 @@
         "Ut enim ad minim veniam quis nostrud exercitation.",
         "Ullamco laboris nisi ut aliquip ex ea commodo."
       ]
+    },
+    {
+      "title": "Google Sign-In and Calendar",
+      "body": "Sign in securely with Google and, with your permission, sync Devu appointments to your own Google Calendar.",
+      "thumbLabel": "Google · Optional and secure",
+      "mediaLabel": "Google Sign-In and Google Calendar data use",
+      "modalBody": "Google connections are optional. We use identity data only to sign you in and link your account, and Calendar access only to sync your Devu appointments.",
+      "learnMore": "Review data use",
+      "dataUseLink": "Learn how we use Google data",
+      "bullets": [
+        "For Google Sign-In, your unique account ID, verified email, and name are used only for authentication and secure account linking.",
+        "Calendar access is used only to create, update, or delete Devu appointments in your primary Google Calendar.",
+        "We do not bulk-read your existing calendar events, and client phone numbers and free-form appointment notes are never sent to Google.",
+        "Google user data is never used for advertising, sold, or used to train artificial intelligence models."
+      ],
+      "visual": {
+        "previewLabel": "Optional Google Calendar synchronization for Devu appointments",
+        "title": "Google Calendar connection",
+        "subtitle": "Only with your permission",
+        "optional": "Optional",
+        "devuCalendar": "Devu appointment",
+        "googleCalendar": "Your Google Calendar",
+        "actions": ["Create", "Update", "Delete"],
+        "dataNote": "Your existing calendar is not bulk-read."
+      }
     }
   ],
   "landing.demos.eyebrow": "Lorem ipsum",
@@ -341,96 +368,97 @@
         "6 active practitioners",
         "3 venues",
         "Up to 10 team members",
-        "500 MB storage",
+        "More storage",
+        "Advanced Today view",
         "Daily team notifications",
         "Google Calendar connection",
-        "Payment tracking"
+        "Priority support"
       ]
     }
   ],
-  "landing.faq.eyebrow": "Lorem ipsum dolor",
-  "landing.faq.title": "Lorem ipsum dolor sit amet consectetur.",
+  "landing.faq.eyebrow": "Frequently Asked Questions",
+  "landing.faq.title": "Everything to know before you subscribe.",
   "landing.faq.items": [
     {
-      "question": "Lorem ipsum dolor sit.",
-      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat lorem ipsum dolor sit amet consectetur."
+      "question": "What is Devu's main benefit?",
+      "answer": "Devu treats appointment reminders as part of daily operations, not as a separate messaging tool. WhatsApp reminders, quick replies, the Today view, calendar, and client records work together, so your team can see who is coming, who cancelled, and which appointment needs action in one flow."
     },
     {
-      "question": "Lorem ipsum dolor sit amet.",
-      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat lorem ipsum dolor sit amet consectetur."
+      "question": "Which businesses is Devu designed for?",
+      "answer": "Devu is designed for small and medium service businesses that work by appointment, including healthcare and care services, consulting, beauty, sports, therapy, education, and similar appointment-focused teams. It is especially useful for businesses that communicate through WhatsApp without needing a complex CRM or heavy management software."
     },
     {
-      "question": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed.",
-      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat lorem ipsum dolor sit amet."
+      "question": "Can Devu replace my current calendar or notes system?",
+      "answer": "Devu simplifies your team's daily appointment flow in one place. The appointment calendar, client profile, notes, photos, alerts, and WhatsApp message status stay in the same context. On plans with Google Calendar, appointments can also be written to the connected calendar so practitioners can follow their schedule on their phones."
     },
     {
-      "question": "Lorem ipsum dolor sit amet consectetur adipiscing.",
-      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea."
+      "question": "Is a card required for the 14-day trial?",
+      "answer": "The trial starts through the subscription flow, and iyzico handles payment security. This lets you complete setup and test whether Devu fits your real daily workflow. If you cancel before the trial or current subscription period ends, it will not renew."
     },
     {
-      "question": "Lorem ipsum dolor sit.",
-      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat lorem."
+      "question": "How does WhatsApp setup work?",
+      "answer": "Devu uses Meta's Embedded Signup flow. Start the connection with Facebook in the dashboard, then choose your business account and phone number in Meta's secure window. Devu stores the required technical credentials securely on the server. Our WhatsApp Setup Guide explains every step."
     },
     {
-      "question": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
-      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat lorem ipsum dolor sit amet consectetur."
+      "question": "Do I need a new phone number for WhatsApp?",
+      "answer": "Usually, yes. For the smoothest setup, we recommend a new or released number dedicated to the WhatsApp Business Platform. It should not be active in WhatsApp or the WhatsApp Business app and must receive an SMS or call for verification. This keeps automated reminders reliable and separate from personal WhatsApp use."
     },
     {
-      "question": "Lorem ipsum dolor sit amet consectetur.",
-      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat lorem."
+      "question": "Do clients need to use the Devu app?",
+      "answer": "No. Clients do not sign in to Devu, download an app, or create an account. They receive reminders through WhatsApp and use quick replies to confirm or cancel an appointment. Your team sees those replies as appointment statuses inside Devu."
     },
     {
-      "question": "Lorem ipsum dolor sit amet consectetur.",
-      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat lorem ipsum."
+      "question": "What do WhatsApp quick replies do?",
+      "answer": "They give clients clear actions inside the reminder, such as 'I will attend' or 'Cancel'. When a client responds, Devu updates the appointment status and shows it in the appointment details. Your team can identify confirmed or at-risk appointments without reading messages one by one."
     },
     {
-      "question": "Lorem ipsum dolor sit.",
-      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat lorem ipsum dolor sit amet."
+      "question": "Who is the mobile app for?",
+      "answer": "The mobile app is designed for assistants and practitioners who stay on the move during the day. Desktop makes setup and management easy, while mobile focuses on running daily operations quickly and flexibly. Clients never use either platform; they only receive and answer reminders through WhatsApp."
     },
     {
       "question": "What is the difference between Basic and Premium?",
       "answer": "Basic supports up to 2 active practitioners and 1 venue. Both plans include access for up to 10 team members, excluding the owner. Premium additionally supports 6 active practitioners, 3 venues, Google Calendar sync, payment tracking, weekly calendar view, team notifications, and larger photo storage."
     },
     {
-      "question": "Lorem ipsum dolor sit.",
-      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea."
+      "question": "Is payment tracking required?",
+      "answer": "No. Devu's core value is WhatsApp reminders and simple appointment operations. Payment tracking is an additional module you can use when it fits your workflow. Teams that do not need it can continue using Devu solely for appointments, clients, and WhatsApp operations."
     },
     {
-      "question": "Lorem ipsum dolor sit amet consectetur.",
-      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat lorem ipsum."
+      "question": "How are data and WhatsApp access protected?",
+      "answer": "WhatsApp connects through Meta's official Embedded Signup flow, and technical credentials are encrypted on Devu's server. Devu never stores your card details; iyzico handles the payment process. Client data, appointment records, and team access are isolated and managed by workspace."
     },
     {
-      "question": "Lorem ipsum dolor sit amet.",
-      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim."
+      "question": "Can I cancel whenever I want?",
+      "answer": "Yes. You can cancel your subscription at any time. You will retain access until the current trial or paid period ends, and the subscription will not renew afterward."
     }
   ],
-  "landing.finalCta.eyebrow": "Lorem ipsum",
-  "landing.finalCta.title": "Lorem ipsum dolor sit.",
-  "landing.finalCta.body": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna.",
-  "landing.finalCta.cta": "Lorem ipsum dolor sit.",
-  "landing.footer.tagline": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do.",
-  "landing.footer.colProduct": "Lorem ipsum",
-  "landing.footer.linkFeatures": "Lorem ipsum",
-  "landing.footer.linkLogin": "Lorem ipsum",
-  "landing.footer.linkStart": "Lorem ipsum",
-  "landing.footer.colResources": "Lorem ipsum",
-  "landing.footer.linkGuide": "Lorem ipsum dolor",
-  "landing.footer.colLegal": "Lorem ipsum",
-  "landing.footer.linkTerms": "Lorem ipsum",
-  "landing.footer.linkPrivacy": "Lorem ipsum",
-  "landing.footer.linkKvkk": "Lorem ipsum dolor",
-  "landing.footer.linkCookie": "Lorem ipsum",
-  "landing.footer.cookiePrefs": "Lorem ipsum",
-  "landing.footer.linkDistanceSales": "Lorem ipsum dolor",
-  "landing.footer.linkPreInfo": "Lorem ipsum dolor",
-  "landing.footer.linkRefund": "Lorem ipsum dolor sit.",
-  "landing.footer.paymentLabel": "Lorem ipsum dolor sit.",
-  "landing.footer.copyright": "Lorem ipsum dolor sit amet consectetur.",
+  "landing.finalCta.eyebrow": "Get Started",
+  "landing.finalCta.title": "Try it, cancel if it is not for you.",
+  "landing.finalCta.body": "Start your 14-day free trial with card verification and test Devu in your real workflow. Cancel before the trial ends and you will not be charged.",
+  "landing.finalCta.cta": "Try Free for 14 Days",
+  "landing.footer.tagline": "Appointment and client management for service businesses.",
+  "landing.footer.colProduct": "Product",
+  "landing.footer.linkFeatures": "Features",
+  "landing.footer.linkLogin": "Log In",
+  "landing.footer.linkStart": "Get Started",
+  "landing.footer.colResources": "Resources",
+  "landing.footer.linkGuide": "WhatsApp Setup Guide",
+  "landing.footer.colLegal": "Legal",
+  "landing.footer.linkTerms": "Terms of Service",
+  "landing.footer.linkPrivacy": "Privacy Policy",
+  "landing.footer.linkKvkk": "KVKK Privacy Notice",
+  "landing.footer.linkCookie": "Cookie Policy",
+  "landing.footer.cookiePrefs": "Cookie Preferences",
+  "landing.footer.linkDistanceSales": "Distance Sales Agreement",
+  "landing.footer.linkPreInfo": "Preliminary Information Form",
+  "landing.footer.linkRefund": "Refund and Withdrawal Policy",
+  "landing.footer.paymentLabel": "Payments secured by",
+  "landing.footer.copyright": "© 2026 DevuApp. All rights reserved.",
   "landing.legalNotes.items": [
-    "Lorem ipsum dolor sit amet consectetur adipiscing.",
-    "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod.",
-    "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod.",
-    "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut."
+    "The Devu subscription fee covers the software service ONLY.",
+    "Meta charges WhatsApp messaging fees SEPARATELY under Conversation-Based Pricing.",
+    "Fees vary by conversation category, recipient country, and Meta's current rates.",
+    "Meta charges these fees directly to the card linked to the RECIPIENT's WhatsApp Business account."
   ],
-  "landing.legalNotes.rateLabel": "Lorem ipsum"
+  "landing.legalNotes.rateLabel": "Current rates:"
 }

@@ -196,6 +196,7 @@
   "landing.features.learnMore": "Lorem ipsum",
   "landing.features.modalDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud.",
   "landing.features.modalCta": "Lorem ipsum",
+  "landing.features.closeLabel": "Özellik detayını kapat",
   "landing.features.items": [
     {
       "title": "Lorem ipsum dolor",
@@ -268,6 +269,31 @@
         "Ut enim ad minim veniam quis nostrud exercitation.",
         "Ullamco laboris nisi ut aliquip ex ea commodo."
       ]
+    },
+    {
+      "title": "Google ile giriş ve Takvim",
+      "body": "Google hesabınızla güvenle giriş yapın; açık izninizle Devu randevularınızı kendi Google Takviminizle eşitleyin.",
+      "thumbLabel": "Google · İsteğe bağlı ve güvenli",
+      "mediaLabel": "Google ile giriş ve Google Takvim veri kullanımı",
+      "modalBody": "Google bağlantıları isteğe bağlıdır. Kimlik bilgilerinizi yalnızca giriş ve hesap eşleme, Takvim iznini ise yalnızca Devu randevularınızı eşitlemek için kullanırız.",
+      "learnMore": "Veri kullanımını incele",
+      "dataUseLink": "Google verilerini nasıl kullandığımızı inceleyin",
+      "bullets": [
+        "Google ile girişte benzersiz hesap kimliğiniz, doğrulanmış e-postanız ve adınız yalnızca kimlik doğrulama ve hesap bağlama için kullanılır.",
+        "Takvim izni yalnızca Devu randevularını birincil Google Takviminizde oluşturmak, güncellemek ve iptal edildiğinde silmek için kullanılır.",
+        "Mevcut takvim etkinlikleriniz toplu olarak okunmaz; müşteri telefonu ve serbest randevu notları Google'a gönderilmez.",
+        "Google kullanıcı verileri reklam, satış veya yapay zeka modeli eğitimi amacıyla kullanılmaz."
+      ],
+      "visual": {
+        "previewLabel": "Devu randevularının isteğe bağlı Google Takvim senkronizasyonu",
+        "title": "Google Takvim bağlantısı",
+        "subtitle": "Yalnızca açık izninizle",
+        "optional": "İsteğe bağlı",
+        "devuCalendar": "Devu randevusu",
+        "googleCalendar": "Google Takviminiz",
+        "actions": ["Oluştur", "Güncelle", "Sil"],
+        "dataNote": "Mevcut takviminiz toplu olarak okunmaz."
+      }
     }
   ],
   "landing.demos.eyebrow": "Lorem ipsum",
