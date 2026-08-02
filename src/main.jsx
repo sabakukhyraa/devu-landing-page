@@ -20,6 +20,7 @@ import {
 } from "./marketing-sections.jsx";
 import { Pricing, FAQ, FinalCTA, SiteFooter } from "./kept-sections.jsx";
 import CookieBanner from "./cookie-banner.jsx";
+import WhatsAppContactPage from "./whatsapp-contact-page.jsx";
 
 const SIGNUP_URL = "https://app.devuapp.com/#/register";
 const LOGIN_URL = "https://app.devuapp.com/#/login";
@@ -573,6 +574,31 @@ function LegalPage({ title, subtitle, sections, icon: Icon }) {
 
 function App() {
   const path = window.location.pathname.replace(/\/$/, "") || "/";
+  const searchParams = new URLSearchParams(window.location.search);
+  const whatsappContactMatch = path.match(/^\/whatsapp-contact\/(tr|en)\/(\d+)$/);
+
+  if (path === "/whatsapp-contact") {
+    return (
+      <WhatsAppContactPage
+        language={searchParams.get("lang") === "en" ? "en" : "tr"}
+        phoneDigits={searchParams.get("phone") || ""}
+      />
+    );
+  }
+
+  if (whatsappContactMatch) {
+    return (
+      <WhatsAppContactPage
+        language={whatsappContactMatch[1]}
+        phoneDigits={whatsappContactMatch[2]}
+      />
+    );
+  }
+
+  if (path.startsWith("/whatsapp-contact")) {
+    const language = path.split("/")[2] === "en" ? "en" : "tr";
+    return <WhatsAppContactPage language={language} />;
+  }
 
   if (path === "/terms") {
     return (
@@ -668,6 +694,6 @@ function App() {
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <App />
-    <CookieBanner />
+    {!window.location.pathname.startsWith("/whatsapp-contact") && <CookieBanner />}
   </React.StrictMode>
 );
