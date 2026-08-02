@@ -25,6 +25,7 @@ import {
   PlayCircle,
   Plus,
   Settings,
+  ShieldCheck,
   SlidersHorizontal,
   Smartphone,
   Smile,
@@ -55,14 +56,15 @@ const whatsappTabsMeta = [
   { id: "config", icon: Settings, visual: "embedded-signup" }
 ];
 
-// icons map to: workspace / calendar / client cards / payments / mobile
+// icons map to: workspace / calendar / client cards / payments / mobile / custom fields / Google
 const featuresMeta = [
   { id: "workspace", icon: UsersRound, thumb: "screenshot", media: "screenshot" },
   { id: "calendar", icon: CalendarDays, thumb: "screenshot", media: "calendar" },
   { id: "client", icon: CircleUser, thumb: "screenshot", media: "client" },
   { id: "payment", icon: CreditCard, thumb: "screenshot", media: "screenshot" },
   { id: "mobile", icon: Smartphone, thumb: "phone", media: "phone" },
-  { id: "customfields", icon: SlidersHorizontal, thumb: "screenshot", media: "screenshot" }
+  { id: "customfields", icon: SlidersHorizontal, thumb: "screenshot", media: "screenshot" },
+  { id: "google", icon: ShieldCheck, thumb: "google", media: "google" }
 ];
 
 const demosMeta = [{ id: "today" }, { id: "calendar" }, { id: "client" }, { id: "whatsapp" }];
@@ -142,6 +144,47 @@ function Placeholder({ kind = "screenshot", label, sublabel, aspect = "", tag })
         </div>
       )}
       <div className={`ph-canvas ${aspect}`}>{inner}</div>
+    </div>
+  );
+}
+
+function GoogleDataMock({ copy = {}, compact = false }) {
+  const actions = Array.isArray(copy.actions) ? copy.actions : [];
+
+  return (
+    <div className={`mkt-google-data ${compact ? "is-compact" : ""}`} role="img" aria-label={copy.previewLabel}>
+      <div className="mkt-google-data-head">
+        <span className="mkt-google-mark" aria-hidden="true">G</span>
+        <div>
+          <strong>{copy.title}</strong>
+          <span>{copy.subtitle}</span>
+        </div>
+        <span className="mkt-google-optional">
+          <ShieldCheck size={14} />
+          {copy.optional}
+        </span>
+      </div>
+
+      <div className="mkt-google-flow">
+        <div className="mkt-google-flow-node">
+          <CalendarDays size={18} />
+          <span>{copy.devuCalendar}</span>
+        </div>
+        <ArrowRight className="mkt-google-flow-arrow" size={18} aria-hidden="true" />
+        <div className="mkt-google-flow-node is-google">
+          <span className="mkt-google-mini-mark" aria-hidden="true">G</span>
+          <span>{copy.googleCalendar}</span>
+        </div>
+      </div>
+
+      <div className="mkt-google-actions" aria-hidden="true">
+        {actions.map((action) => <span key={action}>{action}</span>)}
+      </div>
+
+      <p className="mkt-google-data-note">
+        <ShieldCheck size={16} aria-hidden="true" />
+        {copy.dataNote}
+      </p>
     </div>
   );
 }
@@ -822,13 +865,14 @@ function FeatureModal({ feature, onClose }) {
         exit={{ opacity: 0, scale: 0.97, y: 8 }}
         transition={{ duration: 0.26, ease: [0.22, 1, 0.36, 1] }}
       >
-        <button type="button" className="mkt-modal-close" onClick={onClose} aria-label="Close">
+        <button type="button" className="mkt-modal-close" onClick={onClose} aria-label={t("landing.features.closeLabel")}>
           <X size={18} />
         </button>
         <div className="mkt-modal-media">
           {feature.mediaType === "calendar" && <CalendarMock />}
           {feature.mediaType === "client" && <ClientMock />}
           {feature.mediaType === "phone" && <Placeholder kind="phone" label={feature.mediaLabel} />}
+          {feature.mediaType === "google" && <GoogleDataMock copy={feature.visual} />}
           {feature.mediaType === "screenshot" && <Placeholder kind="screenshot" tag={t("landing.hero.shotTag")} label={feature.mediaLabel} />}
         </div>
         <div className="mkt-modal-body">
@@ -836,7 +880,7 @@ function FeatureModal({ feature, onClose }) {
             <Icon size={22} />
           </span>
           <h3>{feature.title}</h3>
-          <p>{t("landing.features.modalDesc")}</p>
+          <p>{feature.modalBody || t("landing.features.modalDesc")}</p>
           <ul className="mkt-modal-list">
             {(feature.bullets || []).map((b) => (
               <li key={b}>
@@ -845,12 +889,21 @@ function FeatureModal({ feature, onClose }) {
               </li>
             ))}
           </ul>
-          <div className="mkt-modal-cta">
-            <a className="primary-cta" href={SIGNUP_URL}>
-              {t("landing.features.modalCta")}
-              <ArrowRight size={18} />
+          {feature.dataUseLink && (
+            <a className="mkt-modal-data-link" href="/privacy/">
+              <ShieldCheck size={17} />
+              {feature.dataUseLink}
+              <ArrowUpRight size={15} />
             </a>
-          </div>
+          )}
+          {!feature.dataUseLink && (
+            <div className="mkt-modal-cta">
+              <a className="primary-cta" href={SIGNUP_URL}>
+                {t("landing.features.modalCta")}
+                <ArrowRight size={18} />
+              </a>
+            </div>
+          )}
         </div>
       </motion.div>
     </motion.div>
@@ -904,7 +957,10 @@ export function FeaturesSection() {
                   mediaType: meta.media,
                   mediaLabel: txt.mediaLabel,
                   title: txt.title,
-                  bullets: txt.bullets
+                  bullets: txt.bullets,
+                  modalBody: txt.modalBody,
+                  dataUseLink: txt.dataUseLink,
+                  visual: txt.visual
                 })
               }
               initial={{ opacity: 0, y: 24 }}
@@ -917,6 +973,8 @@ export function FeaturesSection() {
                   <div className="ph-canvas ph-wide" style={{ display: "grid", placeItems: "center" }}>
                     <span className="ph-icon"><Smartphone /></span>
                   </div>
+                ) : meta.thumb === "google" ? (
+                  <GoogleDataMock copy={txt.visual} compact />
                 ) : (
                   <div className="ph-canvas ph-wide">
                     <Skeleton />
@@ -934,7 +992,7 @@ export function FeaturesSection() {
                 <h3>{txt.title}</h3>
                 <p>{txt.body}</p>
                 <span className="mkt-feat-more">
-                  {t("landing.features.learnMore")}
+                  {txt.learnMore || t("landing.features.learnMore")}
                   <ArrowUpRight size={15} />
                 </span>
               </div>
