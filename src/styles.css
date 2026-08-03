@@ -1094,7 +1094,8 @@ svg {
 }
 
 .site-footer {
-  width: min(100% - 1px, 2048px);
+  width: 100%;
+  max-width: 2048px;
   margin: 96px auto 0;
   padding: 34px max(24px, calc((100vw - 1180px) / 2)) 32px;
   border: 1px solid #2a2a2a;
@@ -1903,8 +1904,7 @@ svg {
   .hero-content,
   .section,
   .workflow,
-  .final-cta,
-  .site-footer {
+  .final-cta {
     width: min(100% - 28px, 1180px);
   }
 

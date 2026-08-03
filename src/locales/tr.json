@@ -36,8 +36,8 @@
     "Sadece birkaç tıkla, sihir gibi"
   ],
   "landing.minimal.cta": "Hemen Başla",
-  "landing.minimal.badge": "Lorem",
-  "landing.minimal.shotTag": "App screenshot",
+  "landing.minimal.badge": "Next next next",
+  "landing.minimal.shotTag": "3 adımda hazır",
   "landing.minimal.shotLabel": "Minimal UI — a single focused list",
   "landing.minimal.shotSub": "No clutter, no noise",
   "landing.minimal.micros": [
@@ -189,10 +189,10 @@
       "captionText": "Facebook ile giriş yapın, işletme hesabınızı ve numaranızı seçin; Devu bağlantıyı güvenle tamamlasın."
     }
   ],
-  "landing.features.eyebrow": "Lorem ipsum",
-  "landing.features.title": "Everything else, lorem ipsum.",
-  "landing.features.body": "Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore.",
-  "landing.features.hint": "Lorem ipsum — click a card for details",
+  "landing.features.eyebrow": "Diğer özellikler",
+  "landing.features.title": "Birçok özellik, Ve daha fazlası.",
+  "landing.features.body": "İşinize yarayabilecek diğer özellikleri keşfedin.",
+  "landing.features.hint": "Tüm özellikleri görmek için kartlara tıklayın",
   "landing.features.learnMore": "Lorem ipsum",
   "landing.features.modalDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud.",
   "landing.features.modalCta": "Lorem ipsum",
@@ -291,7 +291,14 @@
         "optional": "İsteğe bağlı",
         "devuCalendar": "Devu randevusu",
         "googleCalendar": "Google Takviminiz",
-        "actions": ["Oluştur", "Güncelle", "Sil"],
+        "appointmentDate": "Bugün",
+        "appointmentTime": "14:20",
+        "syncStatus": "Eşitlendi",
+        "actions": [
+          "Oluştur",
+          "Güncelle",
+          "Sil"
+        ],
         "dataNote": "Mevcut takviminiz toplu olarak okunmaz."
       }
     }
@@ -380,28 +387,24 @@
   "landing.faq.title": "Satın almadan önce net olması gerekenler.",
   "landing.faq.items": [
     {
-      "question": "devu'nun ana faydası nedir?",
-      "answer": "devu, randevu hatırlatmalarını yalnızca mesaj gönderen ayrı bir araç gibi değil, günlük operasyonun parçası olarak ele alır. WhatsApp hatırlatmaları, hızlı yanıtlar, Bugün ekranı, takvim ve danışan kayıtları birlikte çalışır; ekip kimin geleceğini, kimin iptal ettiğini ve hangi randevunun aksiyon istediğini aynı akışta görür."
+      "question": "WhatsApp için yeni bir telefon numarası gerekir mi?",
+      "answer": "Genellikle evet, en sorunsuz kurulum için WhatsApp Business Platform'a özel yeni veya boşa çıkarılmış bir numara önerilir. Bu numara mevcut WhatsApp ya da WhatsApp Business uygulamasında aktif kullanılmamalı; SMS veya arama ile doğrulanabilir olmalıdır. Böylece otomatik hatırlatmalar işletme numaranızdan güvenilir şekilde gönderilir ve kişisel WhatsApp kullanımınızla karışmaz."
+    },
+    {
+      "question": "Neden yeni telefon numarası önerilir?",
+      "answer": "Varolan WhatsApp Business numaraları ile yapılan entegrasyonlarda (coexistence), telefonunuzdaki manuel kullanım ile otomatik yanıt sistemleri birbirine karışabilir. Devu otomasyonlarının kusursuz, hızlı ve güvenli çalışabilmesi için mesajların tamamen izole edilmiş bir altyapıda işlenmesi gerekir. Yeni bir numara kullanmak; yeni bir cihaz gerektirmez, her zaman bir cihaza bağlı olması gerekmez, yalnızca bir kereye mahsus SMS veya arama ile doğrulanabilir olmalıdır. Bu, WhatsApp Business Platform'un resmi önerisidir."
     },
     {
       "question": "devu hangi işletmeler için uygun?",
       "answer": "Randevuyla çalışan küçük ve orta ölçekli hizmet işletmeleri için uygundur: sağlık ve bakım hizmetleri, danışmanlık, güzellik, spor, terapi, eğitim ve benzeri randevu yoğun ekipler. devu özellikle WhatsApp ile iletişim kuran, ama karmaşık CRM veya ağır yönetim yazılımlarına ihtiyaç duymayan işletmeler için tasarlanır."
     },
     {
-      "question": "devu mevcut takvim veya not sistemimin yerini alır mı?",
-      "answer": "devu'nun amacı ekibin günlük randevu akışını tek bir yerde sadeleştirmektir. Randevu takvimi, danışan profili, notlar, fotoğraflar, uyarılar ve WhatsApp mesaj durumu aynı bağlamda tutulur. Google Takvim bağlantısı olan planlarda randevular bağlı takvime yazılabilir; böylece uzmanlar günlük programı telefonlarında da takip edebilir."
-    },
-    {
       "question": "14 günlük deneme için kart gerekiyor mu?",
-      "answer": "Deneme süreci abonelik akışı üzerinden başlar ve ödeme güvenliği iyzico altyapısıyla yönetilir. Amaç, kurulumu yapıp devu'nun günlük akışınıza uyup uymadığını gerçekçi şekilde test etmenizdir. Deneme veya mevcut abonelik dönemi bitmeden iptal ederseniz, yenileme yapılmaz."
+      "answer": "Evet. Deneme süreci abonelik üzerinden başlar ve ödeme güvenliği iyzico altyapısıyla yönetilir. Amaç, kurulumu yapıp devu'nun günlük akışınıza uyup uymadığını gerçekçi şekilde test etmenizdir. Deneme veya mevcut abonelik dönemi bitmeden iptal ederseniz, yenileme yapılmaz."
     },
     {
       "question": "WhatsApp kurulumu nasıl çalışıyor?",
       "answer": "devu, Meta'nın Embedded Signup akışıyla çalışır. Panelde Facebook ile WhatsApp bağlantısını başlatır, işletme hesabınızı ve numaranızı Meta'nın güvenli penceresinde seçersiniz; teknik erişim bilgileri devu tarafından sunucuda şifreli şekilde yönetilir. Ayrıntılı adımlar için WhatsApp Kurulum Rehberi sayfasını hazırladık."
-    },
-    {
-      "question": "WhatsApp için yeni bir telefon numarası gerekir mi?",
-      "answer": "Genellikle evet, en sorunsuz kurulum için WhatsApp Business Platform'a özel yeni veya boşa çıkarılmış bir numara önerilir. Bu numara mevcut WhatsApp ya da WhatsApp Business uygulamasında aktif kullanılmamalı; SMS veya arama ile doğrulanabilir olmalıdır. Böylece otomatik hatırlatmalar işletme numaranızdan güvenilir şekilde gönderilir ve kişisel WhatsApp kullanımınızla karışmaz."
     },
     {
       "question": "Danışanlar devu uygulamasını kullanmak zorunda mı?",

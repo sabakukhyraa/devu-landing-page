@@ -40,6 +40,7 @@ import "./marketing.css";
 
 const SIGNUP_URL = "https://app.devuapp.com/#/register";
 const LOGIN_URL = "https://app.devuapp.com/#/login";
+const GOOGLE_G_ICON_PATH = "/brands/google-g.svg";
 
 // Structure only — all display copy comes from shared/locales via i18n
 // (landing.*). Icons, ids, visual/media types stay in code and are zipped with
@@ -154,7 +155,9 @@ function GoogleDataMock({ copy = {}, compact = false }) {
   return (
     <div className={`mkt-google-data ${compact ? "is-compact" : ""}`} role="img" aria-label={copy.previewLabel}>
       <div className="mkt-google-data-head">
-        <span className="mkt-google-mark" aria-hidden="true">G</span>
+        <span className="mkt-google-mark" aria-hidden="true">
+          <img src={GOOGLE_G_ICON_PATH} alt="" />
+        </span>
         <div>
           <strong>{copy.title}</strong>
           <span>{copy.subtitle}</span>
@@ -165,20 +168,28 @@ function GoogleDataMock({ copy = {}, compact = false }) {
         </span>
       </div>
 
-      <div className="mkt-google-flow">
-        <div className="mkt-google-flow-node">
+      <div className="mkt-google-sync-row">
+        <div className="mkt-google-event-time" aria-hidden="true">
           <CalendarDays size={18} />
-          <span>{copy.devuCalendar}</span>
+          <strong>{copy.appointmentTime}</strong>
         </div>
-        <ArrowRight className="mkt-google-flow-arrow" size={18} aria-hidden="true" />
-        <div className="mkt-google-flow-node is-google">
-          <span className="mkt-google-mini-mark" aria-hidden="true">G</span>
-          <span>{copy.googleCalendar}</span>
+        <div className="mkt-google-event-copy">
+          <strong>{copy.devuCalendar}</strong>
+          <span>{copy.appointmentDate} · {copy.googleCalendar}</span>
         </div>
+        <span className="mkt-google-sync-status">
+          <CheckCheck size={15} aria-hidden="true" />
+          {copy.syncStatus}
+        </span>
       </div>
 
       <div className="mkt-google-actions" aria-hidden="true">
-        {actions.map((action) => <span key={action}>{action}</span>)}
+        {actions.map((action) => (
+          <span key={action}>
+            <CircleCheck size={13} />
+            {action}
+          </span>
+        ))}
       </div>
 
       <p className="mkt-google-data-note">
