@@ -658,13 +658,32 @@ export function HeroSection() {
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
-          <Placeholder kind="screenshot" aspect="ph-wide" tag={t("landing.hero.shotTag")} label={t("landing.hero.shotLabel")} sublabel={t("landing.hero.shotSub")} />
+          <div className="mkt-hero-flip">
+            <picture className="mkt-hero-picture">
+              <source
+                media="(max-width: 449px)"
+                srcSet="/media/screenshots/hero_small_2x.png"
+              />
+              <source
+                media="(max-width: 980px)"
+                srcSet="/media/screenshots/hero_medium_2x.png"
+              />
+              <img
+                src="/media/screenshots/hero_large_2x.png"
+                alt={t("landing.hero.shotLabel")}
+                decoding="async"
+              />
+            </picture>
+            <div className="mkt-hero-float">
+              <ChatMockup compact />
+            </div>
+          </div>
+          <span className="mkt-hero-flip-progress" aria-hidden="true">
+            <i />
+          </span>
           <div className="mkt-hero-pill">
             <i className="dot" />
             {t("landing.hero.pill")}
-          </div>
-          <div className="mkt-hero-float">
-            <ChatMockup compact />
           </div>
         </motion.div>
 
@@ -711,7 +730,22 @@ export function MinimalSection() {
 
         <Reveal className="mkt-minimal-visual" delay={0.1}>
           <span className="mkt-minimal-badge">{t("landing.minimal.badge")}</span>
-          <Placeholder kind="screenshot" aspect="ph-tall" tag={t("landing.minimal.shotTag")} label={t("landing.minimal.shotLabel")} sublabel={t("landing.minimal.shotSub")} />
+          <picture className="mkt-minimal-picture">
+            <source
+              media="(max-width: 449px)"
+              srcSet="/media/screenshots/minimal_appointment_small_2x.png"
+            />
+            <source
+              media="(max-width: 980px)"
+              srcSet="/media/screenshots/minimal_appointment_medium_2x.png"
+            />
+            <img
+              src="/media/screenshots/minimal_appointment_large_2x.png"
+              alt={t("landing.minimal.shotLabel")}
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
         </Reveal>
       </div>
 

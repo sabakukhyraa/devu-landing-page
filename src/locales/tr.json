@@ -16,7 +16,7 @@
   "landing.hero.shotTag": "App screenshot",
   "landing.hero.shotLabel": "Product UI — Today / daily overview",
   "landing.hero.shotSub": "Replace with a real capture",
-  "landing.hero.pill": "Lorem ipsum · delivered",
+  "landing.hero.pill": "İki farklı bakış açısı",
   "landing.hero.trust": [
     "Klinikler",
     "Stüdyolar",
@@ -78,8 +78,8 @@
   },
   "landing.whatsapp.mockup.reminder": {
     "previewLabel": "Otomatik WhatsApp randevu hatırlatması",
-    "greeting": "Merhaba Ayşe 👋",
-    "message": "Yarın saat 09:30'da Ece ile Pilates randevun var.",
+    "greeting": "Merhaba Mehmet 👋",
+    "message": "Yarın saat 15:00'da Dt. Bahar Yüksel ile randevun var.",
     "detail": "İşletmeniz · Kadıköy",
     "sentAt": "20:00"
   },
@@ -87,12 +87,12 @@
     "previewLabel": "WhatsApp randevu güncelleme ve iptal bildirimleri",
     "updatedBadge": "Randevu güncellendi",
     "updatedTitle": "Yeni randevu bilgilerin",
-    "updatedDetails": "20 Temmuz · 14:00 · Ece ile",
+    "updatedDetails": "4 Ağustos · 15:00 · Dt. Bahar Yüksel ile",
     "updatedVenue": "İşletmeniz · Kadıköy",
     "updatedAt": "10:02",
     "cancelledBadge": "Randevu iptal edildi",
-    "cancelledTitle": "22 Temmuz saat 11:00'daki randevunu iptal ettik.",
-    "cancelledDetails": "Pilates · Ece",
+    "cancelledTitle": "6 Ağustos saat 15:00'daki randevunu iptal ettik.",
+    "cancelledDetails": "Muayene · Dt. Bahar Yüksel",
     "cancelledNote": "Yeni bir randevu için bize yazabilirsin.",
     "cancelledAt": "10:08"
   },
@@ -100,7 +100,7 @@
     "previewLabel": "Uzmana gönderilen günlük WhatsApp randevu özeti",
     "dateLabel": "18 Temmuz",
     "badge": "Günlük ekip özeti",
-    "greeting": "Günaydın Ece,",
+    "greeting": "Günaydın Dt. Bahar Yüksel,",
     "summary": "Bugün 4 randevun var.",
     "appointments": [
       {
@@ -134,8 +134,8 @@
   "landing.whatsapp.mockup.quickReply": {
     "previewLabel": "WhatsApp hızlı yanıt ve otomatik cevap akışı",
     "replyTime": "20:14",
-    "confirmationMessage": "Randevun onaylandı ✅\n20 Temmuz · 09:30 · İşletmeniz\nGörüşmek üzere!",
-    "cancellationMessage": "Randevun iptal edildi ❌\n20 Temmuz · 09:30 · İşletmeniz\nYeni bir randevu için bize yazabilirsin."
+    "confirmationMessage": "Randevun onaylandı ✅\n4 Ağustos · 15:00 · İşletmeniz\nGörüşmek üzere!",
+    "cancellationMessage": "Randevun iptal edildi ❌\n4 Ağustos · 15:00 · İşletmeniz\nYeni bir randevu için bize yazabilirsin."
   },
   "landing.whatsapp.mockup.setup": {
     "previewLabel": "Devu rehberli WhatsApp Embedded Signup kurulumu",
