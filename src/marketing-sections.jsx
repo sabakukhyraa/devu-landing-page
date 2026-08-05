@@ -59,12 +59,19 @@ const whatsappTabsMeta = [
 
 // icons map to: workspace / calendar / client cards / payments / mobile / custom fields / Google
 const featuresMeta = [
-  { id: "workspace", icon: UsersRound, thumb: "screenshot", media: "screenshot" },
-  { id: "calendar", icon: CalendarDays, thumb: "screenshot", media: "calendar" },
-  { id: "client", icon: CircleUser, thumb: "screenshot", media: "client" },
-  { id: "payment", icon: CreditCard, thumb: "screenshot", media: "screenshot" },
-  { id: "mobile", icon: Smartphone, thumb: "phone", media: "phone" },
-  { id: "customfields", icon: SlidersHorizontal, thumb: "screenshot", media: "screenshot" },
+  { id: "workspace", icon: UsersRound, thumb: "screenshot", media: "screenshot", image: "/media/screenshots/feature_team_2x.png" },
+  { id: "calendar", icon: CalendarDays, thumb: "screenshot", media: "calendar", image: "/media/screenshots/feature_calendar_2x.png" },
+  { id: "client", icon: CircleUser, thumb: "screenshot", media: "client", image: "/media/screenshots/feature_client_2x.png" },
+  { id: "payment", icon: CreditCard, thumb: "screenshot", media: "screenshot", image: "/media/screenshots/feature_payments_2x.png" },
+  { id: "mobile", icon: Smartphone, thumb: "phone", media: "phone", image: "/media/screenshots/feature_mobile_2x.jpg" },
+  {
+    id: "customfields",
+    icon: SlidersHorizontal,
+    thumb: "screenshot",
+    media: "screenshot",
+    image: "/media/screenshots/feature_custom_fields_2x.png",
+    video: "/media/videos/feature_custom_fields_placeholder.mp4"
+  },
   { id: "google", icon: ShieldCheck, thumb: "google", media: "google" }
 ];
 
@@ -879,6 +886,7 @@ export function WhatsAppSection() {
 
 function FeatureModal({ feature, onClose }) {
   const { t } = useTranslation();
+  const reduceMotion = useReducedMotion();
   useEffect(() => {
     const onKey = (e) => e.key === "Escape" && onClose();
     window.addEventListener("keydown", onKey);
@@ -913,12 +921,38 @@ function FeatureModal({ feature, onClose }) {
         <button type="button" className="mkt-modal-close" onClick={onClose} aria-label={t("landing.features.closeLabel")}>
           <X size={18} />
         </button>
-        <div className="mkt-modal-media">
-          {feature.mediaType === "calendar" && <CalendarMock />}
-          {feature.mediaType === "client" && <ClientMock />}
-          {feature.mediaType === "phone" && <Placeholder kind="phone" label={feature.mediaLabel} />}
-          {feature.mediaType === "google" && <GoogleDataMock copy={feature.visual} />}
-          {feature.mediaType === "screenshot" && <Placeholder kind="screenshot" tag={t("landing.hero.shotTag")} label={feature.mediaLabel} />}
+        <div className={`mkt-modal-media${feature.id === "mobile" ? " is-portrait" : ""}`}>
+          {feature.video ? (
+            <div className="mkt-feature-video-shell">
+              <video
+                className="mkt-feature-video"
+                src={feature.video}
+                poster={feature.image}
+                aria-label={feature.mediaLabel || feature.title}
+                autoPlay={!reduceMotion}
+                loop={!reduceMotion}
+                muted
+                playsInline
+                preload="auto"
+              />
+              <span className="mkt-feature-video-progress" aria-hidden="true" />
+            </div>
+          ) : feature.image ? (
+            <img
+              className={`mkt-feature-shot mkt-feature-shot-modal${feature.id === "mobile" ? " is-portrait" : ""}`}
+              src={feature.image}
+              alt={feature.mediaLabel || feature.title}
+              decoding="async"
+            />
+          ) : (
+            <>
+              {feature.mediaType === "calendar" && <CalendarMock />}
+              {feature.mediaType === "client" && <ClientMock />}
+              {feature.mediaType === "phone" && <Placeholder kind="phone" label={feature.mediaLabel} />}
+              {feature.mediaType === "google" && <GoogleDataMock copy={feature.visual} />}
+              {feature.mediaType === "screenshot" && <Placeholder kind="screenshot" tag={t("landing.hero.shotTag")} label={feature.mediaLabel} />}
+            </>
+          )}
         </div>
         <div className="mkt-modal-body">
           <span className="mkt-modal-icon">
@@ -998,6 +1032,7 @@ export function FeaturesSection() {
               key={meta.id}
               onClick={() =>
                 setActive({
+                  id: meta.id,
                   icon: meta.icon,
                   mediaType: meta.media,
                   mediaLabel: txt.mediaLabel,
@@ -1005,7 +1040,9 @@ export function FeaturesSection() {
                   bullets: txt.bullets,
                   modalBody: txt.modalBody,
                   dataUseLink: txt.dataUseLink,
-                  visual: txt.visual
+                  visual: txt.visual,
+                  image: meta.image,
+                  video: meta.video
                 })
               }
               initial={{ opacity: 0, y: 24 }}
@@ -1014,7 +1051,25 @@ export function FeaturesSection() {
               transition={{ duration: 0.5, delay: 0.04 * i, ease: [0.22, 1, 0.36, 1] }}
             >
               <div className="mkt-feat-thumb">
-                {meta.thumb === "phone" ? (
+                {meta.id === "mobile" && meta.image ? (
+                  <div className="mkt-mobile-shot-stage">
+                    <img
+                      className="mkt-mobile-shot-card"
+                      src={meta.image}
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                ) : meta.image ? (
+                  <img
+                    className="mkt-feature-shot"
+                    src={meta.image}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                ) : meta.thumb === "phone" ? (
                   <div className="ph-canvas ph-wide" style={{ display: "grid", placeItems: "center" }}>
                     <span className="ph-icon"><Smartphone /></span>
                   </div>

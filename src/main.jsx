@@ -444,7 +444,7 @@ const whatsappSections = [
     title: "1. Devu'da WhatsApp bağlantısını başlatın",
     items: [
       "Devu web panelinde WhatsApp > Konfigürasyon sayfasına gidin.",
-      "Facebook ile WhatsApp bağla butonuna tıklayın.",
+      "\"Facebook ile WhatsApp Bağlayın\" düğmesine tıklayın.",
       "Açılan Meta penceresinde Facebook hesabınızla devam edin."
     ]
   },

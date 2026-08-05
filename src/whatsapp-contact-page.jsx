@@ -6,11 +6,11 @@ const COPY = {
     eyebrow: "Devu üzerinden güvenli yönlendirme",
     title: "İşletmeyle WhatsApp'ta iletişime geçin",
     body: "Aşağıdaki düğme sizi işletmenin müşteri iletişim numarasıyla yeni bir WhatsApp sohbetine götürür.",
-    action: "WhatsApp'ta aç",
+    action: "WhatsApp'ta açın",
     privacy: "Bu sohbet işletmeyle sizin aranızdadır. Devu konuşmanın içeriğini görmez veya saklamaz.",
     invalidTitle: "İletişim bağlantısı geçersiz",
     invalidBody: "Bu bağlantı eksik veya hatalı görünüyor. Lütfen size gönderilen bildirimdeki Bize Yaz düğmesini yeniden kullanın.",
-    home: "Devu ana sayfasına dön",
+    home: "Devu ana sayfasına dönün",
   },
   en: {
     eyebrow: "Secure handoff by Devu",

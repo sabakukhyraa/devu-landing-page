@@ -4,15 +4,15 @@
     "Fiyatlar",
     "WhatsApp"
   ],
-  "landing.nav.login": "Giriş yap",
+  "landing.nav.login": "Giriş yapın",
   "landing.nav.langLabel": "Dil",
   "landing.hero.badgeStrong": "Basit",
-  "landing.hero.badgeText": "Randevularını profesyonelce yönetmeye başla",
+  "landing.hero.badgeText": "Randevularınızı profesyonelce yönetmeye başlayın",
   "landing.hero.title": "Ran<accent>devu</accent> ve WhatsApp",
-  "landing.hero.subtitle": "Çocuk oyuncağı bir randevu yönetim platformu. Otomatik WhatsApp mesajlarıyla müşterilerini ve uzmanlarını randevular hakkında bilgilendirirken profesyonelliğin tadını çıkar!",
-  "landing.hero.ctaPrimary": "Hemen Başla",
-  "landing.hero.ctaSecondary": "Demo izle",
-  "landing.hero.note": "14 gün ücretsiz dene · Kart bilgisi gereklidir",
+  "landing.hero.subtitle": "Çocuk oyuncağı bir randevu yönetim platformu. Otomatik WhatsApp mesajlarıyla müşterilerinizi ve uzmanlarınızı randevular hakkında bilgilendirirken profesyonelliğin tadını çıkarın!",
+  "landing.hero.ctaPrimary": "Hemen Başlayın",
+  "landing.hero.ctaSecondary": "Demoyu izleyin",
+  "landing.hero.note": "14 gün ücretsiz deneyin · Kart bilgisi gereklidir",
   "landing.hero.shotTag": "App screenshot",
   "landing.hero.shotLabel": "Product UI — Today / daily overview",
   "landing.hero.shotSub": "Replace with a real capture",
@@ -35,7 +35,7 @@
     "Aradığınız her şey tek bir bakışta karşınızda",
     "Sadece birkaç tıkla, sihir gibi"
   ],
-  "landing.minimal.cta": "Hemen Başla",
+  "landing.minimal.cta": "Hemen Başlayın",
   "landing.minimal.badge": "Next next next",
   "landing.minimal.shotTag": "3 adımda hazır",
   "landing.minimal.shotLabel": "Minimal UI — a single focused list",
@@ -43,15 +43,15 @@
   "landing.minimal.micros": [
     {
       "title": "Dakikalar içinde hazır",
-      "body": "İşletmeni, mekanını ve uzmanlarını ekle. Rehberli kurulumla kaybolmadan çalışmaya başla."
+      "body": "İşletmenizi, mekanınızı ve uzmanlarınızı ekleyin. Rehberli kurulumla kaybolmadan çalışmaya başlayın."
     },
     {
       "title": "Randevu için birkaç dokunuş",
-      "body": "Müşteriyi, uzmanı ve saati seç. Devu tüm detayları tek bir akışta düzenlesin."
+      "body": "Müşteriyi, uzmanı ve saati seçin. Devu tüm detayları tek bir akışta düzenlesin."
     },
     {
-      "title": "Takibi Devu'ya bırak",
-      "body": "Hatırlatma, onay, iptal, güncelleme ve ekip bildirimleri WhatsApp'tan otomatik gitsin."
+      "title": "Takibi Devu'ya bırakın",
+      "body": "Hatırlatma, onay, iptal, güncelleme ve ekip bildirimlerini Devu sizin için WhatsApp'tan otomatik göndersin."
     }
   ],
   "landing.whatsapp.eyebrow": "sihir gibi",
@@ -63,37 +63,37 @@
     "businessName": "İşletmeniz",
     "online": "çevrimiçi",
     "videoLabel": "Görüntülü arama",
-    "callLabel": "Ara",
+    "callLabel": "Arayın",
     "moreLabel": "Diğer seçenekler",
     "today": "Bugün",
     "automaticBadge": "İşletmeniz · Otomatik Mesaj",
     "quickRepliesLabel": "Hızlı yanıtlar",
-    "confirm": "Onayla",
-    "cancel": "İptal Et",
+    "confirm": "Onaylayın",
+    "cancel": "İptal Edin",
     "emojiLabel": "Emoji",
     "messagePlaceholder": "Mesaj",
-    "attachLabel": "Dosya ekle",
+    "attachLabel": "Dosya ekleyin",
     "cameraLabel": "Kamera",
     "voiceLabel": "Sesli mesaj"
   },
   "landing.whatsapp.mockup.reminder": {
     "previewLabel": "Otomatik WhatsApp randevu hatırlatması",
     "greeting": "Merhaba Mehmet 👋",
-    "message": "Yarın saat 15:00'da Dt. Bahar Yüksel ile randevun var.",
+    "message": "Yarın saat 15:00'da Dt. Bahar Yüksel ile randevunuz var.",
     "detail": "İşletmeniz · Kadıköy",
     "sentAt": "20:00"
   },
   "landing.whatsapp.mockup.changes": {
     "previewLabel": "WhatsApp randevu güncelleme ve iptal bildirimleri",
     "updatedBadge": "Randevu güncellendi",
-    "updatedTitle": "Yeni randevu bilgilerin",
+    "updatedTitle": "Yeni randevu bilgileriniz",
     "updatedDetails": "4 Ağustos · 15:00 · Dt. Bahar Yüksel ile",
     "updatedVenue": "İşletmeniz · Kadıköy",
     "updatedAt": "10:02",
     "cancelledBadge": "Randevu iptal edildi",
-    "cancelledTitle": "6 Ağustos saat 15:00'daki randevunu iptal ettik.",
+    "cancelledTitle": "6 Ağustos saat 15:00'daki randevunuzu iptal ettik.",
     "cancelledDetails": "Muayene · Dt. Bahar Yüksel",
-    "cancelledNote": "Yeni bir randevu için bize yazabilirsin.",
+    "cancelledNote": "Yeni bir randevu için bize yazabilirsiniz.",
     "cancelledAt": "10:08"
   },
   "landing.whatsapp.mockup.teamDigest": {
@@ -101,7 +101,7 @@
     "dateLabel": "18 Temmuz",
     "badge": "Günlük ekip özeti",
     "greeting": "Günaydın Dt. Bahar Yüksel,",
-    "summary": "Bugün 4 randevun var.",
+    "summary": "Bugün 4 randevunuz var.",
     "appointments": [
       {
         "time": "09:30",
@@ -134,23 +134,23 @@
   "landing.whatsapp.mockup.quickReply": {
     "previewLabel": "WhatsApp hızlı yanıt ve otomatik cevap akışı",
     "replyTime": "20:14",
-    "confirmationMessage": "Randevun onaylandı ✅\n4 Ağustos · 15:00 · İşletmeniz\nGörüşmek üzere!",
-    "cancellationMessage": "Randevun iptal edildi ❌\n4 Ağustos · 15:00 · İşletmeniz\nYeni bir randevu için bize yazabilirsin."
+    "confirmationMessage": "Randevunuz onaylandı ✅\n4 Ağustos · 15:00 · İşletmeniz\nGörüşmek üzere!",
+    "cancellationMessage": "Randevunuz iptal edildi ❌\n4 Ağustos · 15:00 · İşletmeniz\nYeni bir randevu için bize yazabilirsiniz."
   },
   "landing.whatsapp.mockup.setup": {
     "previewLabel": "Devu rehberli WhatsApp Embedded Signup kurulumu",
     "secure": "Meta ile güvenli",
     "eyebrow": "Rehberli kurulum",
-    "title": "WhatsApp'ı birkaç tıkla bağla",
-    "body": "Teknik ayarlarla uğraşmadan işletme hesabını ve numaranı seç.",
+    "title": "WhatsApp'ı birkaç tıkla bağlayın",
+    "body": "Teknik ayarlarla uğraşmadan işletme hesabınızı ve numaranızı seçin.",
     "steps": [
-      "Facebook ile devam et",
-      "İşletme hesabını seç",
-      "WhatsApp numaranı seç",
+      "Facebook ile devam edin",
+      "İşletme hesabınızı seçin",
+      "WhatsApp numaranızı seçin",
       "Bağlantı tamamlandı"
     ],
     "readyTitle": "WhatsApp hazır",
-    "readyBody": "Otomasyonlarını kullanmaya başlayabilirsin."
+    "readyBody": "Otomasyonlarınızı kullanmaya başlayabilirsiniz."
   },
   "landing.whatsapp.controls": {
     "tabsLabel": "WhatsApp özellikleri",
@@ -160,7 +160,7 @@
   "landing.whatsapp.tabs": [
     {
       "title": "Randevu hatırlatmaları",
-      "sub": "Doğru zamanda, Onayla ve İptal Et butonlarıyla.",
+      "sub": "Doğru zamanda, Onaylayın ve İptal Edin butonlarıyla.",
       "captionTitle": "Müşterileriniz randevusunu unutmasın",
       "captionText": "Mesajı ne kadar önce göndereceğinizi seçin; Devu doğru zamanda otomatik iletsin."
     },
@@ -178,7 +178,7 @@
     },
     {
       "title": "Akıllı hızlı yanıtlar",
-      "sub": "Onayla ve İptal Et seçimlerine otomatik cevap verin.",
+      "sub": "Onaylayın ve İptal Edin seçimlerine otomatik cevap verin.",
       "captionTitle": "Yanıt gelir, randevu kendiliğinden güncellenir",
       "captionText": "Müşteri butona bastığında Devu randevuyu onaylar veya iptal eder ve belirlediğiniz yanıtı gönderir."
     },
@@ -192,95 +192,101 @@
   "landing.features.eyebrow": "Diğer özellikler",
   "landing.features.title": "Birçok özellik, Ve daha fazlası.",
   "landing.features.body": "İşinize yarayabilecek diğer özellikleri keşfedin.",
-  "landing.features.hint": "Tüm özellikleri görmek için kartlara tıklayın",
-  "landing.features.learnMore": "Lorem ipsum",
-  "landing.features.modalDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud.",
-  "landing.features.modalCta": "Lorem ipsum",
-  "landing.features.closeLabel": "Özellik detayını kapat",
+  "landing.features.hint": "Detayları görmek için bir karta tıklayın",
+  "landing.features.learnMore": "Detayları görün",
+  "landing.features.modalDesc": "Devu'nun işinizi nasıl kolaylaştırdığını keşfedin.",
+  "landing.features.modalCta": "Hemen başlayın",
+  "landing.features.closeLabel": "Özellik detayını kapatın",
   "landing.features.items": [
     {
-      "title": "Lorem ipsum dolor",
-      "body": "Sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
-      "thumbLabel": "Lorem — team & roles",
-      "mediaLabel": "Workspace — invite & roles",
+      "title": "Çalışma alanı ve ekip yönetimi",
+      "body": "Ekibinizi davet edin, rolleri seçin ve herkesin aynı düzen içinde çalışmasını birkaç dakikada sağlayın.",
+      "thumbLabel": "Ekip · roller ve erişimler",
+      "mediaLabel": "Çalışma alanı, ekip üyeleri ve rol yönetimi",
+      "modalBody": "Ekip kurmak uzun ayarlar gerektirmesin. Daveti gönderin, rolü seçin; Devu herkes için düzenli ve anlaşılır bir çalışma alanı hazırlasın.",
       "bullets": [
-        "Lorem ipsum dolor sit amet consectetur.",
-        "Adipiscing elit sed do eiusmod tempor.",
-        "Incididunt ut labore et dolore magna.",
-        "Aliqua ut enim ad minim veniam quis."
+        "İşletme sahibi dışında 10 ekip üyesine kadar aynı çalışma alanında buluşun.",
+        "Asistan ve uzman rollerini birkaç tıkla belirleyin.",
+        "Uzman hesaplarını kendi profilleri ve kişisel takvimleriyle eşleştirin.",
+        "Mekanlar, müşteriler ve randevular üzerinde birlikte, her zaman güncel verilerle çalışın."
       ]
     },
     {
-      "title": "Sit amet consectetur",
-      "body": "Adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim.",
-      "thumbLabel": "Ipsum — week view",
-      "mediaLabel": "Calendar — week view",
+      "title": "Özelleştirilebilir takvim görünümü",
+      "body": "İster güne odaklanın ister haftanın tamamını görün; kalabalık programınızı saniyeler içinde sadeleştirin.",
+      "thumbLabel": "Takvim · size göre düzenlenir",
+      "mediaLabel": "Özelleştirilebilir Devu takvim görünümü",
+      "modalBody": "Takviminiz ne kadar yoğun olursa olsun aradığınızı kolayca bulun. Görünümü değiştirin, filtreyi seçin ve günün akışını tek bakışta anlayın.",
       "bullets": [
-        "Nostrud exercitation ullamco laboris nisi.",
-        "Ut aliquip ex ea commodo consequat duis.",
-        "Aute irure dolor in reprehenderit voluptate.",
-        "Velit esse cillum dolore eu fugiat nulla."
+        "Gün, hafta ve ay görünümleri arasında rahatça geçiş yapın.",
+        "Uzman, mekan ve randevu durumuna göre yalnız görmek istediklerinizi filtreleyin.",
+        "Renklerle ayrılan programı uzun listeleri incelemeden okuyun.",
+        "Bir randevuya tıklayıp detayları açın, düzenleyin veya durumunu güncelleyin."
       ]
     },
     {
-      "title": "Adipiscing elit sed",
-      "body": "Do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam.",
-      "thumbLabel": "Dolor — client card",
-      "mediaLabel": "Client card — history",
+      "title": "Detaylı müşteri ve randevu kayıtları",
+      "body": "Bir müşteriyi hatırlamak için eski mesajları aramayın; ihtiyaç duyduğunuz her bilgi tek, düzenli profilde dursun.",
+      "thumbLabel": "Müşteri · tüm geçmiş tek yerde",
+      "mediaLabel": "Müşteri profili ve randevu geçmişi",
+      "modalBody": "Müşterinizi tanımak için farklı ekranlar arasında dolaşmayın. Profilini açın; geçmiş randevularını, notlarını ve görsellerini aynı yerde görün.",
       "bullets": [
-        "Pariatur excepteur sint occaecat cupidatat.",
-        "Non proident sunt in culpa qui officia.",
-        "Deserunt mollit anim id est laborum lorem.",
-        "Sed ut perspiciatis unde omnis iste natus."
+        "İletişim bilgilerine ve randevu geçmişine tek profilden ulaşın.",
+        "Fotoğrafları, açıklamaları ve işletmenize özel bilgileri düzenli biçimde saklayın.",
+        "Önemli müşteriler için özel durum uyarılarını gözden kaçırmayın.",
+        "Müşteri profilinden ayrılmadan yeni randevu oluşturun."
       ]
     },
     {
-      "title": "Tempor incididunt ut",
-      "body": "Labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco.",
-      "thumbLabel": "Sit — installments",
-      "mediaLabel": "Payments — manual tracker",
+      "title": "Taksitli ödemelerin takip sistemi",
+      "body": "Taksitleri, ödenenleri ve kalan tutarı hesap tablolarına ihtiyaç duymadan kolayca takip edin.",
+      "thumbLabel": "Ödemeler · taksitler kontrol altında",
+      "mediaLabel": "Taksitli ödeme takip ekranı",
+      "modalBody": "Kimin ne kadar ödediğini akılda tutmaya çalışmayın. Ödeme planını bir kez oluşturun; Devu kalan tutarı ve taksitlerin durumunu sizin için düzenlesin.",
       "bullets": [
-        "Error sit voluptatem accusantium doloremque.",
-        "Laudantium totam rem aperiam eaque ipsa.",
-        "Quae ab illo inventore veritatis et quasi.",
-        "Architecto beatae vitae dicta sunt explicabo."
+        "Toplam tutarı ve taksit planını birkaç adımda kaydedin.",
+        "Ödenen, yaklaşan ve geciken taksitleri kolayca ayırt edin.",
+        "Kalan bakiyeyi hesaplama yapmadan anında görün.",
+        "Tüm ödeme geçmişini ilgili müşteri kaydıyla birlikte takip edin."
       ]
     },
     {
-      "title": "Ut enim ad minim",
-      "body": "Veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "thumbLabel": "Amet — on the go",
-      "mediaLabel": "Mobile companion",
+      "title": "Mobil uygulama ve bildirimler",
+      "body": "Bilgisayar başında olmasanız da günün programı cebinizde olsun; önemli gelişmelerden anında haberdar olun.",
+      "thumbLabel": "Mobil · işletmeniz yanınızda",
+      "mediaLabel": "Devu mobil uygulamasında bugünün programı",
+      "modalBody": "Devu'yu kullanmak için masanıza bağlı kalmayın. Bugünün programını açın, randevulara ulaşın ve işlerinizi telefonunuzdan da kolayca yönetin.",
       "bullets": [
-        "Nemo enim ipsam voluptatem quia voluptas.",
-        "Sit aspernatur aut odit aut fugit sed quia.",
-        "Consequuntur magni dolores eos qui ratione.",
-        "Voluptatem sequi nesciunt neque porro lorem."
+        "Randevulardaki önemli değişikliklerde anında bildirim alın.",
+        "WhatsApp mesajlarıyla gelen onay ve iptal yanıtlarını anında görün.",
+        "Bugünkü randevuları ve günün özetini tek ekranda görün.",
+        "Randevu ve müşteri bilgilerine hareket halindeyken de ulaşın."
       ]
     },
     {
-      "title": "Consectetur adipiscing elit",
-      "body": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis.",
-      "thumbLabel": "Elit — custom fields",
-      "mediaLabel": "Custom fields — settings",
+      "title": "Hasta kayıtlarında size özel alanlar",
+      "body": "Hazır kalıplara sığmak zorunda değilsiniz; ihtiyacınız olan bilgileri kendi alanlarınızla kolayca kaydedin.",
+      "thumbLabel": "Özel alanlar · işinize tam uyum",
+      "mediaLabel": "Müşteri kayıtları için özel alan ayarları",
+      "modalBody": "Her işletme müşterisi hakkında farklı şeyler bilmek ister. Alanınızı adlandırın, türünü seçin ve müşteri profillerinde hemen kullanmaya başlayın.",
       "bullets": [
-        "Lorem ipsum dolor sit amet consectetur adipiscing.",
-        "Elit sed do eiusmod tempor incididunt labore.",
-        "Ut enim ad minim veniam quis nostrud exercitation.",
-        "Ullamco laboris nisi ut aliquip ex ea commodo."
+        "İşletmenize özel bilgileri tek tıkla sisteme ekleyin.",
+        "Farklı alan türleri arasından ihtiyacınıza uygun olanı seçin.",
+        "Alanları istediğiniz sıraya koyun ve gerektiğinde kolayca düzenleyin.",
+        "Eklediğiniz bilgileri her müşteri profilinde düzenli biçimde görün."
       ]
     },
     {
-      "title": "Google ile giriş ve Takvim",
-      "body": "Google hesabınızla güvenle giriş yapın; açık izninizle Devu randevularınızı kendi Google Takviminizle eşitleyin.",
+      "title": "Google ile giriş ve Takvim senkronizasyonu",
+      "body": "Google hesabınızla kolayca giriş yapın; isterseniz Devu randevularınızı kendi Google Takviminizle otomatik eşitleyin.",
       "thumbLabel": "Google · İsteğe bağlı ve güvenli",
       "mediaLabel": "Google ile giriş ve Google Takvim veri kullanımı",
-      "modalBody": "Google bağlantıları isteğe bağlıdır. Kimlik bilgilerinizi yalnızca giriş ve hesap eşleme, Takvim iznini ise yalnızca Devu randevularınızı eşitlemek için kullanırız.",
-      "learnMore": "Veri kullanımını incele",
+      "modalBody": "Ayrı bir giriş yöntemiyle veya çift kayıtla uğraşmayın. Google bağlantısı tamamen isteğe bağlıdır; kimlik bilgilerinizi yalnız giriş ve hesap eşleme, Takvim iznini ise yalnız Devu randevularınızı eşitlemek için kullanırız.",
+      "learnMore": "Veri kullanımını inceleyin",
       "dataUseLink": "Google verilerini nasıl kullandığımızı inceleyin",
       "bullets": [
-        "Google ile girişte benzersiz hesap kimliğiniz, doğrulanmış e-postanız ve adınız yalnızca kimlik doğrulama ve hesap bağlama için kullanılır.",
-        "Takvim izni yalnızca Devu randevularını birincil Google Takviminizde oluşturmak, güncellemek ve iptal edildiğinde silmek için kullanılır.",
+        "Google hesabınızla parola yazmadan hızlı ve güvenli biçimde giriş yapın.",
+        "İzin verdiğinizde Devu randevuları birincil Google Takviminizde otomatik oluşturulsun, güncellensin ve iptal edildiğinde silinsin.",
         "Mevcut takvim etkinlikleriniz toplu olarak okunmaz; müşteri telefonu ve serbest randevu notları Google'a gönderilmez.",
         "Google kullanıcı verileri reklam, satış veya yapay zeka modeli eğitimi amacıyla kullanılmaz."
       ],
@@ -295,28 +301,28 @@
         "appointmentTime": "14:20",
         "syncStatus": "Eşitlendi",
         "actions": [
-          "Oluştur",
-          "Güncelle",
-          "Sil"
+          "Oluşturma",
+          "Güncelleme",
+          "Silme"
         ],
         "dataNote": "Mevcut takviminiz toplu olarak okunmaz."
       }
     }
   ],
-  "landing.demos.eyebrow": "Lorem ipsum",
-  "landing.demos.title": "See it in motion. Lorem ipsum dolor.",
-  "landing.demos.body": "Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  "landing.demos.eyebrow": "Videolu gösterim",
+  "landing.demos.title": "Nasıl çalıştığını izleyin.",
+  "landing.demos.body": "Demo videolarla Devu'ya yakından göz atın.",
   "landing.demos.tag": "Screen Studio",
   "landing.demos.duration": "Lorem · 0:32",
   "landing.demos.controls": {
     "tabsLabel": "Demo bölümleri",
     "previous": "Önceki demo",
     "next": "Sonraki demo",
-    "play": "Demoyu oynat",
-    "close": "Demo videosunu kapat",
+    "play": "Demoyu oynatın",
+    "close": "Demo videosunu kapatın",
     "focusedLabel": "Odaklanmış demo",
     "position": "{{current}} / {{total}} numaralı demo",
-    "select": "{{index}} / {{total}}: {{label}} demosunu göster"
+    "select": "{{index}} / {{total}}: {{label}} demosunu gösterin"
   },
   "landing.demos.items": [
     {
@@ -348,7 +354,7 @@
   "landing.pricing.yearlyChip": "2 ay ücretsiz",
   "landing.pricing.perYear": "/ yıl",
   "landing.pricing.perMonth": "/ ay",
-  "landing.pricing.cta": "14 gün ücretsiz dene",
+  "landing.pricing.cta": "14 gün ücretsiz deneyin",
   "landing.pricing.badgeFeatured": "En uygun seçim",
   "landing.pricing.badgeDefault": "Başlamak için",
   "landing.pricing.trustPay": "Güvenli ödeme",
@@ -412,7 +418,7 @@
     },
     {
       "question": "WhatsApp hızlı yanıtlar ne işe yarar?",
-      "answer": "Hatırlatma mesajında danışana net aksiyonlar sunar: örneğin 'Geleceğim' veya 'İptal et'. Danışan yanıt verdiğinde devu randevunun durumunu günceller ve bu bilgi randevu detayında görünür. Böylece ekip, tek tek mesaj okumadan günün riskli veya teyit edilmiş randevularını ayırt edebilir."
+      "answer": "Hatırlatma mesajında danışana net aksiyonlar sunar: örneğin 'Geleceğim' veya 'İptal Edin'. Danışan yanıt verdiğinde devu randevunun durumunu günceller ve bu bilgi randevu detayında görünür. Böylece ekip, tek tek mesaj okumadan günün riskli veya teyit edilmiş randevularını ayırt edebilir."
     },
     {
       "question": "Mobil uygulama kimler için?",
@@ -436,13 +442,13 @@
     }
   ],
   "landing.finalCta.eyebrow": "Başlayın",
-  "landing.finalCta.title": "İncele, beğenmezsen iptal et.",
+  "landing.finalCta.title": "İnceleyin, beğenmezseniz iptal edin.",
   "landing.finalCta.body": "Kart doğrulamasıyla 14 günlük ücretsiz denemenizi başlatın; Devu'yu gerçek iş akışınızda deneyin. Deneme bitmeden iptal ederseniz ücret alınmaz.",
-  "landing.finalCta.cta": "14 Gün Ücretsiz Dene",
+  "landing.finalCta.cta": "14 Gün Ücretsiz Deneyin",
   "landing.footer.tagline": "Randevu ve müşteri yönetim platformu. Hizmet sektöründeki işletmeler için tasarlandı.",
   "landing.footer.colProduct": "Ürün",
   "landing.footer.linkFeatures": "Özellikler",
-  "landing.footer.linkLogin": "Giriş Yap",
+  "landing.footer.linkLogin": "Giriş Yapın",
   "landing.footer.linkStart": "Başlayın",
   "landing.footer.colResources": "Kaynaklar",
   "landing.footer.linkGuide": "WhatsApp Kurulum Rehberi",
@@ -457,6 +463,27 @@
   "landing.footer.linkRefund": "İade ve Cayma Politikası",
   "landing.footer.paymentLabel": "Ödemeler güvenli altyapı ile",
   "landing.footer.copyright": "© 2026 DevuApp. Tüm hakları saklıdır.",
+  "landing.cookie.banner.title": "Çerez tercihleriniz",
+  "landing.cookie.banner.body": "devu; oturum güvenliği için zorunlu çerezleri ve onayınızla web analizi (Google Analytics 4) ile reklam ölçümü (Meta Pixel) çerezlerini kullanır. Yurt dışı veri aktarımı söz konusudur. Ayrıntılar için <policy>Çerez Politikası'nı inceleyin</policy>.",
+  "landing.cookie.actions.reject": "Reddedin",
+  "landing.cookie.actions.manage": "Tercihleri Yönetin",
+  "landing.cookie.actions.acceptAll": "Tümünü Kabul Edin",
+  "landing.cookie.actions.requiredOnly": "Sadece Zorunlu",
+  "landing.cookie.actions.save": "Tercihleri Kaydedin",
+  "landing.cookie.modal.kicker": "Gizlilik kontrolü",
+  "landing.cookie.modal.title": "Çerez tercihleri",
+  "landing.cookie.modal.close": "Çerez tercihlerini kapatın",
+  "landing.cookie.modal.intro": "Zorunlu çerezler devu'nun güvenli çalışması için her zaman aktiftir. Diğer kategorileri dilediğiniz zaman açıp kapatabilirsiniz.",
+  "landing.cookie.modal.policyLink": "Çerez Politikası'nı inceleyin",
+  "landing.cookie.categories.required.title": "Zorunlu çerezler",
+  "landing.cookie.categories.required.description": "Platform'un çalışması için zorunludur. Oturum güvenliği, kimlik doğrulama ve CSRF koruması için kullanılır; kapatılamaz.",
+  "landing.cookie.categories.required.badge": "Zorunlu",
+  "landing.cookie.categories.functional.title": "İşlevsellik çerezleri",
+  "landing.cookie.categories.functional.description": "Dil tercihi ve son seçilen lokasyon gibi kullanıcı tercihlerini hatırlar.",
+  "landing.cookie.categories.analytics.title": "Performans / Analiz (Google Analytics 4)",
+  "landing.cookie.categories.analytics.description": "Anonim veya takma adlı cihaz tanımlayıcısı ile web sitesi ve uygulama kullanımını ölçer. Veriler ABD'ye aktarılır.",
+  "landing.cookie.categories.marketing.title": "Pazarlama (Meta Pixel)",
+  "landing.cookie.categories.marketing.description": "Reklam etkinliği ölçümü, dönüşüm takibi ve yeniden hedefleme için kullanılır. Veriler ABD'ye aktarılır.",
   "landing.legalNotes.items": [
     "devu abonelik bedeli YALNIZCA yazılım hizmetinin karşılığıdır.",
     "WhatsApp mesajları için Meta tarafından AYRICA ücret tahsil edilir (Conversation-Based Pricing).",

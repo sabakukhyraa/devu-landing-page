@@ -189,98 +189,104 @@
       "captionText": "Continue with Facebook, choose the business account and phone number, and Devu completes the connection securely."
     }
   ],
-  "landing.features.eyebrow": "Lorem ipsum",
-  "landing.features.title": "Everything else, lorem ipsum.",
-  "landing.features.body": "Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore.",
-  "landing.features.hint": "Lorem ipsum — click a card for details",
-  "landing.features.learnMore": "Lorem ipsum",
-  "landing.features.modalDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud.",
-  "landing.features.modalCta": "Lorem ipsum",
+  "landing.features.eyebrow": "More ways Devu helps",
+  "landing.features.title": "Plenty of features. And more.",
+  "landing.features.body": "Your team, calendar, client records, and payments are all easy to reach and even easier to manage.",
+  "landing.features.hint": "Click a card to explore the details",
+  "landing.features.learnMore": "See details",
+  "landing.features.modalDesc": "See how Devu makes everyday work feel easier.",
+  "landing.features.modalCta": "Get started",
   "landing.features.closeLabel": "Close feature details",
   "landing.features.items": [
     {
-      "title": "Lorem ipsum dolor",
-      "body": "Sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
-      "thumbLabel": "Lorem — team & roles",
-      "mediaLabel": "Workspace — invite & roles",
+      "title": "Workspace and team management",
+      "body": "Invite your team, choose their roles, and get everyone working in the same organized space in just a few minutes.",
+      "thumbLabel": "Team · roles and access",
+      "mediaLabel": "Workspace members and role management",
+      "modalBody": "Building your team should not mean wrestling with settings. Send the invitation, choose a role, and let Devu keep the workspace clear for everyone.",
       "bullets": [
-        "Lorem ipsum dolor sit amet consectetur.",
-        "Adipiscing elit sed do eiusmod tempor.",
-        "Incididunt ut labore et dolore magna.",
-        "Aliqua ut enim ad minim veniam quis."
+        "Bring up to 10 team members together, in addition to the workspace owner.",
+        "Assign assistant and practitioner roles in a few clicks.",
+        "Link practitioner accounts to their profiles and personal calendars.",
+        "Work together on locations, clients, and appointments with the same up-to-date information."
       ]
     },
     {
-      "title": "Sit amet consectetur",
-      "body": "Adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim.",
-      "thumbLabel": "Ipsum — week view",
-      "mediaLabel": "Calendar — week view",
+      "title": "A calendar that works your way",
+      "body": "Focus on today or see the whole week, then simplify even the busiest schedule in seconds.",
+      "thumbLabel": "Calendar · shaped around your day",
+      "mediaLabel": "Customizable Devu calendar view",
+      "modalBody": "No matter how busy the calendar gets, finding what you need stays simple. Switch the view, choose a filter, and understand the day at a glance.",
       "bullets": [
-        "Nostrud exercitation ullamco laboris nisi.",
-        "Ut aliquip ex ea commodo consequat duis.",
-        "Aute irure dolor in reprehenderit voluptate.",
-        "Velit esse cillum dolore eu fugiat nulla."
+        "Move comfortably between day, week, and month views.",
+        "Filter by practitioner, location, and appointment status.",
+        "Read the schedule quickly with clear, color-coded appointments.",
+        "Open an appointment to review details, edit it, or update its status."
       ]
     },
     {
-      "title": "Adipiscing elit sed",
-      "body": "Do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam.",
-      "thumbLabel": "Dolor — client card",
-      "mediaLabel": "Client card — history",
+      "title": "Complete client and appointment records",
+      "body": "Stop searching through old messages. Keep everything you need to remember about a client in one organized profile.",
+      "thumbLabel": "Clients · the full history in one place",
+      "mediaLabel": "Client profile and appointment history",
+      "modalBody": "You should not have to jump between screens to understand a client. Open their profile and see appointments, notes, and photos together.",
       "bullets": [
-        "Pariatur excepteur sint occaecat cupidatat.",
-        "Non proident sunt in culpa qui officia.",
-        "Deserunt mollit anim id est laborum lorem.",
-        "Sed ut perspiciatis unde omnis iste natus."
+        "Reach contact details and appointment history from one profile.",
+        "Keep photos, descriptions, and business-specific information organized.",
+        "Make important clients easy to notice with special status alerts.",
+        "Create a new appointment without leaving the client profile."
       ]
     },
     {
-      "title": "Tempor incididunt ut",
-      "body": "Labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco.",
-      "thumbLabel": "Sit — installments",
-      "mediaLabel": "Payments — manual tracker",
+      "title": "Simple installment payment tracking",
+      "body": "Track installments, paid amounts, and remaining balances without relying on spreadsheets.",
+      "thumbLabel": "Payments · every installment under control",
+      "mediaLabel": "Installment payment tracking dashboard",
+      "modalBody": "Stop trying to remember who paid what. Create the payment plan once and let Devu organize the remaining balance and installment status for you.",
       "bullets": [
-        "Error sit voluptatem accusantium doloremque.",
-        "Laudantium totam rem aperiam eaque ipsa.",
-        "Quae ab illo inventore veritatis et quasi.",
-        "Architecto beatae vitae dicta sunt explicabo."
+        "Save the total and installment plan in a few simple steps.",
+        "Tell paid, upcoming, and overdue installments apart instantly.",
+        "See the remaining balance without doing the math yourself.",
+        "Keep the complete payment history alongside the relevant client."
       ]
     },
     {
-      "title": "Ut enim ad minim",
-      "body": "Veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "thumbLabel": "Amet — on the go",
-      "mediaLabel": "Mobile companion",
+      "title": "Mobile app and notifications",
+      "body": "Keep the day's schedule in your pocket and stay on top of important changes even when you are away from your desk.",
+      "thumbLabel": "Mobile · your business goes with you",
+      "mediaLabel": "Today's schedule in the Devu mobile app",
+      "modalBody": "You should not have to sit at a desk to use Devu. Open today's schedule, reach appointments, and manage everyday work from your phone too.",
       "bullets": [
-        "Nemo enim ipsam voluptatem quia voluptas.",
-        "Sit aspernatur aut odit aut fugit sed quia.",
-        "Consequuntur magni dolores eos qui ratione.",
-        "Voluptatem sequi nesciunt neque porro lorem."
+        "See today's appointments and key numbers on one screen.",
+        "Filter by location and find what you need in a busy schedule.",
+        "Reach appointment and client information while you are on the move.",
+        "Continue with the same up-to-date workspace across web and mobile."
       ]
     },
     {
-      "title": "Consectetur adipiscing elit",
-      "body": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis.",
-      "thumbLabel": "Elit — custom fields",
-      "mediaLabel": "Custom fields — settings",
+      "title": "Custom fields for every client record",
+      "body": "Your workflow does not have to fit a template. Add the information you need with fields made for your business.",
+      "thumbLabel": "Custom fields · a natural fit for your work",
+      "mediaLabel": "Custom field settings for client records",
+      "modalBody": "Every business needs to know something different about its clients. Name the field, choose its type, and start using it in client profiles right away.",
       "bullets": [
-        "Lorem ipsum dolor sit amet consectetur adipiscing.",
-        "Elit sed do eiusmod tempor incididunt labore.",
-        "Ut enim ad minim veniam quis nostrud exercitation.",
-        "Ullamco laboris nisi ut aliquip ex ea commodo."
+        "Add business-specific information without writing code.",
+        "Choose the field type that fits the information you collect.",
+        "Reorder your fields and update them whenever your needs change.",
+        "See the information neatly organized in every client profile."
       ]
     },
     {
-      "title": "Google Sign-In and Calendar",
-      "body": "Sign in securely with Google and, with your permission, sync Devu appointments to your own Google Calendar.",
+      "title": "Google Sign-In and Calendar sync",
+      "body": "Sign in easily with Google and, if you choose, keep Devu appointments automatically synced with your own Google Calendar.",
       "thumbLabel": "Google · Optional and secure",
       "mediaLabel": "Google Sign-In and Google Calendar data use",
-      "modalBody": "Google connections are optional. We use identity data only to sign you in and link your account, and Calendar access only to sync your Devu appointments.",
+      "modalBody": "Skip an extra login method and duplicate entries. Google connections are fully optional; identity data is used only for sign-in and account linking, and Calendar access only to sync Devu appointments.",
       "learnMore": "Review data use",
       "dataUseLink": "Learn how we use Google data",
       "bullets": [
-        "For Google Sign-In, your unique account ID, verified email, and name are used only for authentication and secure account linking.",
-        "Calendar access is used only to create, update, or delete Devu appointments in your primary Google Calendar.",
+        "Sign in quickly and securely with your Google account, without typing another password.",
+        "With your permission, Devu appointments are automatically created, updated, and deleted when cancelled in your primary Google Calendar.",
         "We do not bulk-read your existing calendar events, and client phone numbers and free-form appointment notes are never sent to Google.",
         "Google user data is never used for advertising, sold, or used to train artificial intelligence models."
       ],
@@ -454,6 +460,27 @@
   "landing.footer.linkRefund": "Refund and Withdrawal Policy",
   "landing.footer.paymentLabel": "Payments secured by",
   "landing.footer.copyright": "© 2026 DevuApp. All rights reserved.",
+  "landing.cookie.banner.title": "Your cookie preferences",
+  "landing.cookie.banner.body": "Devu uses essential cookies for session security and, with your consent, cookies for web analytics (Google Analytics 4) and advertising measurement (Meta Pixel). This may involve international data transfers. For details, review our <policy>Cookie Policy</policy>.",
+  "landing.cookie.actions.reject": "Reject",
+  "landing.cookie.actions.manage": "Manage Preferences",
+  "landing.cookie.actions.acceptAll": "Accept All",
+  "landing.cookie.actions.requiredOnly": "Essential Only",
+  "landing.cookie.actions.save": "Save Preferences",
+  "landing.cookie.modal.kicker": "Privacy controls",
+  "landing.cookie.modal.title": "Cookie preferences",
+  "landing.cookie.modal.close": "Close cookie preferences",
+  "landing.cookie.modal.intro": "Essential cookies are always active so Devu can operate securely. You can enable or disable the other categories at any time.",
+  "landing.cookie.modal.policyLink": "Review the Cookie Policy",
+  "landing.cookie.categories.required.title": "Essential cookies",
+  "landing.cookie.categories.required.description": "Required for the platform to operate. They support session security, authentication, and CSRF protection and cannot be disabled.",
+  "landing.cookie.categories.required.badge": "Required",
+  "landing.cookie.categories.functional.title": "Functionality cookies",
+  "landing.cookie.categories.functional.description": "Remember preferences such as your language and most recently selected location.",
+  "landing.cookie.categories.analytics.title": "Performance / Analytics (Google Analytics 4)",
+  "landing.cookie.categories.analytics.description": "Measure website and app usage with an anonymous or pseudonymous device identifier. Data is transferred to the United States.",
+  "landing.cookie.categories.marketing.title": "Marketing (Meta Pixel)",
+  "landing.cookie.categories.marketing.description": "Used for advertising measurement, conversion tracking, and retargeting. Data is transferred to the United States.",
   "landing.legalNotes.items": [
     "The Devu subscription fee covers the software service ONLY.",
     "Meta charges WhatsApp messaging fees SEPARATELY under Conversation-Based Pricing.",
