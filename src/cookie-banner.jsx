@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Cookie, X } from "lucide-react";
+import { Trans, useTranslation } from "react-i18next";
 import {
   getConsent,
   setConsent,
@@ -19,6 +20,7 @@ import {
  *  - Mount'ta mevcut consent varsa tracker'ları yükler
  */
 export default function CookieBanner() {
+  const { t } = useTranslation();
   const [decision, setDecision] = useState(() => getConsent());
   const [bannerOpen, setBannerOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
@@ -88,22 +90,23 @@ export default function CookieBanner() {
               <Cookie size={22} />
             </div>
             <div className="cookie-banner-text">
-              <strong id="cookie-banner-title">Çerez tercihleriniz</strong>
+              <strong id="cookie-banner-title">{t("landing.cookie.banner.title")}</strong>
               <p>
-                devu; oturum güvenliği için zorunlu çerezleri ve onayınızla web analizi (Google Analytics 4)
-                ile reklam ölçümü (Meta Pixel) çerezlerini kullanır. Yurt dışı veri aktarımı söz konusudur.
-                Detay için <a href="/cerez-politikasi">Çerez Politikası</a>.
+                <Trans
+                  i18nKey="landing.cookie.banner.body"
+                  components={{ policy: <a href="/cerez-politikasi" /> }}
+                />
               </p>
             </div>
             <div className="cookie-banner-actions">
               <button type="button" className="cookie-btn cookie-btn-secondary" onClick={handleRejectAll}>
-                Reddet
+                {t("landing.cookie.actions.reject")}
               </button>
               <button type="button" className="cookie-btn cookie-btn-secondary" onClick={handleOpenPreferences}>
-                Tercihleri Yönet
+                {t("landing.cookie.actions.manage")}
               </button>
               <button type="button" className="cookie-btn cookie-btn-primary" onClick={handleAcceptAll}>
-                Tümünü Kabul Et
+                {t("landing.cookie.actions.acceptAll")}
               </button>
             </div>
           </div>
@@ -123,51 +126,57 @@ export default function CookieBanner() {
           <div className="cookie-modal">
             <div className="cookie-modal-head">
               <div>
-                <p className="cookie-modal-kicker">Gizlilik kontrolü</p>
-                <h2 id="cookie-modal-title">Çerez tercihleri</h2>
+                <p className="cookie-modal-kicker">{t("landing.cookie.modal.kicker")}</p>
+                <h2 id="cookie-modal-title">{t("landing.cookie.modal.title")}</h2>
               </div>
-              <button type="button" className="cookie-modal-close" aria-label="Kapat" onClick={() => setModalOpen(false)}>
+              <button
+                type="button"
+                className="cookie-modal-close"
+                aria-label={t("landing.cookie.modal.close")}
+                onClick={() => setModalOpen(false)}
+              >
                 <X size={18} />
               </button>
             </div>
             <div className="cookie-modal-body">
               <p className="cookie-modal-intro">
-                Zorunlu çerezler devu'nun güvenli çalışması için her zaman aktiftir. Diğer kategorileri dilediğiniz zaman açıp kapatabilirsiniz.
+                {t("landing.cookie.modal.intro")}
               </p>
               <CategoryRow
-                title="Zorunlu çerezler"
-                description="Platform'un çalışması için zorunludur. Oturum güvenliği, kimlik doğrulama, CSRF token. Kapatılamaz."
+                title={t("landing.cookie.categories.required.title")}
+                description={t("landing.cookie.categories.required.description")}
+                requiredLabel={t("landing.cookie.categories.required.badge")}
                 checked
                 disabled
               />
               <CategoryRow
-                title="İşlevsellik çerezleri"
-                description="Dil tercihi, son seçilen lokasyon gibi kullanıcı tercihlerini hatırlar."
+                title={t("landing.cookie.categories.functional.title")}
+                description={t("landing.cookie.categories.functional.description")}
                 checked={draft.functional}
                 onChange={(v) => setDraft((d) => ({ ...d, functional: v }))}
               />
               <CategoryRow
-                title="Performans / Analiz (Google Analytics 4)"
-                description="Anonim/pseudonim cihaz tanımlayıcısı ile web sitesi/uygulama kullanımını ölçer. Veri ABD'ye aktarılır."
+                title={t("landing.cookie.categories.analytics.title")}
+                description={t("landing.cookie.categories.analytics.description")}
                 checked={draft.analytics}
                 onChange={(v) => setDraft((d) => ({ ...d, analytics: v }))}
               />
               <CategoryRow
-                title="Pazarlama (Meta Pixel)"
-                description="Reklam etkinliği ölçümü, dönüşüm takibi ve yeniden hedefleme (retargeting). Veri ABD'ye aktarılır."
+                title={t("landing.cookie.categories.marketing.title")}
+                description={t("landing.cookie.categories.marketing.description")}
                 checked={draft.marketing}
                 onChange={(v) => setDraft((d) => ({ ...d, marketing: v }))}
               />
               <a className="cookie-policy-link" href="/cerez-politikasi">
-                Çerez Politikası'nı incele
+                {t("landing.cookie.modal.policyLink")}
               </a>
             </div>
             <div className="cookie-modal-foot">
               <button type="button" className="cookie-btn cookie-btn-secondary" onClick={handleRejectAll}>
-                Sadece Zorunlu
+                {t("landing.cookie.actions.requiredOnly")}
               </button>
               <button type="button" className="cookie-btn cookie-btn-primary" onClick={handleSavePreferences}>
-                Tercihleri Kaydet
+                {t("landing.cookie.actions.save")}
               </button>
             </div>
           </div>
@@ -177,13 +186,13 @@ export default function CookieBanner() {
   );
 }
 
-function CategoryRow({ title, description, checked, onChange, disabled }) {
+function CategoryRow({ title, description, checked, onChange, disabled, requiredLabel }) {
   return (
     <div className={`cookie-category${disabled ? " cookie-category-disabled" : ""}`}>
       <div>
         <div className="cookie-category-title">
           <strong>{title}</strong>
-          {disabled && <span>Zorunlu</span>}
+          {disabled && <span>{requiredLabel}</span>}
         </div>
         <p>{description}</p>
       </div>
@@ -192,6 +201,7 @@ function CategoryRow({ title, description, checked, onChange, disabled }) {
           type="checkbox"
           checked={!!checked}
           disabled={!!disabled}
+          aria-label={title}
           onChange={(e) => onChange && onChange(e.target.checked)}
         />
         <span className="cookie-toggle-track" />
