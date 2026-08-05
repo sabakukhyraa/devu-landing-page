@@ -657,10 +657,11 @@
 /* ── 3. HIGHLIGHT 2 — WHATSAPP INTEGRATION ────────────────────────────────── */
 
 .mkt-wa-wrap {
-  padding: 0 20px;
+  width: var(--page-shell-width);
+  margin-inline: auto;
 }
 .mkt-wa {
-  width: min(1220px, 100%);
+  width: 100%;
   margin: 0 auto;
   padding: clamp(48px, 6vw, 84px) clamp(24px, 5vw, 72px);
   border-radius: 28px;
@@ -1376,7 +1377,7 @@
 .mkt-feat-nav button:disabled { opacity: 0.4; cursor: default; }
 
 .mkt-feat-track {
-  --feat-shadow-gutter: clamp(20px, calc((100vw - 1180px) / 2), 56px);
+  --feat-shadow-gutter: clamp(20px, calc((100vw - var(--page-content-max)) / 2), 56px);
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: minmax(300px, 1fr);
@@ -1431,12 +1432,53 @@
   border-color: #dcd3c7;
 }
 .mkt-feat-thumb {
+  overflow: hidden;
   border: 0;
   border-bottom: 1px solid var(--line);
   border-radius: 0;
   box-shadow: none;
+  background: var(--panel);
 }
 .mkt-feat-thumb .ph-canvas { aspect-ratio: 16 / 10; }
+
+.mkt-feature-shot {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center;
+}
+
+.mkt-feat-thumb .mkt-feature-shot {
+  transition: transform 260ms ease;
+}
+
+.mkt-feat-card:hover .mkt-feature-shot {
+  transform: scale(1.025);
+}
+
+.mkt-mobile-shot-stage {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #f2f4f1;
+}
+
+.mkt-mobile-shot-card {
+  display: block;
+  width: auto;
+  height: 92%;
+  max-width: 72%;
+  border: 1px solid #dfdfdc;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(26, 26, 26, 0.14);
+  transition: transform 260ms ease;
+}
+
+.mkt-feat-card:hover .mkt-mobile-shot-card {
+  transform: translateY(-2px) scale(1.02);
+}
 .mkt-feat-card-body {
   padding: 20px 22px 22px;
   display: flex;
@@ -1500,11 +1542,11 @@
 }
 .mkt-modal {
   position: relative;
-  width: min(920px, 100%);
+  width: min(1120px, 100%);
   max-height: 88vh;
   overflow: hidden;
   display: grid;
-  grid-template-columns: 1.05fr 1fr;
+  grid-template-columns: minmax(0, 1.35fr) minmax(340px, 1fr);
   border-radius: 22px;
   background: var(--paper);
   border: 1px solid var(--line);
@@ -1524,6 +1566,74 @@
 .mkt-modal-media .calendar-mockup,
 .mkt-modal-media .client-mockup,
 .mkt-modal-media .whatsapp-mockup { width: 100%; }
+
+.mkt-feature-shot-modal {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: var(--shadow-soft);
+}
+
+.mkt-feature-video-shell {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel);
+  box-shadow: var(--shadow-soft);
+}
+
+.mkt-feature-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mkt-feature-video-progress {
+  position: absolute;
+  right: 12px;
+  bottom: 10px;
+  left: 12px;
+  height: 3px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(24, 22, 20, 0.14);
+}
+
+.mkt-feature-video-progress::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--accent);
+  transform-origin: left;
+  animation: mktFeatureVideoProgress 8s linear infinite;
+}
+
+@keyframes mktFeatureVideoProgress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+.mkt-modal-media.is-portrait {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  padding: 18px;
+  background: #f2f4f1;
+}
+
+.mkt-feature-shot-modal.is-portrait {
+  width: auto;
+  max-width: 100%;
+  height: min(70vh, 700px);
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: center;
+}
 .mkt-modal-body {
   padding: 30px 32px;
   overflow-y: auto;
@@ -2207,6 +2317,7 @@
 
 @media (max-width: 403px) {
   .mkt-hero-badge {
+    width: 100%;
     height: auto;
     gap: 4px;
     padding: 6px;
@@ -2214,7 +2325,10 @@
     line-height: 1.2;
   }
   .mkt-hero-badge-text {
-    white-space: nowrap;
+    min-width: 0;
+    flex: 1;
+    white-space: normal;
+    text-align: left;
     font-size: 11.5px;
   }
 }
@@ -2226,6 +2340,11 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .mkt-feature-video-progress::after {
+    animation: none;
+    transform: scaleX(1);
+  }
+
   .mkt-hero-title-accent {
     animation: none;
     background-position: 50% 50%;

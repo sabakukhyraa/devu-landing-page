@@ -21,6 +21,12 @@
   --shadow-soft: 0 10px 36px rgba(46, 38, 31, 0.08);
   --radius: 8px;
   --radius-lg: 18px;
+  --page-content-max: 1180px;
+  --page-gutter: 20px;
+  --page-shell-width: min(
+    var(--page-content-max),
+    calc(100% - var(--page-gutter) - var(--page-gutter))
+  );
   font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--ink);
   background: var(--bg);
@@ -329,7 +335,7 @@ svg {
 }
 
 .section {
-  width: min(1180px, calc(100% - 40px));
+  width: var(--page-shell-width);
   margin: 0 auto;
   padding: 96px 0;
 }
@@ -1064,7 +1070,7 @@ svg {
 }
 
 .final-cta {
-  width: min(1180px, calc(100% - 40px));
+  width: var(--page-shell-width);
   margin: 10px auto 0;
   padding: clamp(36px, 7vw, 78px);
   display: flex;
@@ -1896,6 +1902,10 @@ svg {
 }
 
 @media (max-width: 640px) {
+  :root {
+    --page-gutter: 14px;
+  }
+
   .hero {
     min-height: 94svh;
   }
@@ -1905,7 +1915,7 @@ svg {
   .section,
   .workflow,
   .final-cta {
-    width: min(100% - 28px, 1180px);
+    width: var(--page-shell-width);
   }
 
   .site-header {
@@ -2581,6 +2591,7 @@ svg {
   font-weight: 750;
   text-decoration: underline;
   text-underline-offset: 3px;
+  overflow-wrap: anywhere;
 }
 
 .legal-notes ol li a:hover {
