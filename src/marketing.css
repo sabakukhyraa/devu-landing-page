@@ -1758,6 +1758,8 @@
 }
 .mkt-modal-list {
   margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
   display: grid;
   gap: 12px;
 }
@@ -1881,14 +1883,6 @@
   transform: none;
   background: rgba(255, 255, 255, 0.14);
 }
-.mkt-demo-frame.is-started::after,
-.mkt-demo-frame.is-started > .ph-tag,
-.mkt-demo-frame.is-started > .mkt-demo-play,
-.mkt-demo-frame.is-started > .mkt-demo-meta {
-  opacity: 0;
-  pointer-events: none;
-}
-
 .mkt-demo-meta {
   position: absolute;
   left: 22px;

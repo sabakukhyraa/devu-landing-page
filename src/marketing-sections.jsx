@@ -1332,37 +1332,24 @@ export function FeaturesSection() {
 /* ── 5. DEMO VIDEOS ───────────────────────────────────────────────────────── */
 
 function DemoStage({ demo, media, controls, tag, durationLabel, onOpenFocused }) {
-  const videoRef = useRef(null);
-  const [hasStarted, setHasStarted] = useState(false);
   const hasVideo = Boolean(media.video);
 
   const handlePlay = () => {
     if (!hasVideo) return;
-    if (window.matchMedia("(max-width: 980px)").matches) {
-      onOpenFocused();
-      return;
-    }
-    videoRef.current?.play().catch(() => {});
+    onOpenFocused();
   };
 
   return (
-    <div className={`mkt-demo-frame ${hasVideo ? "has-media" : ""} ${hasStarted ? "is-started" : ""}`}>
+    <div className={`mkt-demo-frame ${hasVideo ? "has-media" : ""}`}>
       {hasVideo && (
         <video
-          ref={videoRef}
           className="mkt-demo-video"
           src={media.video}
           poster={media.poster}
           aria-label={demo.title}
           muted
           playsInline
-          controls={hasStarted}
           preload="metadata"
-          onPlay={() => setHasStarted(true)}
-          onEnded={(event) => {
-            event.currentTarget.currentTime = 0;
-            setHasStarted(false);
-          }}
         />
       )}
       <span className="ph-tag">
@@ -1503,7 +1490,7 @@ export function DemosSection() {
     setActive((index + count) % count);
   };
   const openFocusedDemo = () => {
-    if (activeMeta.video && window.matchMedia("(max-width: 980px)").matches) setIsFocused(true);
+    if (activeMeta.video) setIsFocused(true);
   };
 
   useEffect(() => {
@@ -1513,16 +1500,6 @@ export function DemosSection() {
     const left = button.offsetLeft - (rail.clientWidth - button.offsetWidth) / 2;
     rail.scrollTo({ left: Math.max(0, left), behavior: reduceMotion ? "auto" : "smooth" });
   }, [active, reduceMotion]);
-
-  useEffect(() => {
-    if (!isFocused) return undefined;
-    const viewport = window.matchMedia("(max-width: 980px)");
-    const handleViewportChange = (event) => {
-      if (!event.matches) setIsFocused(false);
-    };
-    viewport.addEventListener("change", handleViewportChange);
-    return () => viewport.removeEventListener("change", handleViewportChange);
-  }, [isFocused]);
 
   const handleDockKeyDown = (event, index) => {
     if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
