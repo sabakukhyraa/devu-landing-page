@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { Trans, useTranslation } from "react-i18next";
 import {
@@ -15,6 +16,7 @@ import {
   CircleUser,
   CreditCard,
   Image as ImageIcon,
+  Maximize2,
   MessageCircle,
   Mic,
   Monitor,
@@ -70,7 +72,7 @@ const featuresMeta = [
     thumb: "screenshot",
     media: "screenshot",
     image: "/media/screenshots/feature_custom_fields_2x.png",
-    video: "/media/videos/feature_custom_fields_placeholder.mp4"
+    video: "/media/videos/feature_custom_fields.mp4"
   },
   { id: "google", icon: ShieldCheck, thumb: "google", media: "google" }
 ];
@@ -884,18 +886,229 @@ export function WhatsAppSection() {
 
 /* ── 4. SECONDARY FEATURES — SLIDER CARDS + MODAL ─────────────────────────── */
 
+function FocusedFeatureVideo({ src, poster, label, closeLabel, startTime, onClose, reduceMotion }) {
+  const dialogRef = useRef(null);
+  const closeRef = useRef(null);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const previouslyFocused = document.activeElement;
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        onClose(videoRef.current?.currentTime || 0);
+        return;
+      }
+      if (event.key !== "Tab") return;
+
+      const focusable = dialogRef.current?.querySelectorAll(
+        'button:not([disabled]), video[controls], [href], [tabindex]:not([tabindex="-1"])'
+      );
+      if (!focusable?.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    window.requestAnimationFrame(() => closeRef.current?.focus({ preventScroll: true }));
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      previouslyFocused?.focus?.({ preventScroll: true });
+    };
+  }, [onClose]);
+
+  const resumeAtStartTime = (event) => {
+    const video = event.currentTarget;
+    if (Number.isFinite(startTime) && startTime > 0 && video.duration) {
+      video.currentTime = Math.min(startTime, Math.max(0, video.duration - 0.05));
+    }
+    video.play().catch(() => {});
+  };
+
+  return createPortal(
+    <motion.div
+      className="mkt-feature-focus-overlay"
+      onClick={() => onClose(videoRef.current?.currentTime || 0)}
+      initial={{ opacity: reduceMotion ? 1 : 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: reduceMotion ? 1 : 0 }}
+      transition={{ duration: reduceMotion ? 0 : 0.18 }}
+    >
+      <motion.div
+        className="mkt-feature-focus-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-label={label}
+        ref={dialogRef}
+        onClick={(event) => event.stopPropagation()}
+        initial={{ opacity: reduceMotion ? 1 : 0, scale: reduceMotion ? 1 : 0.97, y: reduceMotion ? 0 : 10 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        exit={{ opacity: reduceMotion ? 1 : 0, scale: reduceMotion ? 1 : 0.98, y: reduceMotion ? 0 : 8 }}
+        transition={{ duration: reduceMotion ? 0 : 0.22, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <button
+          type="button"
+          className="mkt-feature-focus-close"
+          onClick={() => onClose(videoRef.current?.currentTime || 0)}
+          aria-label={closeLabel}
+          ref={closeRef}
+        >
+          <X size={20} />
+        </button>
+        <video
+          ref={videoRef}
+          className="mkt-feature-focus-video"
+          src={src}
+          poster={poster}
+          aria-label={label}
+          autoPlay
+          loop
+          muted
+          playsInline
+          controls
+          controlsList="nodownload"
+          preload="auto"
+          onLoadedMetadata={resumeAtStartTime}
+        />
+      </motion.div>
+    </motion.div>,
+    document.body
+  );
+}
+
+function FeatureVideoPlayer({ src, poster, label, reduceMotion, controls, onFocusChange }) {
+  const inlineVideoRef = useRef(null);
+  const progressRef = useRef(null);
+  const focusButtonRef = useRef(null);
+  const animationFrameRef = useRef(null);
+  const [isFocused, setIsFocused] = useState(false);
+  const [focusStartTime, setFocusStartTime] = useState(0);
+
+  const stopProgressTracking = () => {
+    if (animationFrameRef.current) {
+      window.cancelAnimationFrame(animationFrameRef.current);
+      animationFrameRef.current = null;
+    }
+  };
+
+  const updateProgress = (video) => {
+    if (!video || !progressRef.current) return;
+    const duration = Number.isFinite(video.duration) ? video.duration : 0;
+    const ratio = duration > 0 ? Math.min(1, Math.max(0, video.currentTime / duration)) : 0;
+    progressRef.current.style.transform = `scaleX(${ratio})`;
+  };
+
+  const trackProgress = (video) => {
+    stopProgressTracking();
+    const tick = () => {
+      updateProgress(video);
+      if (!video.paused && !video.ended) {
+        animationFrameRef.current = window.requestAnimationFrame(tick);
+      }
+    };
+    tick();
+  };
+
+  useEffect(() => () => stopProgressTracking(), []);
+
+  const openFocusedVideo = () => {
+    const video = inlineVideoRef.current;
+    setFocusStartTime(video?.currentTime || 0);
+    video?.pause();
+    setIsFocused(true);
+    onFocusChange?.(true);
+  };
+
+  const closeFocusedVideo = (resumeTime) => {
+    setIsFocused(false);
+    onFocusChange?.(false);
+    window.requestAnimationFrame(() => {
+      const video = inlineVideoRef.current;
+      if (!video) return;
+      if (Number.isFinite(resumeTime)) video.currentTime = resumeTime;
+      updateProgress(video);
+      if (!reduceMotion) video.play().catch(() => {});
+      focusButtonRef.current?.focus({ preventScroll: true });
+    });
+  };
+
+  return (
+    <>
+      <div className="mkt-feature-video-shell">
+        <video
+          ref={inlineVideoRef}
+          className="mkt-feature-video"
+          src={src}
+          poster={poster}
+          aria-label={label}
+          autoPlay={!reduceMotion}
+          loop={!reduceMotion}
+          muted
+          playsInline
+          preload="auto"
+          onClick={openFocusedVideo}
+          onLoadedMetadata={(event) => updateProgress(event.currentTarget)}
+          onPlay={(event) => trackProgress(event.currentTarget)}
+          onPause={(event) => {
+            stopProgressTracking();
+            updateProgress(event.currentTarget);
+          }}
+          onSeeked={(event) => updateProgress(event.currentTarget)}
+          onTimeUpdate={(event) => updateProgress(event.currentTarget)}
+        />
+        <button
+          type="button"
+          className="mkt-feature-video-focus"
+          onClick={openFocusedVideo}
+          aria-label={controls.openLabel}
+          title={controls.openLabel}
+          ref={focusButtonRef}
+        >
+          <Maximize2 size={18} />
+        </button>
+        <span className="mkt-feature-video-progress" aria-hidden="true">
+          <i ref={progressRef} />
+        </span>
+      </div>
+
+      <AnimatePresence>
+        {isFocused && (
+          <FocusedFeatureVideo
+            src={src}
+            poster={poster}
+            label={label}
+            closeLabel={controls.closeLabel}
+            startTime={focusStartTime}
+            onClose={closeFocusedVideo}
+            reduceMotion={reduceMotion}
+          />
+        )}
+      </AnimatePresence>
+    </>
+  );
+}
+
 function FeatureModal({ feature, onClose }) {
   const { t } = useTranslation();
   const reduceMotion = useReducedMotion();
+  const [videoFocused, setVideoFocused] = useState(false);
+  const videoControls = t("landing.features.video", { returnObjects: true });
   useEffect(() => {
-    const onKey = (e) => e.key === "Escape" && onClose();
+    const onKey = (e) => e.key === "Escape" && !videoFocused && onClose();
     window.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
     return () => {
       window.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
     };
-  }, [onClose]);
+  }, [onClose, videoFocused]);
 
   const Icon = feature.icon;
 
@@ -923,20 +1136,14 @@ function FeatureModal({ feature, onClose }) {
         </button>
         <div className={`mkt-modal-media${feature.id === "mobile" ? " is-portrait" : ""}`}>
           {feature.video ? (
-            <div className="mkt-feature-video-shell">
-              <video
-                className="mkt-feature-video"
-                src={feature.video}
-                poster={feature.image}
-                aria-label={feature.mediaLabel || feature.title}
-                autoPlay={!reduceMotion}
-                loop={!reduceMotion}
-                muted
-                playsInline
-                preload="auto"
-              />
-              <span className="mkt-feature-video-progress" aria-hidden="true" />
-            </div>
+            <FeatureVideoPlayer
+              src={feature.video}
+              poster={feature.image}
+              label={feature.mediaLabel || feature.title}
+              reduceMotion={reduceMotion}
+              controls={videoControls}
+              onFocusChange={setVideoFocused}
+            />
           ) : feature.image ? (
             <img
               className={`mkt-feature-shot mkt-feature-shot-modal${feature.id === "mobile" ? " is-portrait" : ""}`}

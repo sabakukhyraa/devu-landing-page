@@ -197,6 +197,10 @@
   "landing.features.modalDesc": "See how Devu makes everyday work feel easier.",
   "landing.features.modalCta": "Get started",
   "landing.features.closeLabel": "Close feature details",
+  "landing.features.video": {
+    "openLabel": "Enlarge the video",
+    "closeLabel": "Close the enlarged video"
+  },
   "landing.features.items": [
     {
       "title": "Workspace and team management",

@@ -197,6 +197,10 @@
   "landing.features.modalDesc": "Devu'nun işinizi nasıl kolaylaştırdığını keşfedin.",
   "landing.features.modalCta": "Hemen başlayın",
   "landing.features.closeLabel": "Özellik detayını kapatın",
+  "landing.features.video": {
+    "openLabel": "Videoyu büyütün",
+    "closeLabel": "Büyük video görünümünü kapatın"
+  },
   "landing.features.items": [
     {
       "title": "Çalışma alanı ve ekip yönetimi",

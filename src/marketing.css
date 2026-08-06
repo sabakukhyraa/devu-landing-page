@@ -1589,6 +1589,36 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  cursor: zoom-in;
+}
+
+.mkt-feature-video-focus {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(18, 17, 15, 0.66);
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: transform 150ms ease, background 150ms ease;
+}
+
+.mkt-feature-video-focus:hover {
+  transform: scale(1.05);
+  background: rgba(18, 17, 15, 0.84);
+}
+
+.mkt-feature-video-focus:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
 }
 
 .mkt-feature-video-progress {
@@ -1602,20 +1632,83 @@
   background: rgba(24, 22, 20, 0.14);
 }
 
-.mkt-feature-video-progress::after {
-  content: "";
+.mkt-feature-video-progress > i {
   display: block;
   width: 100%;
   height: 100%;
   border-radius: inherit;
   background: var(--accent);
   transform-origin: left;
-  animation: mktFeatureVideoProgress 8s linear infinite;
+  transform: scaleX(0);
+  will-change: transform;
 }
 
-@keyframes mktFeatureVideoProgress {
-  from { transform: scaleX(0); }
-  to { transform: scaleX(1); }
+.mkt-feature-focus-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10020;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: rgba(10, 9, 8, 0.84);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.mkt-feature-focus-dialog {
+  position: relative;
+  width: min(1280px, 100%, calc((100vh - 36px) * 16 / 10));
+  max-height: calc(100vh - 36px);
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 16px;
+  background: #0d0c0b;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.52);
+}
+
+@supports (height: 100dvh) {
+  .mkt-feature-focus-dialog {
+    width: min(1280px, 100%, calc((100dvh - 36px) * 16 / 10));
+    max-height: calc(100dvh - 36px);
+  }
+}
+
+.mkt-feature-focus-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #0d0c0b;
+}
+
+.mkt-feature-focus-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(12, 11, 10, 0.72);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: transform 150ms ease, background 150ms ease;
+}
+
+.mkt-feature-focus-close:hover {
+  transform: scale(1.05);
+  background: rgba(12, 11, 10, 0.9);
+}
+
+.mkt-feature-focus-close:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
 }
 
 .mkt-modal-media.is-portrait {
@@ -2340,11 +2433,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .mkt-feature-video-progress::after {
-    animation: none;
-    transform: scaleX(1);
-  }
-
   .mkt-hero-title-accent {
     animation: none;
     background-position: 50% 50%;
