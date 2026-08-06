@@ -77,7 +77,17 @@ const featuresMeta = [
   { id: "google", icon: ShieldCheck, thumb: "google", media: "google" }
 ];
 
-const demosMeta = [{ id: "today" }, { id: "calendar" }, { id: "client" }, { id: "whatsapp" }];
+const demosMeta = [
+  {
+    id: "today",
+    video: "/media/videos/hero-today.mp4",
+    poster: "/media/screenshots/hero_large_2x.png",
+    duration: "0:29"
+  },
+  { id: "calendar" },
+  { id: "client" },
+  { id: "whatsapp" }
+];
 
 /* ── shared helpers ───────────────────────────────────────────────────────── */
 
@@ -1321,7 +1331,66 @@ export function FeaturesSection() {
 
 /* ── 5. DEMO VIDEOS ───────────────────────────────────────────────────────── */
 
-function FocusedDemoModal({ demo, controls, onClose, reduceMotion }) {
+function DemoStage({ demo, media, controls, tag, durationLabel, onOpenFocused }) {
+  const videoRef = useRef(null);
+  const [hasStarted, setHasStarted] = useState(false);
+  const hasVideo = Boolean(media.video);
+
+  const handlePlay = () => {
+    if (!hasVideo) return;
+    if (window.matchMedia("(max-width: 980px)").matches) {
+      onOpenFocused();
+      return;
+    }
+    videoRef.current?.play().catch(() => {});
+  };
+
+  return (
+    <div className={`mkt-demo-frame ${hasVideo ? "has-media" : ""} ${hasStarted ? "is-started" : ""}`}>
+      {hasVideo && (
+        <video
+          ref={videoRef}
+          className="mkt-demo-video"
+          src={media.video}
+          poster={media.poster}
+          aria-label={demo.title}
+          muted
+          playsInline
+          controls={hasStarted}
+          preload="metadata"
+          onPlay={() => setHasStarted(true)}
+          onEnded={(event) => {
+            event.currentTarget.currentTime = 0;
+            setHasStarted(false);
+          }}
+        />
+      )}
+      <span className="ph-tag">
+        <Video />
+        {tag}
+      </span>
+      <button
+        type="button"
+        className="mkt-demo-play"
+        aria-label={hasVideo ? controls.play : controls.comingSoon}
+        onClick={handlePlay}
+        disabled={!hasVideo}
+      >
+        <PlayCircle />
+      </button>
+      <div className="mkt-demo-meta" aria-live="polite">
+        <span className="tag">
+          <PlayCircle size={13} />
+          {durationLabel}
+        </span>
+        <h3>{demo.title}</h3>
+        <p>{demo.caption}</p>
+      </div>
+    </div>
+  );
+}
+
+function FocusedDemoModal({ demo, media, controls, onClose, reduceMotion }) {
   const dialogRef = useRef(null);
   const closeRef = useRef(null);
 
@@ -1337,7 +1406,7 @@ function FocusedDemoModal({ demo, controls, onClose, reduceMotion }) {
       if (event.key !== "Tab") return;
 
       const focusable = dialogRef.current?.querySelectorAll(
-        'button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        'button:not([disabled]), video[controls], [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
       );
       if (!focusable?.length) return;
       const first = focusable[0];
@@ -1395,13 +1464,18 @@ function FocusedDemoModal({ demo, controls, onClose, reduceMotion }) {
         </button>
 
         <div className="mkt-demo-focus-frame">
-          <span className="ph-tag">
-            <Video />
-            {controls.playerTag}
-          </span>
-          <button type="button" className="mkt-demo-focus-play" aria-label={controls.play}>
-            <PlayCircle />
-          </button>
+          <video
+            className="mkt-demo-focus-video"
+            src={media.video}
+            poster={media.poster}
+            aria-label={demo.title}
+            autoPlay
+            muted
+            playsInline
+            controls
+            controlsList="nodownload"
+            preload="auto"
+          />
         </div>
         <div className="mkt-demo-focus-meta">
           <span>{controls.focusedLabel}</span>
@@ -1422,10 +1496,14 @@ export function DemosSection() {
   const items = t("landing.demos.items");
   const controls = t("landing.demos.controls", { returnObjects: true });
   const demo = (Array.isArray(items) && items[active]) || {};
+  const activeMeta = demosMeta[active] || {};
   const count = demosMeta.length;
-  const selectDemo = (index) => setActive((index + count) % count);
+  const selectDemo = (index) => {
+    setIsFocused(false);
+    setActive((index + count) % count);
+  };
   const openFocusedDemo = () => {
-    if (window.matchMedia("(max-width: 980px)").matches) setIsFocused(true);
+    if (activeMeta.video && window.matchMedia("(max-width: 980px)").matches) setIsFocused(true);
   };
 
   useEffect(() => {
@@ -1477,23 +1555,16 @@ export function DemosSection() {
               exit={{ opacity: reduceMotion ? 1 : 0 }}
               transition={{ duration: reduceMotion ? 0 : 0.3 }}
             >
-              <div className="mkt-demo-frame">
-                <span className="ph-tag">
-                  <Video />
-                  {t("landing.demos.tag")}
-                </span>
-                <button type="button" className="mkt-demo-play" aria-label={controls.play} onClick={openFocusedDemo}>
-                  <PlayCircle />
-                </button>
-                <div className="mkt-demo-meta" aria-live="polite">
-                  <span className="tag">
-                    <PlayCircle size={13} />
-                    {t("landing.demos.duration")}
-                  </span>
-                  <h3>{demo.title}</h3>
-                  <p>{demo.caption}</p>
-                </div>
-              </div>
+              <DemoStage
+                demo={demo}
+                media={activeMeta}
+                controls={controls}
+                tag={t("landing.demos.tag")}
+                durationLabel={activeMeta.video
+                  ? t("landing.demos.duration", { duration: activeMeta.duration })
+                  : controls.comingSoon}
+                onOpenFocused={openFocusedDemo}
+              />
             </motion.div>
           </AnimatePresence>
 
@@ -1557,9 +1628,13 @@ export function DemosSection() {
               onClick={() => selectDemo(i)}
             >
               <div className="ph-canvas">
-                <div className="ph-placeholder-inner">
-                  <span className="ph-icon"><PlayCircle /></span>
-                </div>
+                {meta.poster ? (
+                  <img className="mkt-demo-thumb-poster" src={meta.poster} alt="" loading="lazy" decoding="async" />
+                ) : (
+                  <div className="ph-placeholder-inner">
+                    <span className="ph-icon"><PlayCircle /></span>
+                  </div>
+                )}
               </div>
               <span className="mkt-demo-thumb-label">
                 <span className="idx">{i + 1}</span>
@@ -1574,7 +1649,8 @@ export function DemosSection() {
         {isFocused && (
           <FocusedDemoModal
             demo={demo}
-            controls={{ ...controls, playerTag: t("landing.demos.tag") }}
+            media={activeMeta}
+            controls={controls}
             onClose={() => setIsFocused(false)}
             reduceMotion={reduceMotion}
           />

@@ -317,22 +317,23 @@
   "landing.demos.title": "Nasıl çalıştığını izleyin.",
   "landing.demos.body": "Demo videolarla Devu'ya yakından göz atın.",
   "landing.demos.tag": "Screen Studio",
-  "landing.demos.duration": "Lorem · 0:32",
+  "landing.demos.duration": "Ekran kaydı · {{duration}}",
   "landing.demos.controls": {
     "tabsLabel": "Demo bölümleri",
     "previous": "Önceki demo",
     "next": "Sonraki demo",
     "play": "Demoyu oynatın",
     "close": "Demo videosunu kapatın",
+    "comingSoon": "Video yakında",
     "focusedLabel": "Odaklanmış demo",
     "position": "{{current}} / {{total}} numaralı demo",
     "select": "{{index}} / {{total}}: {{label}} demosunu gösterin"
   },
   "landing.demos.items": [
     {
-      "title": "Lorem ipsum dolor sit amet",
-      "caption": "Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
-      "label": "Today — daily flow"
+      "title": "Günün akışı, tek bakışta.",
+      "caption": "Randevuları, uzmanları ve mekanları aynı ekranda görün; ayrıntılara birkaç saniyede ulaşın.",
+      "label": "Bugün · günlük akış"
     },
     {
       "title": "Sit amet consectetur elit",

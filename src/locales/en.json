@@ -310,22 +310,23 @@
   "landing.demos.title": "See it in motion. Lorem ipsum dolor.",
   "landing.demos.body": "Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna.",
   "landing.demos.tag": "Screen Studio",
-  "landing.demos.duration": "Lorem · 0:32",
+  "landing.demos.duration": "Screen recording · {{duration}}",
   "landing.demos.controls": {
     "tabsLabel": "Demo chapters",
     "previous": "Previous demo",
     "next": "Next demo",
     "play": "Play demo",
     "close": "Close demo video",
+    "comingSoon": "Video coming soon",
     "focusedLabel": "Focused demo",
     "position": "Demo {{current}} of {{total}}",
     "select": "Show demo {{index}} of {{total}}: {{label}}"
   },
   "landing.demos.items": [
     {
-      "title": "Lorem ipsum dolor sit amet",
-      "caption": "Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
-      "label": "Today — daily flow"
+      "title": "Your day, clear at a glance.",
+      "caption": "See appointments, practitioners, and venues together, then reach every detail in seconds.",
+      "label": "Today · daily flow"
     },
     {
       "title": "Sit amet consectetur elit",

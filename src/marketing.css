@@ -1826,14 +1826,40 @@
 }
 .mkt-demo-frame {
   position: relative;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 10;
   display: grid;
   place-items: center;
+  overflow: hidden;
   background:
     radial-gradient(50% 60% at 50% 40%, rgba(220, 76, 62, 0.18), transparent 60%),
     linear-gradient(160deg, #201d1a, #100f0d);
 }
+.mkt-demo-frame.has-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(12, 11, 10, 0.08) 30%, rgba(12, 11, 10, 0.78) 100%);
+  transition: opacity 180ms ease;
+}
+.mkt-demo-video {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #12110f;
+}
+.mkt-demo-frame > .ph-tag {
+  z-index: 3;
+  transition: opacity 150ms ease;
+}
 .mkt-demo-play {
+  position: relative;
+  z-index: 3;
   display: grid;
   place-items: center;
   width: 76px;
@@ -1847,6 +1873,21 @@
 }
 .mkt-demo-play svg { width: 30px; height: 30px; }
 .mkt-demo-play:hover { transform: scale(1.06); background: rgba(255, 255, 255, 0.22); }
+.mkt-demo-play:disabled {
+  cursor: default;
+  opacity: 0.42;
+}
+.mkt-demo-play:disabled:hover {
+  transform: none;
+  background: rgba(255, 255, 255, 0.14);
+}
+.mkt-demo-frame.is-started::after,
+.mkt-demo-frame.is-started > .ph-tag,
+.mkt-demo-frame.is-started > .mkt-demo-play,
+.mkt-demo-frame.is-started > .mkt-demo-meta {
+  opacity: 0;
+  pointer-events: none;
+}
 
 .mkt-demo-meta {
   position: absolute;
@@ -1901,7 +1942,13 @@
 }
 .mkt-demo-thumb:hover { transform: translateY(-3px); }
 .mkt-demo-thumb.is-active { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-soft), var(--shadow-soft); }
-.mkt-demo-thumb .ph-canvas { aspect-ratio: 16 / 9; }
+.mkt-demo-thumb .ph-canvas { aspect-ratio: 16 / 10; }
+.mkt-demo-thumb-poster {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .mkt-demo-thumb-label {
   display: flex;
   align-items: center;
@@ -1944,7 +1991,7 @@
 
 .mkt-demo-focus-dialog {
   position: relative;
-  width: min(900px, 100%, calc((100vh - 150px) * 16 / 9));
+  width: min(1000px, 100%, calc((100vh - 150px) * 16 / 10));
   max-height: calc(100vh - 28px);
   overflow-y: auto;
   border: 1px solid rgba(255, 255, 255, 0.16);
@@ -1955,7 +2002,7 @@
 
 @supports (height: 100dvh) {
   .mkt-demo-focus-dialog {
-    width: min(900px, 100%, calc((100dvh - 150px) * 16 / 9));
+    width: min(1000px, 100%, calc((100dvh - 150px) * 16 / 10));
     max-height: calc(100dvh - 28px);
   }
 }
@@ -1988,7 +2035,7 @@
 
 .mkt-demo-focus-frame {
   position: relative;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 10;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -1996,6 +2043,14 @@
   background:
     radial-gradient(50% 60% at 50% 40%, rgba(220, 76, 62, 0.2), transparent 60%),
     linear-gradient(160deg, #201d1a, #100f0d);
+}
+
+.mkt-demo-focus-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #12110f;
 }
 
 .mkt-demo-focus-play {
