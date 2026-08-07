@@ -84,7 +84,12 @@ const demosMeta = [
     poster: "/media/screenshots/hero_large_2x.png",
     duration: "0:29"
   },
-  { id: "calendar" },
+  {
+    id: "calendar",
+    video: "/media/videos/calendar-flow.mp4",
+    poster: "/media/screenshots/calendar_month_large_2x.png",
+    duration: "0:33"
+  },
   { id: "client" },
   { id: "whatsapp" }
 ];

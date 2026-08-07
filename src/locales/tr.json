@@ -369,8 +369,8 @@
       "name": "Başlangıç",
       "description": "İki uzmana kadar çalışan küçük işletmeler için sade başlangıç.",
       "items": [
-        "1 lokasyon",
         "2 aktif uzman",
+        "1 lokasyon",
         "10 ekip üyesine kadar",
         "Randevu takvimi",
         "Danışan kayıtları",
