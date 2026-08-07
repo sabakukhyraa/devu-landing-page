@@ -309,7 +309,7 @@
   "landing.demos.eyebrow": "Lorem ipsum",
   "landing.demos.title": "See it in motion. Lorem ipsum dolor.",
   "landing.demos.body": "Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna.",
-  "landing.demos.tag": "Screen Studio",
+  "landing.demos.tag": "Devu demo",
   "landing.demos.duration": "Screen recording · {{duration}}",
   "landing.demos.controls": {
     "tabsLabel": "Demo chapters",

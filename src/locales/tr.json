@@ -13,7 +13,7 @@
   "landing.hero.ctaPrimary": "Hemen Başlayın",
   "landing.hero.ctaSecondary": "Demoyu izleyin",
   "landing.hero.note": "14 gün ücretsiz deneyin · Kart bilgisi gereklidir",
-  "landing.hero.shotTag": "App screenshot",
+  "landing.hero.shotTag": "Ekran görüntüsü",
   "landing.hero.shotLabel": "Product UI — Today / daily overview",
   "landing.hero.shotSub": "Replace with a real capture",
   "landing.hero.pill": "İki farklı bakış açısı",
@@ -316,7 +316,7 @@
   "landing.demos.eyebrow": "Videolu gösterim",
   "landing.demos.title": "Nasıl çalıştığını izleyin.",
   "landing.demos.body": "Demo videolarla Devu'ya yakından göz atın.",
-  "landing.demos.tag": "Screen Studio",
+  "landing.demos.tag": "Devu demo",
   "landing.demos.duration": "Ekran kaydı · {{duration}}",
   "landing.demos.controls": {
     "tabsLabel": "Demo bölümleri",
