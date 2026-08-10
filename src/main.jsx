@@ -21,6 +21,7 @@ import {
 import { Pricing, FAQ, FinalCTA, SiteFooter } from "./kept-sections.jsx";
 import CookieBanner from "./cookie-banner.jsx";
 import WhatsAppContactPage from "./whatsapp-contact-page.jsx";
+import { EnglishPrivacyPage, EnglishSupportPage } from "./english-public-pages.jsx";
 
 const SIGNUP_URL = "https://app.devuapp.com/#/register";
 const LOGIN_URL = "https://app.devuapp.com/#/login";
@@ -600,6 +601,14 @@ function App() {
     return <WhatsAppContactPage language={language} />;
   }
 
+  if (path === "/privacy/en") {
+    return <EnglishPrivacyPage />;
+  }
+
+  if (path === "/support/en" || path === "/support") {
+    return <EnglishSupportPage />;
+  }
+
   if (path === "/terms") {
     return (
       <LegalPage
@@ -694,6 +703,8 @@ function App() {
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <App />
-    {!window.location.pathname.startsWith("/whatsapp-contact") && <CookieBanner />}
+    {!window.location.pathname.startsWith("/whatsapp-contact")
+      && !/^\/(privacy|support)\/en\/?$/.test(window.location.pathname)
+      && <CookieBanner />}
   </React.StrictMode>
 );

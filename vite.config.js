@@ -20,6 +20,8 @@ export default defineConfig({
         "whatsapp-contact": path.resolve(__dirname, "whatsapp-contact/index.html"),
         "whatsapp-setup": path.resolve(__dirname, "whatsapp-setup/index.html"),
         privacy: path.resolve(__dirname, "privacy/index.html"),
+        "privacy-en": path.resolve(__dirname, "privacy/en/index.html"),
+        "support-en": path.resolve(__dirname, "support/en/index.html"),
         terms: path.resolve(__dirname, "terms/index.html"),
         kvkk: path.resolve(__dirname, "kvkk/index.html"),
         "cerez-politikasi": path.resolve(__dirname, "cerez-politikasi/index.html"),
