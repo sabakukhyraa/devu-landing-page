@@ -84,8 +84,9 @@ const termsSections = [
       "WhatsApp özellikleri Meta WhatsApp Business Cloud API üzerinden çalışır ve Meta politikalarına tabidir.",
       "Mesaj göndereceğiniz alıcılara dair KVKK rıza, ETK ticari elektronik ileti onayı ve İYS kaydını sağlamak yalnızca sizin sorumluluğunuzdadır.",
       "devu'ya ödediğiniz abonelik bedeli YALNIZCA yazılım hizmetinin karşılığıdır; WhatsApp mesajları için Meta tarafından AYRICA ücret tahsil edilir.",
-      "Meta, 'Konuşma Bazlı Fiyatlandırma' (Conversation-Based Pricing) modeli uygular. Ücretler konuşma kategorisine (Hizmet, Pazarlama, Yardımcı, Kimlik Doğrulama), alıcı ülkesine ve Meta'nın güncel tarifesine göre değişir.",
-      "Meta ücretleri, WhatsApp Business hesabınıza bağlı kart veya kredi limiti üzerinden doğrudan Meta tarafından tahsil edilir; Sağlayıcı bu akışta taraf değildir.",
+      "Meta, 1 Temmuz 2025 itibarıyla ücretli WhatsApp şablon mesajlarını 24 saatlik konuşma başına değil, teslim edilen mesaj başına ücretlendirmektedir. 24 saatlik müşteri hizmetleri penceresi devam eder; bu pencere içindeki mesajların ücretlendirilmesi Meta'nın güncel kurallarına tabidir.",
+      "Ağustos 2026 tarihli Meta tarifesi ve hesaplama tarihinde kullanılan döviz kuru esas alındığında, +90 ülke kodlu Türkiye alıcılarına gönderilen ücrete tabi bir yardımcı (utility) şablon mesajının bedeli yaklaşık 0,0432 TL'dir (4,32 kuruş). Bu tutar yalnızca bilgilendirme amaçlı bir tahmindir; mesaj kategorisi, alıcı ülkesi, hacim kademesi, döviz kuru, vergiler ve Meta'nın tarife değişikliklerine göre farklılaşabilir.",
+      "Meta ücretleri, Devu'ya bağladığınız WhatsApp Business hesabının sahibi olan işletmenin Meta nezdindeki ödeme yöntemi veya kredi limitinden doğrudan Meta tarafından tahsil edilir. Mesajın gönderildiği müşteriden ücret alınmaz; Sağlayıcı bu tahsilatın tarafı değildir.",
       "Meta tarafından uygulanan askıya alma, kalite skoru düşmesi, hesap kapatma veya mesaj limiti kararları Sağlayıcı'nın kontrolünde değildir.",
       "Güncel Meta fiyatlandırma sayfası: developers.facebook.com/docs/whatsapp/pricing"
     ]
@@ -401,9 +402,9 @@ const preInfoSections = [
     title: "5. Meta WhatsApp Mesaj Ücretleri — Ek Maliyet Uyarısı",
     items: [
       "devu abonelik bedeli YALNIZCA yazılım hizmetinin karşılığıdır.",
-      "WhatsApp mesajları için Meta tarafından AYRICA ücret tahsil edilir (Conversation-Based Pricing).",
-      "Ücretler konuşma kategorisine, alıcı ülkesine ve Meta tarifesine göre değişir.",
-      "Meta ücretleri doğrudan ALICI'nın WhatsApp Business hesabına bağlı kart üzerinden Meta tarafından tahsil edilir.",
+      "WhatsApp mesajları için Meta tarafından AYRICA ücret tahsil edilir. Meta, ücretli şablon mesajlarını teslim edilen mesaj başına fiyatlandırır.",
+      "Ağustos 2026 tarihli Meta tarifesi ve hesaplama tarihinde kullanılan döviz kuru esas alındığında, +90 ülke kodlu Türkiye alıcılarına gönderilen ücrete tabi bir yardımcı (utility) şablon mesajının bedeli yaklaşık 0,0432 TL'dir (4,32 kuruş). Bu tahmini tutar mesaj kategorisi, alıcı ülkesi, hacim kademesi, döviz kuru, vergiler ve Meta'nın tarife değişikliklerine göre farklılaşabilir.",
+      "Meta ücretleri, Devu aboneliğini satın alan ALICI'nın Devu'ya bağladığı WhatsApp Business hesabına tanımlı ödeme yöntemi veya kredi limitinden doğrudan Meta tarafından tahsil edilir; mesajın gönderildiği müşteriden ücret alınmaz.",
       "Güncel tarife: developers.facebook.com/docs/whatsapp/pricing"
     ]
   },
@@ -490,14 +491,14 @@ const whatsappSections = [
     title: "Sık karşılaşılan durumlar",
     items: [
       "Meta işletme doğrulaması, telefon adı incelemesi veya kalite durumu nedeniyle gönderimi geçici olarak sınırlayabilir.",
-      "WhatsApp konuşma ücretleri Meta tarafından ayrıca tahsil edilir; devu aboneliğine dahil değildir.",
+      "WhatsApp mesaj ücretleri Meta tarafından ayrıca tahsil edilir; devu aboneliğine dahil değildir.",
       "Şablonlar Meta onayından geçmeden randevu dışı otomatik hatırlatma olarak kullanılamaz.",
       "Bağlantıyı yenilemeniz gerekirse aynı sayfadaki Bağlantıyı yenile butonunu kullanabilirsiniz."
     ]
   },
   {
     title: "Önemli not",
-    body: "Meta politikaları, şablon onayları, hesap uygunluğu ve WhatsApp konuşma ücretleri zaman içinde değişebilir. Devu bağlantı ve günlük hatırlatma akışını sadeleştirir; Meta Business hesabınızın uygunluğu, ödeme yöntemi ve mesajlaşma politikalarına uyum işletmenizin sorumluluğundadır."
+    body: "Meta politikaları, şablon onayları, hesap uygunluğu ve WhatsApp mesaj ücretleri zaman içinde değişebilir. Devu bağlantı ve günlük hatırlatma akışını sadeleştirir; Meta Business hesabınızın uygunluğu, ödeme yöntemi ve mesajlaşma politikalarına uyum işletmenizin sorumluluğundadır."
   }
 ];
 

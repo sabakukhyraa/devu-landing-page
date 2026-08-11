@@ -488,9 +488,9 @@
   "landing.cookie.categories.marketing.description": "Used for advertising measurement, conversion tracking, and retargeting. Data is transferred to the United States.",
   "landing.legalNotes.items": [
     "The Devu subscription fee covers the software service ONLY.",
-    "Meta charges WhatsApp messaging fees SEPARATELY under Conversation-Based Pricing.",
-    "Fees vary by conversation category, recipient country, and Meta's current rates.",
-    "Meta charges these fees directly to the card linked to the RECIPIENT's WhatsApp Business account."
+    "Meta prices paid WhatsApp template messages per delivered message; the rules governing the 24-hour customer service window continue to apply.",
+    "Based on Meta's August 2026 rate card and the exchange rate used for this estimate, a chargeable utility template message delivered to a +90 recipient costs approximately TRY 0.0432 (4.32 kurus). This estimate may vary by category, country, volume, exchange rate, taxes, and Meta pricing changes.",
+    "Meta charges these fees directly to the payment method or credit line associated with the WhatsApp Business account connected by the subscribing business; recipients of WhatsApp messages are not charged."
   ],
   "landing.legalNotes.rateLabel": "Current rates:"
 }

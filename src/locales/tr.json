@@ -491,9 +491,9 @@
   "landing.cookie.categories.marketing.description": "Reklam etkinliği ölçümü, dönüşüm takibi ve yeniden hedefleme için kullanılır. Veriler ABD'ye aktarılır.",
   "landing.legalNotes.items": [
     "devu abonelik bedeli YALNIZCA yazılım hizmetinin karşılığıdır.",
-    "WhatsApp mesajları için Meta tarafından AYRICA ücret tahsil edilir (Conversation-Based Pricing).",
-    "Ücretler konuşma kategorisine, alıcı ülkesine ve Meta'nın güncel tarifesine göre değişir.",
-    "Meta ücretleri doğrudan ALICI'nın WhatsApp Business hesabına bağlı kart üzerinden Meta tarafından tahsil edilir."
+    "Meta, ücretli WhatsApp şablon mesajlarını teslim edilen mesaj başına fiyatlandırır; 24 saatlik müşteri hizmetleri penceresine ilişkin kurallar devam eder.",
+    "Ağustos 2026 tarihli tarife ve hesaplama kuru esas alındığında, +90 alıcılara gönderilen ücrete tabi bir adet yardımcı (utility) şablon mesajı yaklaşık 0,0432 TL'dir (4,32 kuruş). Bu tahmin kategori, ülke, hacim, kur, vergi ve Meta tarife değişikliklerine göre farklılaşabilir.",
+    "Meta ücretleri, Devu'ya WhatsApp Business hesabını bağlayan işletmenin Meta nezdindeki ödeme yöntemi veya kredi limitinden doğrudan Meta tarafından tahsil edilir; mesajın gönderildiği müşteriden ücret alınmaz."
   ],
   "landing.legalNotes.rateLabel": "Güncel tarife:"
 }
