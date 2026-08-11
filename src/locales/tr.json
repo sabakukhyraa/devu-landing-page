@@ -336,19 +336,19 @@
       "label": "Bugün · günlük akış"
     },
     {
-      "title": "Sit amet consectetur elit",
-      "caption": "Ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud.",
-      "label": "Calendar — overview"
+      "title": "Takvim ile tüm randevularınız",
+      "caption": "Randevularınızı gün, hafta ve ay görünümünde kolayca görüntüleyin. Filtreleyin, arayın ve düzenleyin.",
+      "label": "Takvim · çeşitli görünümler"
     },
     {
-      "title": "Adipiscing elit sed do",
-      "caption": "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
-      "label": "Client — profile"
+      "title": "Danışanlar ve geçmiş kayıtlar",
+      "caption": "Danışanlar ile ilgili notları, fotoğrafları ve geçmiş randevuları tek profilde görün. Özel alanlar ile işletmenize özel bilgileri kaydedin.",
+      "label": "Danışanlar · detaylı kayıt"
     },
     {
-      "title": "Tempor incididunt labore",
-      "caption": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
-      "label": "WhatsApp — status"
+      "title": "WhatsApp otomatik mesajları",
+      "caption": "Randevu hatırlatmaları, güncelleme ve iptal bildirimleri, ekip özeti ve hızlı yanıtlar ile WhatsApp üzerinden otomatik iletişim kurun.",
+      "label": "WhatsApp · kurulum ve otomasyon"
     }
   ],
   "landing.pricing.eyebrow": "Fiyatlar",

@@ -16,7 +16,7 @@
   "landing.hero.shotTag": "App screenshot",
   "landing.hero.shotLabel": "Product UI — Today / daily overview",
   "landing.hero.shotSub": "Replace with a real capture",
-  "landing.hero.pill": "Lorem ipsum · delivered",
+  "landing.hero.pill": "Two sides of every appointment",
   "landing.hero.trust": [
     "Clinics",
     "Studios",
@@ -36,7 +36,7 @@
     "Just a few clicks, almost like magic"
   ],
   "landing.minimal.cta": "Get Started",
-  "landing.minimal.badge": "Lorem",
+  "landing.minimal.badge": "Next. Next. Done.",
   "landing.minimal.shotTag": "App screenshot",
   "landing.minimal.shotLabel": "Minimal UI — a single focused list",
   "landing.minimal.shotSub": "No clutter, no noise",
@@ -306,9 +306,9 @@
       }
     }
   ],
-  "landing.demos.eyebrow": "Lorem ipsum",
-  "landing.demos.title": "See it in motion. Lorem ipsum dolor.",
-  "landing.demos.body": "Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  "landing.demos.eyebrow": "Video walkthroughs",
+  "landing.demos.title": "See how Devu works.",
+  "landing.demos.body": "Take a closer look at the everyday workflows that keep appointments, clients, and teams moving.",
   "landing.demos.tag": "Devu demo",
   "landing.demos.duration": "Screen recording · {{duration}}",
   "landing.demos.controls": {
@@ -329,19 +329,19 @@
       "label": "Today · daily flow"
     },
     {
-      "title": "Sit amet consectetur elit",
-      "caption": "Ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud.",
-      "label": "Calendar — overview"
+      "title": "Every appointment, one calendar.",
+      "caption": "View appointments by day, week, or month. Filter, search, and make changes with ease.",
+      "label": "Calendar · flexible views"
     },
     {
-      "title": "Adipiscing elit sed do",
-      "caption": "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
-      "label": "Client — profile"
+      "title": "Clients and complete histories.",
+      "caption": "Keep notes, photos, past appointments, and business-specific details together in one client profile.",
+      "label": "Clients · complete records"
     },
     {
-      "title": "Tempor incididunt labore",
-      "caption": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
-      "label": "WhatsApp — status"
+      "title": "WhatsApp messages, automated.",
+      "caption": "Automate reminders, update and cancellation notices, daily team summaries, and quick replies.",
+      "label": "WhatsApp · setup and automation"
     }
   ],
   "landing.pricing.eyebrow": "Pricing",
