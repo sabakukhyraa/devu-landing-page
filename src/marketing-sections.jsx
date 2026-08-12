@@ -96,7 +96,12 @@ const demosMeta = [
     poster: "/media/screenshots/feature_client_2x.png",
     duration: "0:28"
   },
-  { id: "whatsapp" }
+  {
+    id: "whatsapp",
+    video: "/media/videos/whatsapp-overview.mp4",
+    poster: "/media/screenshots/whatsapp_overview_poster_2x.png",
+    duration: "0:30"
+  }
 ];
 
 /* ── shared helpers ───────────────────────────────────────────────────────── */
