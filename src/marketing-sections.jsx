@@ -40,8 +40,8 @@ import {
 } from "lucide-react";
 import "./marketing.css";
 
-const SIGNUP_URL = "https://app.devuapp.com/#/register";
-const LOGIN_URL = "https://app.devuapp.com/#/login";
+const SIGNUP_URL = "https://app.devuapp.com/register";
+const LOGIN_URL = "https://app.devuapp.com/login";
 const GOOGLE_G_ICON_PATH = "/brands/google-g.svg";
 
 // Structure only — all display copy comes from shared/locales via i18n
@@ -1120,8 +1120,24 @@ function FeatureVideoPlayer({ src, poster, label, reduceMotion, controls, onFocu
   );
 }
 
+/* Premium iOS device frame — screenshot seated inside a real iPhone mockup
+ * (mockup drawn behind, screen capture overlaid in the pre-measured screen rect). */
+function IosPhoneFrame({ src, alt }) {
+  return (
+    <div className="ios-frame">
+      <img className="ios-frame-shell" src="/media/iphone-mockup.png" alt="" aria-hidden="true" />
+      <div className="ios-frame-screen">
+        <img src={src} alt={alt} decoding="async" />
+      </div>
+    </div>
+  );
+}
+
 function FeatureModal({ feature, onClose }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const privacyUrl = i18n.resolvedLanguage === "en" || i18n.language === "en"
+    ? "/privacy/en/"
+    : "/privacy/";
   const reduceMotion = useReducedMotion();
   const [videoFocused, setVideoFocused] = useState(false);
   const videoControls = t("landing.features.video", { returnObjects: true });
@@ -1170,12 +1186,16 @@ function FeatureModal({ feature, onClose }) {
               onFocusChange={setVideoFocused}
             />
           ) : feature.image ? (
-            <img
-              className={`mkt-feature-shot mkt-feature-shot-modal${feature.id === "mobile" ? " is-portrait" : ""}`}
-              src={feature.image}
-              alt={feature.mediaLabel || feature.title}
-              decoding="async"
-            />
+            feature.id === "mobile" ? (
+              <IosPhoneFrame src={feature.image} alt={feature.mediaLabel || feature.title} />
+            ) : (
+              <img
+                className="mkt-feature-shot mkt-feature-shot-modal"
+                src={feature.image}
+                alt={feature.mediaLabel || feature.title}
+                decoding="async"
+              />
+            )
           ) : (
             <>
               {feature.mediaType === "calendar" && <CalendarMock />}
@@ -1201,7 +1221,7 @@ function FeatureModal({ feature, onClose }) {
             ))}
           </ul>
           {feature.dataUseLink && (
-            <a className="mkt-modal-data-link" href="/privacy/">
+            <a className="mkt-modal-data-link" href={privacyUrl}>
               <ShieldCheck size={17} />
               {feature.dataUseLink}
               <ArrowUpRight size={15} />
