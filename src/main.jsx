@@ -21,10 +21,10 @@ import {
 import { Pricing, FAQ, FinalCTA, SiteFooter } from "./kept-sections.jsx";
 import CookieBanner from "./cookie-banner.jsx";
 import WhatsAppContactPage from "./whatsapp-contact-page.jsx";
-import { EnglishPrivacyPage, EnglishSupportPage } from "./english-public-pages.jsx";
+import { EnglishPrivacyPage, EnglishSupportPage, EnglishAccountDeletionPage } from "./english-public-pages.jsx";
 
-const SIGNUP_URL = "https://app.devuapp.com/#/register";
-const LOGIN_URL = "https://app.devuapp.com/#/login";
+const SIGNUP_URL = "https://app.devuapp.com/register";
+const LOGIN_URL = "https://app.devuapp.com/login";
 const formatPrice = (value) => `₺${new Intl.NumberFormat("tr-TR").format(value)}`;
 
 const navLinks = [
@@ -137,7 +137,7 @@ const termsSections = [
     items: [
       "Türkiye Cumhuriyeti hukuku uygulanır.",
       "Tüketici niteliğindeki kullanıcılar için Ticaret Bakanlığı'nca ilan edilen parasal sınırlar dahilinde Tüketici Hakem Heyetleri; üzerindeki uyuşmazlıklarda Tüketici Mahkemeleri yetkilidir.",
-      "Tacir veya tüzel kişi kullanıcılar için [İlgili Yetkili Mahkeme] Mahkemeleri ve İcra Daireleri yetkilidir."
+      "Tacir veya tüzel kişi kullanıcılar için İstanbul Mahkemeleri ve İcra Daireleri yetkilidir."
     ]
   },
   {
@@ -207,7 +207,7 @@ const privacySections = [
       "Faturalandırma kayıtları: VUK m.253 uyarınca 10 yıl.",
       "5651 sayılı Kanun erişim logları: 1-2 yıl (mevzuat şartı).",
       "Pazarlama kayıtları: rıza geri alınana kadar.",
-      "Google OAuth tokenları ve bağlantı kayıtları: bağlantı kaldırılana veya hesap silinene kadar."
+      "Google OAuth tokenları bağlantı kaldırıldığında veya hesap silindiğinde temizlenir; güvenlik, yasal yükümlülük ve uyuşmazlık çözümü için gerekli asgari bağlantı ve denetim kayıtları ilgili saklama süresi boyunca tutulabilir."
     ]
   },
   {
@@ -610,11 +610,15 @@ function App() {
     return <EnglishSupportPage />;
   }
 
+  if (path === "/account-deletion") {
+    return <EnglishAccountDeletionPage />;
+  }
+
   if (path === "/terms") {
     return (
       <LegalPage
         title="Kullanım Koşulları"
-        subtitle="Son güncelleme: Mayıs 2026"
+        subtitle="Son güncelleme: Haziran 2026"
         sections={termsSections}
         icon={FileText}
       />
@@ -706,6 +710,7 @@ createRoot(document.getElementById("root")).render(
     <App />
     {!window.location.pathname.startsWith("/whatsapp-contact")
       && !/^\/(privacy|support)\/en\/?$/.test(window.location.pathname)
+      && !/^\/account-deletion\/?$/.test(window.location.pathname)
       && <CookieBanner />}
   </React.StrictMode>
 );

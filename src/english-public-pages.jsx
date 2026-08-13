@@ -1,8 +1,16 @@
 import { useEffect } from "react";
-import { ExternalLink, LifeBuoy, Mail, ShieldCheck } from "lucide-react";
+import { ExternalLink, LifeBuoy, Mail, ShieldCheck, Trash2 } from "lucide-react";
 
 const APP_URL = "https://app.devuapp.com";
 const SUPPORT_EMAIL = "support@devuapp.com";
+
+const DELETION_REQUEST_MAILTO = `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(
+  "Account deletion request",
+)}&body=${encodeURIComponent(
+  "I request permanent deletion of my Devu account and the data it owns.\n\n"
+  + "Account email address (required so we can verify the request): \n"
+  + "Workspace name (if known): \n",
+)}`;
 
 const privacySections = [
   {
@@ -127,7 +135,7 @@ const supportSections = [
     title: "Sign-in and password help",
     body: "Use Forgot password on the Devu sign-in screen to request a reset email. If you no longer have access to the account email or the reset message does not arrive, contact support from an address you can access.",
     actions: [
-      { label: "Open Devu web sign-in", href: `${APP_URL}/#/login`, icon: ExternalLink },
+      { label: "Open Devu web sign-in", href: `${APP_URL}/login`, icon: ExternalLink },
     ],
   },
   {
@@ -143,6 +151,48 @@ const supportSections = [
   },
 ];
 
+const accountDeletionSections = [
+  {
+    title: "Delete your account inside the app",
+    body: "Open the Devu mobile app, go to More > Settings > Delete account, and complete the two-step confirmation. This permanently deletes eligible accounts and the workspace data you own. Workspace owners may first need to transfer ownership, remove members, or resolve an active subscription before the deletion can complete.",
+  },
+  {
+    title: "Request deletion without signing in",
+    body: "If you can no longer access the app or your account, you can request deletion by email. Send the request from the email address associated with your Devu account so we can verify that it is really you. We may ask for additional confirmation before completing the deletion.",
+    actions: [
+      { label: "Email an account deletion request", href: DELETION_REQUEST_MAILTO, icon: Mail },
+    ],
+  },
+  {
+    title: "How we verify your request",
+    body: "We confirm the email address tied to the account, normally by requiring the request to come from that address or by sending a confirmation to it. This prevents anyone else from deleting your account. Requests are typically processed within 30 days.",
+  },
+  {
+    title: "What is deleted",
+    items: [
+      "Your Devu account and profile: name, email, phone number, encrypted credentials, language, and workspace membership.",
+      "Workspaces you own and their data, including clients, practitioners, venues, appointments, notes, custom fields, and uploaded photos.",
+      "Integration records you control, including Google OAuth grants and WhatsApp configuration, which are removed or disconnected.",
+      "Push-notification tokens associated with your account.",
+    ],
+  },
+  {
+    title: "What may be retained",
+    body: "After deletion, operational data is removed or anonymized following a limited recovery and backup cycle. A limited set of records may be kept where the law requires it — for example billing and invoice records retained for tax and accounting purposes, and records needed for fraud prevention, security, or dispute resolution. Retained records are kept only for the period required and are not used for any other purpose.",
+  },
+  {
+    title: "Data about your own clients",
+    body: "If your business used Devu to store information about its clients, your business is the controller of that information, and deleting your account removes the workspace data you own. If you are an end client of a business that uses Devu and want your information removed, please contact that business directly. You may also contact us and we will help route the request.",
+  },
+  {
+    title: "Questions",
+    body: `For any question about account or data deletion, contact ${SUPPORT_EMAIL}.`,
+    actions: [
+      { label: SUPPORT_EMAIL, href: `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent("Account deletion question")}`, icon: Mail },
+    ],
+  },
+];
+
 function PublicHeader() {
   return (
     <header className="public-document-header">
@@ -152,6 +202,7 @@ function PublicHeader() {
       <nav aria-label="Help and legal pages">
         <a href="/support/en">Support</a>
         <a href="/privacy/en">Privacy</a>
+        <a href="/account-deletion">Delete account</a>
       </nav>
       <a className="public-document-app-link" href={APP_URL}>Open Devu <ExternalLink size={15} /></a>
     </header>
@@ -165,6 +216,7 @@ function PublicFooter() {
       <div>
         <a href="/privacy/en">Privacy Policy</a>
         <a href="/support/en">Support</a>
+        <a href="/account-deletion">Delete account</a>
         <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>
       </div>
     </footer>
@@ -242,6 +294,18 @@ export function EnglishSupportPage() {
       sections={supportSections}
       icon={LifeBuoy}
       pageTitle="Support | Devu"
+    />
+  );
+}
+
+export function EnglishAccountDeletionPage() {
+  return (
+    <EnglishPublicPage
+      title="Account & Data Deletion"
+      subtitle="How to permanently delete your Devu account and the data it owns — inside the app, or by request if you can no longer sign in."
+      sections={accountDeletionSections}
+      icon={Trash2}
+      pageTitle="Account Deletion | Devu"
     />
   );
 }
