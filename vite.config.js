@@ -22,6 +22,7 @@ export default defineConfig({
         privacy: path.resolve(__dirname, "privacy/index.html"),
         "privacy-en": path.resolve(__dirname, "privacy/en/index.html"),
         "support-en": path.resolve(__dirname, "support/en/index.html"),
+        "account-deletion": path.resolve(__dirname, "account-deletion/index.html"),
         terms: path.resolve(__dirname, "terms/index.html"),
         kvkk: path.resolve(__dirname, "kvkk/index.html"),
         "cerez-politikasi": path.resolve(__dirname, "cerez-politikasi/index.html"),
