@@ -21,6 +21,34 @@
     <meta name="theme-color" content="#f7f3ee" />
     <link rel="icon" href="/favicon.ico" />
     <style>
+      /* First paint matches the app so there is no white/unstyled flash. */
+      html, body { margin: 0; background: #fbfbf8; }
+
+      /* Branded loading splash shown until the React bundle mounts and
+         replaces #root. Covers the SEO prerender (which stays in the DOM
+         for non-JS crawlers). */
+      .app-splash {
+        position: fixed;
+        inset: 0;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fbfbf8;
+      }
+      .app-splash img {
+        width: 128px;
+        height: auto;
+        animation: appSplashPulse 1.4s ease-in-out infinite;
+      }
+      @keyframes appSplashPulse {
+        0%, 100% { opacity: 0.4; }
+        50% { opacity: 1; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .app-splash img { animation: none; opacity: 1; }
+      }
+
       /* SEO/verification için statik içerik — React mount olunca React tarafından replace edilir */
       .seo-prerender {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -40,6 +68,10 @@
   </head>
   <body>
     <div id="root">
+      <!-- Branded splash: the only thing a human sees until React mounts. -->
+      <div class="app-splash" aria-hidden="true">
+        <img src="/devu-logo.png" alt="devu" width="128" height="42" />
+      </div>
       <!--
         Statik prerender içerik. JavaScript yüklenmeden önce ya da
         verification crawler'ları için sayfanın amacını ve önemli linkleri
